@@ -21,6 +21,14 @@ switch($_GET['section']) {
             include "inc/faq_content.php";
             break;
 
+      case "login":
+            include "inc/login_content.php";
+            break;
+
+      case "register":
+            include "inc/register_content.php";
+            break;
+
       default:  // Wenn eine ungültige Section angegeben wurde
                 // soll home angezeigt werden
           include "inc/main_content.php";
