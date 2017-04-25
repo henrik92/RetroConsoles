@@ -17,8 +17,9 @@
         <li><a href="index.php?section=shop">Shop</a></li>
         <li><a href="index.php?section=faq">F.A.Q.</a></li>
         <li> <p class="navline">|</p></li>
-        <li><a href="index.php?section=login">Mein Profil</a></li>
+        <li><a href="index.php?section=member">Mein Profil</a></li>
         <li><a href="index.php?section=cart">Warenkorb</a></li>
+        <li><a href="index.php?section=logout">Logout</a></li>
     </ul>
   </nav>
   </div>

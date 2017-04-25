@@ -22,11 +22,11 @@ switch($_GET['section']) {
             break;
 
       case "login":
-            include "inc/login_content.php";
+            include "inc/login.php";
             break;
 
       case "register":
-            include "inc/register_content.php";
+            include "inc/register.php";
             break;
 
       default:  // Wenn eine ungültige Section angegeben wurde
