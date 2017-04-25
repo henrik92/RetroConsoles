@@ -1,0 +1,366 @@
+* {
+margin: 0;
+padding: 0;
+vertical-align: baseline;
+box-sizing: border-box;
+}
+
+body {
+  font-family:sans-serif;
+  font: arial;
+  font-size: 14px;
+  text-align: center;
+  background: black;
+}
+
+ul{
+  list-style-type: none;
+  text-align:center;
+  text-decoration: none;
+}
+li{
+	display:inline;
+  color: white;
+  align-items: center;
+  font-size: 16px;
+  margin-right: 20px;
+  text-decoration: none;
+}
+img .logo{
+  width: 3%;
+}
+.navline{
+    display: inline-block;
+}
+a{
+  margin-top: 10px;
+  display: inline-block;
+  padding: 5px;
+  text-decoration: none;
+  color: white;
+  }
+  a:visited{color: white;}
+  a:hover{
+    color:lightblue;
+  }
+.login{
+float:right;
+height: 100px;
+width: 10%;
+background-color: white;
+}
+}
+header{}
+
+.intro h1{
+  color: white;
+  margin: 20px 20px 20px 20px;
+}
+.intro{
+  border-bottom: 1px solid white;
+  width: 100%;
+  min-height: 300px;
+  padding: 10%;
+  top: 100px;
+  color: white;
+}
+.info{
+  width: 100%;
+  background-image: linear-gradient(to top, lightgrey 0%, white 100%);
+  padding: 5%;
+  box-sizing: border-box;
+}
+.info-box{
+  margin-left: 20%;
+  margin-right: 20%;
+  border: 1px solid grey;
+  padding: 20px;
+}
+.models{
+  width: 100%;
+  padding: 5%;
+  background: lightgrey;
+  border-top: 1px solid grey;
+}
+.models-raster{
+  text-align: center;
+  width: 60%;
+  height: 150px;
+  margin-left: 20%;
+}
+.models-raster img{
+  width: 10%;
+  height: auto;
+  padding: 20px;
+  display: inline;
+}
+.repair-steps{
+  width: 100%;
+  height: auto;
+  background: lightblue;
+  padding: 5%;
+  text-align: center;
+  border-top: 1px solid grey;
+}
+.step{
+  height: 200px;
+  width: 12.5%;
+  display: inline-block;
+  background: white;
+  border-radius: 10px;
+  border-top: 1px solid grey;
+  border-width: thin;
+  margin-right: 5%;
+  margin-left: 5%;
+  padding: 10px;
+}
+.repair-form{
+  padding: 5%;
+  border-top: 1px solid grey;
+}
+.main{
+  text-align: center;
+}
+label{
+  float: left;
+  display: inline-block;
+  width: 6em;
+}
+form{
+  padding: 20px;
+  background-color: white;
+}
+
+.abschicken {
+	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffffff), color-stop(1, #f6f6f6));
+	background:-moz-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+	background:-webkit-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+	background:-o-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+	background:-ms-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+	background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0);
+	background-color:#ffffff;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius:8px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#666666;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:10px 40px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+}
+.abschicken:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f6f6f6), color-stop(1, #ffffff));
+	background:-moz-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
+	background:-webkit-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
+	background:-o-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
+	background:-ms-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
+	background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f6f6', endColorstr='#ffffff',GradientType=0);
+	background-color:#f6f6f6;
+}
+.abschicken:active {
+	position:relative;
+	top:1px;
+}
+
+.navbar{
+background: black;
+min-height: 5%;
+width: 100%;
+top: 0;
+position: fixed;
+border-bottom: 1px solid white;
+}
+ul li img{
+  width: 40px;
+}
+/*SHOP*/
+
+.shop{
+  width: 100%;
+  background: white;
+  padding: 5%;
+  overflow:hidden;
+}
+.shop-filter-box{
+  border-right: 1px dotted grey;
+  width: 20%;
+  float: left;
+  padding: 5%;
+}
+.shop-overview-box{
+  width: 70%;
+  float: right;
+}
+.shop-box{
+  width: 20%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 5%;
+  background: white;
+  border: 1px solid grey;
+  float: left;
+  padding: 5px;
+}
+.shop-box img{
+  width: 100%;
+}
+.shop-description{
+  width: 100%;
+  height: 80px;
+  margin:5px;
+  padding: 5%;
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+  text-align: left;
+}
+.buttons{
+  width: 100%;
+  display: inline;
+}
+.button-warenkorb{
+  background: orange;
+  color: white;
+  text-align: center;
+  padding:10px;
+  border: none;
+  float: right;
+  width: 50%;
+}
+.button-details{
+  background: lightblue;
+  color: white;
+  text-align: center;
+  padding:10px;
+  border: none;
+  float: left;
+  width: 50%;
+}
+/*FORMULAR*/
+  legend{
+    width: 100%;
+    height: 5%;
+    background: white;
+    margin:10px;
+    padding: 10px;
+    border: 1px solid black;
+  }
+  label{
+  margin-left: 10%;
+  margin:10px;
+  background: white;
+
+  }
+  input{
+  border-radius: 5px;
+  width: 20%;
+  margin: 10px;
+  text-align: left;
+  }
+  input:hover{
+    background: lightblue;
+  }
+  input:active{
+    background: lightblue;
+  }
+
+/*ABOUT US*/
+/*MAIN*/
+.main_button{
+  background: lightgreen;
+  color: white;
+  text-align: center;
+  padding:20px 80px;
+  border: none;
+  margin: 20px;
+}
+.main_button:hover{
+  background: green;
+}
+.overview{
+  width: 100%;
+  background: black;
+  color: white;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+/*FAQ*/
+.faq-overview-box{
+  width: 70%;
+  height: 100%;
+  float: right;
+  padding: 5%;
+}
+.faq-box{
+  width: 100%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 5%;
+  padding: 5%;
+  background: white;
+  border: 1px dotted grey;
+  float: left;
+}
+/*About Us*/
+.member-box{
+width: 100%;
+padding: 5%;
+background: green;
+}
+.member{
+  margin-left: 5%;
+  margin-right: 5%;
+  padding: 5%;
+  width: 20%;
+  height: 200px;
+  background: lightgrey;
+  color:black;
+  text-align: center;
+  display: inline;
+}
+
+
+/*Footer*/
+footer{
+  background-color: black;
+  width: 100%;
+  height: 20%;
+  color: white;
+  border-top: 1px solid white;
+  padding-top: 20px;
+}
+.social-media{
+  width: 10%;
+}
+.sitenav{
+  width: 30%;
+  display: inline-block;
+  float: left;
+  text-align: left;
+  padding: 5px;
+}
+.impressum-contact{
+  width: 30%;
+  display: inline-block;
+  float: right;
+  text-align: right;
+  padding: 5px;
+  border-left: 1px dotted white;
+
+  border-right: 1px dotted white;
+}
+.copyright-logo{
+  width: 40%;
+  display: inline-block;
+  text-align: center;
+  padding: 5px;
+}
