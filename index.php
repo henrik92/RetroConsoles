@@ -1,6 +1,13 @@
 <?php
+session_start();
+echo $_SESSION['user_id'];
+
+if (($_SESSION["auth"]==true)){
+include "inc/main_header_member.php";
+} else {
 include "inc/main_header.php";
-switch($_GET['section']) {
+}
+switch(@$_GET['section']) {
       case "home":
           include "inc/main_content.php";
           break;
@@ -25,14 +32,25 @@ switch($_GET['section']) {
             include "inc/login.php";
             break;
 
+      case "logout":
+            include "inc/logout.php";
+            break;
+
       case "register":
             include "inc/register.php";
             break;
 
+      case "cart":
+            include "inc/shop-cart.php";
+            break;
+      case "profile":
+            include "inc/profile.php";
+            break;
       default:  // Wenn eine ungültige Section angegeben wurde
                 // soll home angezeigt werden
           include "inc/main_content.php";
           break;
-  }
+        }
+
   include 'inc/main_footer.php';
  ?>

@@ -1,6 +1,14 @@
-<?php
-session_start();
-session_destroy();
 
-echo "Logout erfolgreich";
-?>
+<div class="main">
+  <div class="overview">
+    <h3>Auf Wiedersehen, <?php echo $_SESSION['vorname']?>. Bis zum nächsten Mal!"</h3></br>
+
+      <?php
+      session_unset ();
+      session_destroy();
+      ob_end_flush ();
+      ?>
+
+      <p><a href="\index.php?section=home">Hier</a> geht es zurück zur Startseite."
+      </div>
+  </div>

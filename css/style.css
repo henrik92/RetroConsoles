@@ -367,3 +367,15 @@ footer{
   text-align: center;
   padding: 5px;
 }
+
+/*Login*/
+
+.login-box{
+  margin-left: 30%;
+  margin-right: 30%;
+  border: 1px solid black;
+  padding: 5px;
+}
+.login-box input{
+  width: 150px;
+}
