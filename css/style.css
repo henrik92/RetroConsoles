@@ -53,12 +53,16 @@ background-color: white;
 header{}
 
 .intro h1{
+  padding-left: 50%;
   color: black;
   margin: 20px 20px 20px 20px;
 }
 .intro{
-  border-bottom: 1px solid white;
   width: 100%;
+  background-image: url('/img/joystick.svg');
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position:left;
   min-height: 300px;
   padding: 10%;
   top: 100px;
@@ -120,6 +124,7 @@ header{}
   border-top: 1px solid grey;
 }
 .main{
+  background-color: grey;
   text-align: center;
 }
 label{
@@ -290,7 +295,7 @@ ul li img{
 }
 .overview{
   width: 100%;
-  background: white;
+  background: #edf3ff;
   color: black;
   padding-top: 5%;
   padding-bottom: 20%;
@@ -334,16 +339,16 @@ background: green;
 
 /*Footer*/
 footer{
-  background-color: #a0d686;
+  background-color: grey;
   width: 100%;
   height: 20%;
-  color: black;
-  border-top: 1px solid black;
-  padding-top: 20px;
+  color: white;
+  border-top: 20px solid lightgrey;
+  padding: 20px;
+  bottom: 0px;
+  display:inline-block;
 }
-.social-media{
-  width: 10%;
-}
+
 .sitenav{
   width: 30%;
   display: inline-block;
@@ -351,22 +356,34 @@ footer{
   text-align: left;
   padding: 5px;
 }
-.impressum-contact{
-  width: 30%;
-  display: inline-block;
-  float: right;
-  text-align: right;
-  padding: 5px;
-  border-left: 1px dotted white;
 
+.contact{
+  width: 30%;
+  float: right;
+  margin-left: 70%;
+  display: inline-block;
+}
+
+.logo {
+  width: 40%;
+  background-image: url('/img/nintendo.png');
+  background-size: 40%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  border-left: 1px dotted white;
   border-right: 1px dotted white;
+  margin-left: 30%;
 }
 .copyright-logo{
-  width: 40%;
-  display: inline-block;
-  text-align: center;
+  width: 30%;
+  height: auto;
+  float: left;
+  background-image: url('img/nintendo.png');
   padding: 5px;
-}
+  border: 1px solid black;
+
+  }
 
 /*Login*/
 

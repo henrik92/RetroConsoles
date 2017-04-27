@@ -1,8 +1,7 @@
 <?php
 session_start();
-echo $_SESSION['user_id'];
 
-if (($_SESSION["auth"]==true)){
+if (isset($_SESSION["user_id"])){
 include "inc/main_header_member.php";
 } else {
 include "inc/main_header.php";

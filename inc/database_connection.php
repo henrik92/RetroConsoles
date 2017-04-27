@@ -1,15 +1,15 @@
 <?php
 $server = "localhost";
-$username = "root";
+$login = "root";
 $password = "";
-$dbname = "retrokonsolen";
+$db_name = "retrokonsolen";
 // Create connection
-$conn = new mysqli($server, $username, $password, $dbname);
+$conn = mysqli_connect( $server, $login, $password, $db_name) or die( 'Verbindungsfehler!' );
 
 // Check connection
 if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+    echo "Connection failed: " . $conn->connect_error;
 } else {
-echo "Connected successfully";
+    echo "Connected successfully";
 }
 ?>
