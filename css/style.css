@@ -198,50 +198,85 @@ ul li img{
   padding: 5%;
   overflow:hidden;
 }
-.shop-filter-box{
+.shop-cart-box{
   border-right: 1px dotted grey;
   width: 20%;
   float: left;
-  padding: 5%;
 }
-.shop-overview-box{
-  width: 70%;
-  float: right;
+.shop-cart-box table{
+  display: inline ;
+  border-collapse: collapse;
+
 }
-.shop-box{
-  width: 20%;
-  margin-left: 5%;
-  margin-right: 5%;
-  margin-bottom: 5%;
-  background: white;
-  border: 1px solid grey;
+.shop-cart-box tr{
+  border-bottom: 1px solid lightgrey;
+  text-align: center;
+  padding: 2px;
+}
+
+
+.shop-cart-box th{
+  display: inline-block ;
+  margin-right: 20px;
+  padding: 5px; 
   float: left;
+}
+.shop-cart-box td{}
+
+.shop-overview-box{
+  width: 80%;
+  float: right;
+  text-align: left;
+  display: table;
+}
+.shop-overview-box h1{
+  margin-left: 100px;
+}
+
+.shop-box{
+  width: auto;
+  max-height: 300px;
+  margin-left: 100px;
+  margin-right: 90px;
+  margin-bottom: 100px;
+  background: white;
+  float: left;
+  display:inline-grid;
+  padding: 20px;
+}
+.shop-image {
+  max-width: 250px;
+  max-height: 200px;
   padding: 5px;
+  overflow: hidden;
 }
-.shop-box img{
-  width: 100%;
+.shop-image img{
+  padding: 5px;
+  width: 200px;
 }
+
 .shop-description{
-  width: 100%;
-  height: 80px;
-  margin:5px;
+  width: 200px;
+  height: auto;
+  margin:1px;
   padding: 5%;
   border-top: 1px solid grey;
   border-bottom: 1px solid grey;
-  text-align: left;
+  text-align:left;
+  display: block;
 }
 .buttons{
   width: 100%;
-  display: inline;
+  height: 100px;
+  display:inline;
 }
 .button-warenkorb{
   background: orange;
   color: white;
   text-align: center;
-  padding:10px;
+  padding:6px;
   border: none;
-  float: right;
-  width: 50%;
+  width: 100%;
 }
 .button-details{
   background: lightblue;

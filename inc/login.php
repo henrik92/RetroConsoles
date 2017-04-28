@@ -9,8 +9,7 @@ include "inc/database_connection.php";
 //Variablen
 $input = $email = $password = "";
 $input_error = $email_error = $password_error = "";
-$dbinfo ="";
-$_SESSION['auth'] = false;
+
 //Funktion: Eingabe formatieren
 function format($input){
   $input = trim($input);
@@ -19,7 +18,7 @@ function format($input){
   return $input;
 }
 //$_SERVER["REQUEST_METHOD"] == "POST"
-if (isset ($_POST['submit'])) {
+if (isset ($_POST['submit']) || $_SERVER["REQUEST_METHOD"] == "POST" ) {
   if(isset($_POST['email']) && isset($_POST['password'])){
 
     $email = format($_POST['email']);
@@ -49,7 +48,6 @@ if (mysqli_num_rows($result) > 0) {
     $_SESSION['vorname'] = $row['vorname'];
     $_SESSION['email'] = $row['email'];
   }
-    echo "Hallo " . $_SESSION['vorname'] . ", dein Login war erfolgreich";
     header("Location: index.php?section=profile");
   } else {
     echo "Hoppla, leider hat deine Anmeldung nicht funktioniert.";
