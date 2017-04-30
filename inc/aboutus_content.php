@@ -1,14 +1,13 @@
-<div class="intro">
-  <h1>Über uns!</h1>
+<div class="jumbotron banner-bot-border bg-about">
+<h1>Unser Unternehmen</h1>
 </div>
-<div class="main">
-<div class="overview">
+<div class="container-fluid container-padding">
   <p>Herzlich Willkommen zu RetroKonsolen, dein Partner wenn es um Spielekonsolen geht.</p>
 </div>
-<div class="overview">
+<div class="container-fluid container-padding">
   <p>Wir bieten Reperaturen an.</p>
 </div>
-<div class="overview">
+<div class="container-fluid container-padding">
   <p>Unser Team:</p>
   <div class="member-box">
     <div class="member">Member1

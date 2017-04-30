@@ -58,20 +58,37 @@ if (mysqli_num_rows($result) > 0) {
 }
 ?>
 <!--Login-Formular -->
-<div class="intro">
-  <h1>Login</h1>
+<div class="jumbotron bg-home banner-bot-border">
+    <h1>Login.</h1>
 </div>
-<div class="main">
-<div class="overview">
-<div class="login-box">
-  <!--<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>-->
-<form action="" method="post">
-  <input type="email" name="email" id="email" placeholder="E-Mail Adresse" required><br/>
+<div class="container container-padding">
+<div class="panel panel-default login-panel">
+  <div class="panel-heading">Login</div>
+<div class="panel-body">
+<form class="form-horizontal" action="" method="post">
+  <div class="form-group">
+  <label>E-Mail Adresse</label>
+  <div class="input-group">
+<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input type="email" class="form-control" name="email" id="email" placeholder="E-Mail Adresse" required>
+  </div>
+</div>
   <?php if(isset($email_error))echo "<span><p>" . $email_error . "</p></span><br/>";?>
-  <input type="password" name="password" id="password" placeholder="Passwort" required><br/>
+  <div class="form-group">
+  <label>Passwort</label>
+  <div class="input-group">
+    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+  <input type="password" class="form-control" name="password" id="password" placeholder="Passwort" required>
+</div>
+</div>
   <?php if(isset($password_error))echo "<p>" . $password_error . "</p>";?>
-  <input class="Einloggen." type="Submit" id ="submit" name="submit" value="Jetzt einloggen." />
+  <div class="checkbox"
+  <label><input type="checkbox">Anmeldedaten merken</label>
+</div>
+  <input class="btn btn-default" type="Submit" id ="submit" name="submit" value="Jetzt einloggen." />
 </form>
+</div>
+<div class="panel-footer">
 <p>Neu bei uns? <a style="color: darkblue;" href="index.php?section=register">Hier</a> geht es zur Registrierung.</p>
 </div>
 </div>

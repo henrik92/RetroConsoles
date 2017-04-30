@@ -3,30 +3,58 @@
 include "inc/database_connection.php";
 $sql = "SELECT * FROM shop";
 $shop_item = mysqli_query($conn, $sql);
-$cart = $_SESSION['cart'];
- ?>
 
-<div class="intro">
+if(isset($_POST['submit'])){
+  if(isset($_SESSION['cart'])){
+    //Prüfen ob Produkt bereits in Warenkorb ist
+    $product_check_id = array_column($_SESSION['cart'], "product_id");
+    if(!in_array($_POST['product_id'], $product_check_id)){
+      $cart = array(
+        'product_id' => $_POST['product_id'],
+        'title' => $_POST['title'],
+        'price' => $_POST['price']);
+    } else {
+      echo '<script>alert("Products already added to cart")</script>';
+      echo '<script>window.location="index.php"</script>';
+    }
+} else {
+  $cart = array(
+    'product_id' => $_POST['product_id'],
+    'title' => $_POST['title'],
+    'price' => $_POST['price']
+ );
+}
+}
+ ?>
+<div class="container-fluid">
+<div class="jumbotron banner-bot-border">
   <h1>Onlineshop</h1>
 </div>
-<div class="main">
-  <div class="shop">
-  <div class="shop-cart-box">
-    <h1>Warenkorb.</h1></br>
-    <table>
-      <tr>
-      	<th>Artikel</th>
-        <th>Preis</th>
-        <th>Entf.</th>
-        <th>Gesamtpreis</th>
-      </tr>
-    <?php  if(!isset($cart)){ ?>
-    <tr><td><p>Keine Artikel im Warenkorb.</p></td></tr>
-    <?php } ?>
-    </table>
-    <button class="main_button">Zur Kasse</button>
-  </div>
-  <div class="shop-overview-box">
+</div>
+<div class="container bg-grey container-padding">
+  <h1>Warenkorb.</h1></br>
+  <div class="well">
+  <table class=" table table-striped">
+    <tr>
+      <th>Artikel</th>
+      <th>Preis</th>
+      <th>Entf.</th>
+      <th>Gesamtpreis</th>
+    </tr>
+  <?php  if(!isset($cart)){ ?>
+  <tr><td><p>Keine Artikel im Warenkorb.</p></td>
+<td></td>
+  <td></td>
+    <td></td>
+  </tr>
+  <?php } ?>
+  </table>
+  <button class="main_button">Zur Kasse</button>
+</div>
+</div>
+</div>
+
+<div class="container container-padding">
     <h1>Artikelübersicht.</h1></br>
 <?php
 if (mysqli_num_rows($shop_item) > 0) {
@@ -41,14 +69,15 @@ if (mysqli_num_rows($shop_item) > 0) {
     </div>
     <div class="buttons">
       <form method="post" action="">
-        <input type="hidden" name="product_id" value="<?php echo $row['product_id']?>">
-        <input type="hidden" name="title" value="<?php echo $row['title'] ?>">
-        <input type="hidden" name="price" value="<?php echo $row['price'] ?>">
-        <button class="button-warenkorb">In den Warenkorb</button>
+        <input type="hidden" name="product_id" value="<?php echo $row['product_id']?>"/>
+        <input type="hidden" name="title" value="<?php echo $row['title'] ?>"/>
+        <input type="hidden" name="price" value="<?php echo $row['price'] ?>"/>
+        <button type"submit" name="add" class="button-warenkorb">In den Warenkorb</button>
   </form>
     </div>
     </div>
 <?php  }} ?>
+</div>
 </div>
 </div>
 </div>
