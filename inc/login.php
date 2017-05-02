@@ -21,6 +21,15 @@ function format($input){
 if (isset ($_POST['submit']) || $_SERVER["REQUEST_METHOD"] == "POST" ) {
   if(isset($_POST['email']) && isset($_POST['password'])){
 
+session_start();
+include 'inc/database_connection.php';
+
+//Formvalidation
+
+//Nach Email-Adresse in DB suchen
+$sql = "SELECT name FROM user where userid='2'";
+$result = $conn->query($sql);
+
     $email = format($_POST['email']);
     $password = format($_POST['password']);
 
