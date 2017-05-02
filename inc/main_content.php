@@ -1,5 +1,7 @@
-<div class="jumbotron bg-home banner-bot-border">
+<div class="jumbotron bg-home">
+  <br><br><br>
     <h1>Welcome to RetroConsole, make your console great again!</h1>
+  <br><br><br>
 </div>
 
 <div class="container-fluid bg-grey container-padding">

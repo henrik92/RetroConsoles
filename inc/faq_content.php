@@ -1,5 +1,7 @@
-<div class="intro">
+<div class="jumbotron bg-sup">
+<br><br><br>
   <h1>F.A.Q.</h1>
+<br><br><br>
 </div>
 <div class="main">
   <div class="shop">

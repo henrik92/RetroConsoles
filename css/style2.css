@@ -353,9 +353,53 @@ kbd{
   text-align: left;
 }
 .bg-home{
-  background-image: url('/img/joystick.svg');
+  background-image: url('/img/content/home.jpg');
   background-repeat: no-repeat;
-  background-size: 100%;
-  width: 100%;
-  height: auto;
+  background-size: 100% 100%;
+  overflow: hidden;
+  min-height: 600px;
+  color: white;
+}
+
+.bg-about{
+  background-image: url('/img/content/home.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  overflow: hidden;
+  min-height: 600px;
+  color: white;
+}
+
+.bg-rep{
+  background-image: url('/img/content/home.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  overflow: hidden;
+  min-height: 600px;
+  color: white;
+}
+
+.bg-shop{
+  background-image: url('/img/content/home.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  overflow: hidden;
+  min-height: 600px;
+  color: white;
+}
+
+.bg-sup{
+  background-image: url('\img\content\books-in-shelf-close-up-picjumbo-com.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  overflow: hidden;
+  min-height: 600px;
+  color: white;
+}
+.panel-bg {
+  background-color: #a3e4ff;
+  color:white;
+}
+.tab-border {
+  border: 1px solid black;
 }

@@ -36,14 +36,7 @@
         <li><a href="index.php?section=faq">Support</a></li>
   	</ul>
       <ul class="nav navbar-nav navbar-right">
-      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> <span class="glyphicon glyphicon-user"></span> Hallo, <?php echo $_SESSION['vorname'] ?>
-          <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="index.php?section=profile"><span class="glyphicon glyphicon-pencil"></span> Profil</a></li>
-            <li><a href="#"><span class="glyphicon glyphicon-piggy-bank"></span> Payment</a></li>
-            <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Bestellungen</a></li>
-            <li><a href="#"><span class="glyphicon glyphicon-wrench"></span> Reperaturen</a></li>
-          </ul>
+      <li><a href="index.php?section=profile"> <span class="glyphicon glyphicon-user"></span> Hallo, <?php echo $_SESSION['vorname'] ?></a></li>
       <li><a href="index.php?section=logout">  <span class="glyphicon glyphicon-off"></span> Logout</a></li>
       </ul>
     </div>

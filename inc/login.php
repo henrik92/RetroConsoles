@@ -1,6 +1,5 @@
 <!--Login-PHP (Session starten, DB Verbindung, Benutzereingaben prüfen) -->
 <?php
-echo session_id();
 //DB-Verbindung
 include "inc/database_connection.php";
 
