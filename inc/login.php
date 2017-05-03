@@ -38,7 +38,7 @@ if(!filter_var($email, FILTER_VALIDATE_EMAIL) === true ) {
    } else {
 
 //DB Abfrage
-$sql = "SELECT user_id, vorname, email, pwd FROM user WHERE email='" .$email. "' AND pwd='" . $password ."' LIMIT 1";
+$sql = "SELECT * FROM user WHERE email='" .$email. "' AND pwd='" . $password ."' LIMIT 1";
 echo $sql;
 
 $result = mysqli_query($conn, $sql);
@@ -54,7 +54,13 @@ if (mysqli_num_rows($result) > 0) {
     $_SESSION['auth'] = true;
     $_SESSION['user_id'] = $row['user_id'];
     $_SESSION['vorname'] = $row['vorname'];
+    $_SESSION['name'] = $row['name'];
     $_SESSION['email'] = $row['email'];
+    $_SESSION['street'] = $row['street'];
+    $_SESSION['streetnr'] = $row['streetnr'];
+    $_SESSION['postcode'] = $row['post'];
+    $_SESSION['city'] = $row['city'];
+    $_SESSION['regdate'] = $row['reg_date'];
   }
     header("Location: index.php?section=profile");
   } else {
