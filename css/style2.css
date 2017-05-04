@@ -174,12 +174,7 @@ form{
   background: white;
 
   }
-  input{
-  border-radius: 5px;
-  width: 20%;
-  margin: 10px;
-  text-align: left;
-  }
+
   input:hover{
     background: lightblue;
   }
@@ -312,7 +307,7 @@ background: green;
  }
 
 .container-padding{
-  padding: 50px;
+  padding: 200px 50px;
 }
 .jumbotron{
   background-color: white;
@@ -329,6 +324,9 @@ background: green;
 .social-list{
   display:inline;
   list-style-type: none;
+}
+.social-list li {
+  padding: 2px;
 }
 .social-list i {
   margin: 5px;
@@ -353,6 +351,11 @@ kbd{
 .col-sm-8 {
   text-align: left;
 }
+
+.bg-red {
+background-color: #af1136;
+}
+
 .bg-home{
   background-image: url('/img/content/home.jpg');
   background-repeat: no-repeat;
@@ -390,10 +393,9 @@ kbd{
 }
 
 .bg-sup{
-  background-image: url('\img\content\books-in-shelf-close-up-picjumbo-com.jpg');
+  background-image: url('/img/content/bookshelf.jpg');
   background-repeat: no-repeat;
-  background-size: 100% 100%;
-  overflow: hidden;
+  background-size: 100%;
   min-height: 600px;
   color: white;
 }
@@ -403,4 +405,11 @@ kbd{
 }
 .tab-border {
   border: 1px solid black;
+}
+.social-iconlist li {
+  text-decoration: none;
+  display: inline;
+  list-style-type: none;
+  float: left;
+  margin: 5px;
 }

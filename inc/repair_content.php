@@ -3,30 +3,81 @@
 </div>
 <div class="main">
   <!--Info-->
-  <div class="container-fluid bg-grey container-padding">
+  <div class="container-fluid bg-grey container-padding" style="background-color: #a2ff77;">
   <div class="info-box">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
   </div>
 
   <div class="container-fluid container-padding">
-  <h2>Wir unterstützen folgende Hersteller:</h2>
-  <div class="models-raster">
-    <img src="img/logos/amiga.png" alt="Amiga"/>
-    <img src="img/logos/atari.png" alt="Atari"/>
-    <img src="img/logos/comm.png" alt="Commodore"/>
-    <img src="img/logos/nin.png" alt="Nintendo"/>
-    <img src="img/logos/sega.png" alt="Sega"/>
-    <img src="img/logos/sony.png" alt="Sony"/>
+  <h3>Wir unterstützen folgende Hersteller: </h3>
+  <hr>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-2">
+        <div class="well">
+<img class="img img-responsive" src="img/logos/amiga.png" alt="Amiga"/>
+        </div>
+      </div>
+      <div class="col-sm-2">
+          <div class="well">
+    <img class="img img-responsive" src="img/logos/atari.png" alt="Atari"/>
+      </div>
+      </div>
+      <div class="col-sm-2">
+          <div class="well">
+    <img class="img img-responsive" src="img/logos/comm.png" alt="Commodore"/>
+      </div>
+      </div>
+      <div class="col-sm-2">
+          <div class="well">
+    <img class="img img-responsive" src="img/logos/nin.png" alt="Nintendo"/>
+      </div>
+      </div>
+      <div class="col-sm-2">
+          <div class="well">
+        <img class="img img-responsive" src="img/logos/sega.png" alt="Sega"/>
+      </div>
+      </div>
+      <div class="col-sm-2">
+          <div class="well">
+        <img class="img img-responsive" src="img/logos/sony.png" alt="Sony"/>
+      </div>
+      </div>
   </div>
   </div>
-  <div class="container-fluid bg-grey container-padding">
-  <div class="step">1.Schritt: Formular ausfüllen und abschicken</div>
-  <div class="step">2.Schritt: Konsole verpacken und verschicken</div>
-  <div class="step">3.Schritt: Reperatur durch unsere Mitarbeiter</div>
-  <div class="step">4.Schritt: Retro-Spielevergnügen erneut genießen!</div>
+  <hr>
+  </div>
+
+  <div class="container-fluid bg-grey container-padding" style="background-color: #adc1ff;">
+    <div class="row">
+<div class="col-sm-3">
+  <div class="panel panel-default">
+    <hr>
+    1.Schritt: Formular ausfüllen und abschicken
+  </div>
+</div>
+<div class="col-sm-3">
+  <div class="panel panel-default">
+    <hr>
+    2.Schritt: Konsole verpacken und verschicken
+  </div>
+</div>
+<div class="col-sm-3">
+  <div class="panel panel-default">
+    <hr>
+    3.Schritt: Reperatur durch unsere Mitarbeiter
+  </div>
+</div>
+<div class="col-sm-3">
+  <div class="panel panel-default">
+    <hr>
+    4.Schritt: Retro-Spielevergnügen erneut genießen!
+  </div>
+</div>
+</div>
 </div>
 
 <!--Formular Reperatur-->
-<div class="container container-padding">
+<div class="container-fluid container-padding" style="background-color: #8ce2ff;">
   <h2>Reperaturauftrag erstellen.</h2>
   <div class="panel panel-default ">
     <div class="panel-heading">

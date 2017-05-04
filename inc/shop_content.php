@@ -58,11 +58,9 @@ if(isset($_POST['submit'])){
 <?php
 if (mysqli_num_rows($shop_item) > 0) {
   while($row = mysqli_fetch_array($shop_item)){?>
-
-    <div class="container">
       <div class="well">
     <div class="row">
-      <div class="col-sm-5">
+      <div class="col-sm-4">
     <img src="<?php echo $row['image_link'] ?>" class="img-thumbnail img-responsive" width="300px" height="250px"></img>
     </div>
     <div class="col-sm-5 text-left">
@@ -71,7 +69,7 @@ if (mysqli_num_rows($shop_item) > 0) {
       <p style="color: red; float:right;"><?php echo $row['price'] ?>€</p>
     </div>
 
-    <div class="col-sm-2">
+    <div class="col-sm-3">
       <form method="post" action="">
         <input type="hidden" name="product_id" value="<?php echo $row['product_id']?>"/>
         <input type="hidden" name="title" value="<?php echo $row['title'] ?>"/>
@@ -81,7 +79,7 @@ if (mysqli_num_rows($shop_item) > 0) {
     </div>
     </div>
     </div>
-  </div>
+    <hr>
 <?php  }} ?>
 
 </div>

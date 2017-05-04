@@ -17,6 +17,17 @@
 
 </head>
 <body>
+
+  <script type='text/javascript'>
+
+  $(document).ready(function() {
+// get current URL path and assign 'active' class
+var pathname = window.location.pathname;
+$('.nav > li > a[href="'+pathname+'"]').parent().addClass('active');
+
+})
+    </script>
+
 <nav class="navbar navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -32,7 +43,7 @@
 	</ul>
     <ul class="nav navbar-nav navbar-right">
     <li><a href="index.php?section=login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-    <li><a href="index.php?section=register"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+    <li><a href="index.php?section=register"><span class="glyphicon glyphicon-user"></span> Registrieren</a></li>
     </ul>
   </div>
 </div>
