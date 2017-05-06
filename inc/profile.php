@@ -82,16 +82,16 @@
         </thead>
         <tbody>
             <tr><td>Straße:</td>
-  <td><?php echo $_SESSION['street']?></td>
+  <td><?php echo $_SESSION['street'] ?></td>
             </tr>
             <tr><td>Hausnummer:</td>
-  <td><?php echo $_SESSION['streetnr']?></td>
+  <td><?php echo $_SESSION['streetnr'] ?></td>
             </tr>
             <tr><td>Postleitzahl:</td>
-  <td><?php echo $_SESSION['postcode']?></td>
+  <td><?php echo $_SESSION['postcode'] ?></td>
             </tr>
             <tr><td>Stadt:</td>
-  <td><?php echo $_SESSION['city']?></td>
+  <td><?php echo $_SESSION['city'] ?></td>
             </tr>
         </tbody>
       </table>
