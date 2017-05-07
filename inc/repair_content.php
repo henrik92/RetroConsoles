@@ -51,26 +51,30 @@
     <div class="row">
 <div class="col-sm-3">
   <div class="panel panel-default">
+      <h5>1.Schritt: </h5>
     <hr>
-    1.Schritt: Formular ausfüllen und abschicken
+  <p>Formular ausfüllen und abschicken</p>
   </div>
 </div>
 <div class="col-sm-3">
   <div class="panel panel-default">
+    <h5>2.Schritt</h5>
     <hr>
-    2.Schritt: Konsole verpacken und verschicken
+    <p>Konsole verpacken und verschicken</p>
   </div>
 </div>
 <div class="col-sm-3">
   <div class="panel panel-default">
+    <h5>3. Schritt: </h5>
     <hr>
-    3.Schritt: Reperatur durch unsere Mitarbeiter
+    <p>Reperatur durch unsere Mitarbeiter</p>
   </div>
 </div>
 <div class="col-sm-3">
   <div class="panel panel-default">
+<h5>4.Schritt</h5>
     <hr>
-    4.Schritt: Retro-Spielevergnügen erneut genießen!
+    <p>Retro-Spielevergnügen erneut genießen!</p>
   </div>
 </div>
 </div>

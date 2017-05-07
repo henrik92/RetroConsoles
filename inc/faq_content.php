@@ -105,7 +105,7 @@
     <?php } else {?>
       <h5>Name: <input name="name" type="text" placeholder="Name"></input></h5>
       <?php } ?>-->
-      <div class="container container-padding" style="background-color: #514b4d">
+      <div class="container container-padding text-left" style="background-color: #514b4d;">
       <div class="container-fluid">
 
     <div class="row">
@@ -122,13 +122,13 @@
 
     <div class="container-fluid">
   <div class="row">
-    <div class="col-sm-8">
+    <div class="col-sm-6">
       <br><br>
       Straße:<br>
       <input type="text text-left"></input>
       <br><br>
     </div>
-    <div class="col-sm-4">
+    <div class="col-sm-6">
       <br><br>
       Hausnummer:<br>
       <input type="text"></input>
@@ -139,13 +139,13 @@
 
   <div class="container-fluid">
 <div class="row">
-  <div class="col-sm-4">
+  <div class="col-sm-6">
     <br><br>
     PLZ:<br>
     <input type="text"></input>
     <br><br>
   </div>
-  <div class="col-sm-8">
+  <div class="col-sm-6">
     <br><br>
     Ort:<br>
     <input type="text"></input>
@@ -156,13 +156,13 @@
 
 <div class="container-fluid">
 <div class="row">
-<div class="col-sm-4">
+<div class="col-sm-6">
   <br><br>
   Vorwahl:<br>
   <input type="text"></input>
   <br><br>
 </div>
-<div class="col-sm-8">
+<div class="col-sm-6">
   <br><br>
 Telefonnummer:<br>
 <input type="text"></input>
@@ -207,7 +207,7 @@ Telefonnummer:<br>
 <div class="container-fluid">
 <div class="row">
 <div class="col-sm-12">
-  <button class="btn btn-hover">Abschicken</button>
+  <button style="color:black;" class="btn btn-hover">Abschicken</button>
 </div>
 </div>
 </div>
