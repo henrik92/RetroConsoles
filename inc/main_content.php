@@ -4,7 +4,7 @@
   <br><br><br>
 </div>
 
-<div class="container-fluid bg-grey container-padding">
+<div class="container-fluid container-padding">
   <div class="row">
     <div class="col-sm-4">
   <i class="fa fa-gamepad fa-5x" aria-hidden="true"></i>

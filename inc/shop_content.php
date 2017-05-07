@@ -26,11 +26,11 @@ if(isset($_POST['submit'])){
 }
 }
  ?>
-<div class="container-fluid">
-<div class="jumbotron banner-bot-border">
+
+<div class="jumbotron banner-bot-border bg-shop">
   <h1>Onlineshop</h1>
 </div>
-</div>
+
 <div class="container-fluid bg-grey container-padding">
   <div class="row">
     <div class="col-sm-9" style="float:left; border-right: 1px solid lightgrey;">

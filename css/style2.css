@@ -385,11 +385,12 @@ background-color: #af1136;
 }
 
 .bg-shop{
-  background-image: url('/img/content/home.jpg');
+  background-image: url('/img/content/happycontrollercollage.jpg');
   background-repeat: no-repeat;
   background-size: 100% 100%;
   overflow: hidden;
   min-height: 600px;
+  background-color: white;
   color: white;
 }
 
