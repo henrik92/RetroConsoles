@@ -26,23 +26,17 @@ if(isset($_POST['submit'])){
 }
 }
  ?>
-
-<div class="jumbotron banner-bot-border bg-shop">
-  <h1>Onlineshop</h1>
-</div>
-
-<div class="container-fluid bg-grey container-padding">
+<div class="container-fluid container-padding" style="background-color: black; color: white;">
   <div class="row">
-    <div class="col-sm-9" style="float:left; border-right: 1px solid lightgrey;">
+    <div class="col-sm-9" style="float:left;">
 
       <h1>Artikelübersicht.</h1></br>
       <?php
       if (mysqli_num_rows($shop_item) > 0) {
       while($row = mysqli_fetch_array($shop_item)){?>
-        <div class="well">
+        <div class="well well-border" style="background-color: black; color: white;">
           <div class="container-fluid text-left">
-            <h4><u><?php echo $row['title'] ?></u></h4>
-            <hr>
+            <h4><?php echo $row['title'] ?></h4>
           </div>
           <div class="container-fluid">
       <div class="row">
@@ -52,7 +46,7 @@ if(isset($_POST['submit'])){
       </div>
 
       <div class="col-sm-6 text-left">
-          <table class="table table-condensed">
+          <table class="table table-condensed" style="color: white; ">
           <thead>
             <tr>
             <th>Informationen:</th>
@@ -92,18 +86,19 @@ if(isset($_POST['submit'])){
       </form>
       </div>
     </div>
-      <hr>
       <?php  }} ?>
       </div>
     <div class="col-sm-3" style="position:fixed; right: 0px;">
-      <h1>Warenkorb.</h1></br>
-      <div class="well">
-      <table class=" table table-striped ">
+      <h1>Warenkorb</h1></br>
+      <div class="well" style="background-color: dimgrey;">
+      <table class="table" style="color: white;">
+        <thead>
         <tr>
           <th>Artikel</th>
           <th>Preis</th>
           <th>Entf.</th>
         </tr>
+      </thead>
       <?php  if(!isset($cart)){ ?>
       <tr><td><p>Keine Artikel im Warenkorb.</p></td>
     <td></td>
@@ -112,7 +107,7 @@ if(isset($_POST['submit'])){
       </tr>
       <?php } ?>
       </table>
-      <button class="main_button">Zur Kasse</button>
+      <button class="btn btn-success">Zur Kasse</button>
     </div>
     </div>
     </div>

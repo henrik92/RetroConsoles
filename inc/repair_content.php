@@ -1,7 +1,8 @@
 <div class="jumbotron banner-bot-border">
   <h1>Retro - Reperaturservice</h1>
 </div>
-<div class="main">
+
+<div class="container-fluid"
   <!--Info-->
   <div class="container-fluid bg-grey container-padding" style="background-color: #a2ff77;">
   <div class="info-box">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>

@@ -9,24 +9,20 @@ function GoogleMap(){
 -->
 <div class="container-fluid footer footer-header">
 </div>
-<div class="container-fluid footer footer-main">
+<div class="container-fluid footer footer-main" style="background-color: black; color: white;">
 <div class="row">
-  <div class="col-sm-3">
-      <span class="fa fa-gamepad fa-5x"></span></br>
-      <kbd>RetroConsoles</kbd>
-      <!--<script src="http://maps.googleapis.com/maps/api/js?key=API_KEY&callback=myMap"></script>"-->
-    </div>
-    <div class="col-sm-2 text-left">
+
+    <div class="col-sm-5 text-left">
       <b>Kontakt.</b>
       <ul class="social-list">
-        <li>RetroConsoles AG</li>
+        <li>OldConsole AG</li>
         <li>Musterstraße 1</li>
         <li>26382 Wilhelmshaven</li>
       </ul>
   </div>
 <div class="col-sm-4 text-left">
   <ul class="social-list">
-    <li><span class="fa fa-envelope-open"> info@retroconsoles.de</span></li>
+    <li><span class="fa fa-envelope-open"> info@oldconsole.de</span></li>
     <li><span class="fa fa-phone"> 42424/121212</span></li>
     <li><span class="fa fa-file-text-o"> <a href"">Zum Kontaktformular</a></span></li>
     </ul>
@@ -45,10 +41,10 @@ function GoogleMap(){
 </div>
 </div>
 </div>
-<div class="container-fluid footer footer-bot">
+<div class="container-fluid footer" style="background-color: black; color: white;">
 <div class="row">
     <div class="col-sm-3">
-    <p>Copyright <i class="fa fa-copyright"></i> 2017 RetroConsoles </p>
+    <p>Copyright <i class="fa fa-copyright"></i> 2017 OldConsole </p>
     </div>
     <div class="col-sm-3">
     <a href="#"><p><u>Datenschutz</u></p></a>

@@ -17,34 +17,25 @@
 
 </head>
 <body>
-
-  <script type='text/javascript'>
-
-  $(document).ready(function() {
-// get current URL path and assign 'active' class
-var pathname = window.location.pathname;
-$('.nav > li > a[href="'+pathname+'"]').parent().addClass('active');
-
-})
-    </script>
-
-<nav class="navbar navbar-fixed-top">
+<div class="container-fluid" style="margin-bottom: 1px;">
+<nav class="navbar navbar-fixed-top navbar-static-top">
   <div class="container-fluid">
-    <div class="navbar-header">
-    <span class="fa fa-gamepad fa-3x"></span>
-    </div>
-    <div class="navbar-collapse" id="#ToggleNavbar">
-    <ul class="nav navbar-nav">
-      <li><a href="index.php?section=home">Home</a></li>
-      <li><a href="index.php?section=aboutus">Über uns</a></li>
-      <li><a href="index.php?section=repair">Reperatur</a></li>
-      <li><a href="index.php?section=shop">Shop</a></li>
-      <li><a href="index.php?section=faq">Support</a></li>
-	</ul>
     <ul class="nav navbar-nav navbar-right">
     <li><a href="index.php?section=login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
     <li><a href="index.php?section=register"><span class="glyphicon glyphicon-user"></span> Registrieren</a></li>
     </ul>
   </div>
+  <div class="container-fluid text-center">
+    <p><img class="img img-responsive" style="width: 20%; margin-left: auto; margin-right: auto;" src="/img/Logo_oldkonsole_klein.png"></img></p>
+  </div>
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li><a href="index.php?section=home">Startseite</a></li>
+      <li><a href="index.php?section=repair">Reparatur</a></li>
+      <li><a href="index.php?section=shop">Shop</a></li>
+      <li><a href="index.php?section=faq">Tipps & Tricks</a></li>
+      <li><a href="index.php?section=aboutus">Über uns</a></li>
+	</ul>
 </div>
 </nav>
+</div>

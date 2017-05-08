@@ -29,11 +29,11 @@
       </div>
       <div class="navbar-collapse">
       <ul class="nav navbar-nav">
-        <li><a href="index.php?section=home">Home</a></li>
-        <li><a href="index.php?section=aboutus">Über uns</a></li>
-        <li><a href="index.php?section=repair">Reperatur</a></li>
+        <li><a href="index.php?section=home">Startseite</a></li>
+        <li><a href="index.php?section=repair">Reparatur</a></li>
         <li><a href="index.php?section=shop">Shop</a></li>
-        <li><a href="index.php?section=faq">Support</a></li>
+        <li><a href="index.php?section=faq">Tipps & Tricks</a></li>
+          <li><a href="index.php?section=aboutus">Über uns</a></li>
   	</ul>
       <ul class="nav navbar-nav navbar-right">
       <li><a href="index.php?section=profile"> <span class="glyphicon glyphicon-user"></span> Hallo, <?php echo $_SESSION['vorname'] ?></a></li>
