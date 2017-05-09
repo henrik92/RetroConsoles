@@ -36,7 +36,7 @@
 </div>
 </div>
 <br><br>
-<input style="width:40%;"class="btn btn-success font-black" type="Submit" id ="submit" name="submit" value="Jetzt registrieren." />
+<input style="width:40%;"class="btn btn-success font-white" type="Submit" id ="submit" name="submit" value="Jetzt registrieren." />
 </form>
 <br><br>
 </div>

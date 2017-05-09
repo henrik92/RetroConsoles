@@ -4,10 +4,62 @@
 
   <div class="container bg-black">
     <div class="row">
-      <div class="col-sm-12 bg-black">
+      <div class="col-sm-6 bg-black">
         <div class="panel panel-default bg-black">
           <div class="panel-heading bg-black">
-            Accountfunktionen
+              <strong>Persönliche Informationen</strong>
+          </div>
+          <div class="panel-body bg-black">
+            <div class="row">
+              <div class="col-sm-4"> AVATAR PICTURE
+              </div>
+              <div class="col-sm-8">
+          <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+              <th>Stammdaten</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Kundennummer:</td>
+              <td><?php echo $_SESSION['user_id']?></td>
+              <tr>
+            <tr><td>Titel:</td>
+                <td>Herr</td>
+              <tr>
+            <tr><td>Vorname:</td>
+    <td><?php echo $_SESSION['vorname']?></td>
+              <tr>
+            <tr><td>Nachname:</td>
+    <td><?php echo $_SESSION['name']?></td>
+              <tr>
+            <tr><td>Geburtsdatum:</td>
+      <td>01.01.2000</td>
+              <tr>
+            <tr><td>E-Mail-Adresse:</td>
+    <td><?php echo $_SESSION['email']?></td>
+  </tr>
+            <tr><td>Telefonnummer:</td>
+  <td>12345/6789</td>
+            </tr>
+            <tr><td>Mitglied seit:</td>
+      <td><?php echo $_SESSION['regdate']?></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+      <div class="col-sm-6 bg-black">
+        <div class="panel panel-default bg-black">
+          <div class="panel-heading bg-black">
+            <strong>Accountfunktionen</strong>
           </div>
           <div class="panel-body bg-black font-black">
             <button class="btn" type="button" value="Editieren">Reperaturauftrag erstellen</button><br>
@@ -19,6 +71,7 @@
           </div>
         </div>
       </div>
+
     </div>
   </div>
 </div>
@@ -27,54 +80,15 @@
   <div class="row">
     <div class="col-sm-6 bg-black">
   <div class="panel panel-default bg-black">
-    <div class="panel-heading bg-black"><b>Deine persönlichen Informationen</b></div>
+    <div class="panel-heading bg-black"><strong>Adressdaten</strong></div>
     <div class="panel-body bg-black">
       <div class="row">
-      <div class="col-sm-6">
-        <div class="table-responsive">
-        <table class="table">
-          <thead>
-            <tr>
-            <th>Stammdaten</th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Kundennummer:</td>
-            <td><?php echo $_SESSION['user_id']?></td>
-            <tr>
-          <tr><td>Titel:</td>
-              <td>Herr</td>
-            <tr>
-          <tr><td>Vorname:</td>
-  <td><?php echo $_SESSION['vorname']?></td>
-            <tr>
-          <tr><td>Nachname:</td>
-  <td><?php echo $_SESSION['name']?></td>
-            <tr>
-          <tr><td>Geburtsdatum:</td>
-    <td>01.01.2000</td>
-            <tr>
-          <tr><td>E-Mail-Adresse:</td>
-  <td><?php echo $_SESSION['email']?></td>
-</tr>
-          <tr><td>Telefonnummer:</td>
-<td>12345/6789</td>
-          </tr>
-          <tr><td>Mitglied seit:</td>
-    <td><?php echo $_SESSION['regdate']?></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-      </div>
       <div class="col-sm-6 bg-black">
         <div class="table-responsive bg-black">
         <table class="table bg-black">
           <thead>
             <tr>
-            <th>Lieferadresse</th>
+            <th>Rechnungsadresse</th>
             <th></th>
           </tr>
         </thead>
@@ -94,6 +108,37 @@
         </tbody>
       </table>
     </div>
+    <form method="post" action="">
+    <input type="checkbox" name="pay_address" value="address">Abweichende Lieferadresse</input>
+  </form>
+  </div>
+  <div class="col-sm-6">
+    <?php if (isset($_POST['address'])){ ?>
+      <div class="table-responsive bg-black">
+      <table class="table bg-black">
+        <thead>
+          <tr>
+          <th>Lieferadresse</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr><td>Straße:</td>
+<td><?php echo $_SESSION['street'] ?></td>
+          </tr>
+          <tr><td>Hausnummer:</td>
+<td><?php echo $_SESSION['streetnr'] ?></td>
+          </tr>
+          <tr><td>Postleitzahl:</td>
+<td><?php echo $_SESSION['postcode'] ?></td>
+          </tr>
+          <tr><td>Stadt:</td>
+<td><?php echo $_SESSION['city'] ?></td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+    <?php } ?>
   </div>
     </div>
   </div>

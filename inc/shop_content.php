@@ -4,32 +4,45 @@ include "inc/database_connection.php";
 $sql = "SELECT * FROM shop";
 $shop_item = mysqli_query($conn, $sql);
 
-if(isset($_POST['submit'])){
-  if(isset($_SESSION['cart'])){
-    //Prüfen ob Produkt bereits in Warenkorb ist
-    $product_check_id = array_column($_SESSION['cart'], "product_id");
-    if(!in_array($_POST['product_id'], $product_check_id)){
-      $cart = array(
-        'product_id' => $_POST['product_id'],
-        'title' => $_POST['title'],
-        'price' => $_POST['price']);
-    } else {
-      echo '<script>alert("Products already added to cart")</script>';
-      echo '<script>window.location="index.php"</script>';
-    }
-} else {
-  $cart = array(
-    'product_id' => $_POST['product_id'],
-    'title' => $_POST['title'],
-    'price' => $_POST['price']
- );
+$_SESSION['sum'];
+
+if(!isset($_SESSION['cart'])){
+  //Shopping Cart Session nicht gesetzt - Keine Artikel im Warenkorb
+  $_SESSION['cart'] = array();
+  $_SESSION['sum'] = 0;
 }
+if(isset($_POST['add_item'])){
+  $add_id = $_POST['product_id'];
+  $title = $_POST['title'];
+  $price = $_POST['price'];
+  if(isset($_SESSION['cart'][$add_id])){
+    echo "Artikel bereits vorhanden!";
+  } else {
+  $cart_row = array('ID' => $add_id, 'Artikel' => $title ,'Preis' => $price , );
+  $_SESSION['cart'][$add_id] = $cart_row;
+  $_SESSION['sum'] = $_SESSION['sum'] + $price;
+  echo "Artikel erfolgreich hinzugefügt!";
+}
+}
+  //Item entfernen
+if (isset ($_POST['delete_item'])){
+  $delete_id = $_POST['delete_id'];
+  $_SESSION['sum'] = $_SESSION['sum'] - $_SESSION['cart'][$delete_id]['Preis'];
+  unset($_SESSION['cart'][$delete_id]);
+} else {
+  echo "Fehler: Artikel konnte nicht gelöscht werden.";
+}
+
+if (isset ($_POST['delete_cart'])){
+ unset($_SESSION['cart']);
+ $_SESSION['sum'] = 0;
 }
  ?>
-<div class="container container-padding first-padding bg-black">
-  <div class="row">
-    <div class="col-sm-9" style="float:left;">
 
+<div class="container first-padding bg-black">
+  <div class="container-fluid bg-black">
+  <div class="row">
+    <div class="col-sm-8" style="float:left;">
       <h1>Artikelübersicht.</h1></br>
       <?php
       if (mysqli_num_rows($shop_item) > 0) {
@@ -82,13 +95,13 @@ if(isset($_POST['submit'])){
           <input type="hidden" name="product_id" value="<?php echo $row['product_id']?>"/>
           <input type="hidden" name="title" value="<?php echo $row['title'] ?>"/>
           <input type="hidden" name="price" value="<?php echo $row['price'] ?>"/>
-          <button type"submit" name="add" class="btn btn-warning" style="float:right;"><i class="fa fa-cart-plus fa-1x"></i> In den Warenkorb</button>
+          <button type"submit" name="add_item" class="btn btn-warning" style="float:right;"><i class="fa fa-cart-plus fa-1x"></i> In den Warenkorb</button>
       </form>
       </div>
     </div>
       <?php  }} ?>
       </div>
-    <div class="col-sm-3" style="position:fixed; right: 0px;">
+    <div class="col-sm-4 auto-margin" style="position:fixed; right: 0px;">
       <h1>Warenkorb</h1></br>
       <div class="well" style="background-color: dimgrey;">
       <table class="table" style="color: white;">
@@ -96,19 +109,48 @@ if(isset($_POST['submit'])){
         <tr>
           <th>Artikel</th>
           <th>Preis</th>
-          <th>Entf.</th>
+          <th>Entfernen</th>
         </tr>
       </thead>
-      <?php  if(!isset($cart)){ ?>
-      <tr><td><p>Keine Artikel im Warenkorb.</p></td>
-    <td></td>
-      <td></td>
-        <td></td>
+      <?php  if(empty($_SESSION['cart'])){ ?>
+      <tr>
+        <td><p>Keine Artikel im Warenkorb.</p></td>
       </tr>
-      <?php } ?>
+        <?php } else {
+          foreach ($_SESSION['cart'] as $id => $product) {
+            ?>
+            <tr>
+            <td> <?php echo $product['Artikel'] ?> </td>
+            <td> <?php echo $product['Preis'] ?> €</td>
+            <td> <form method="post" action="" >
+              <input type="hidden" name="delete_id" value="<?php echo $product['ID']?>" />
+              <button type"submit" name="delete_item" class="btn btn-danger" value="<?php echo $product['ID']?>"><i class="fa fa-times fa-1x"></i></button>
+          </form>
+            </td>
+          </tr>
+          <?php  }} ?>
+          <br><br>
+          <tr>
+            <td>  Gesamtsumme: </td>
+            <td><?php echo $_SESSION['sum']; ?> €</td>
+          </tr>
       </table>
-      <button class="btn btn-success">Zur Kasse</button>
+      <br><br>
+      <div class="container-fluid">
+        <div class="row">
+      <div class="col-sm-6">
+        <form action="" method="post">
+      <button type="submit" class="btn btn-danger" name="delete_cart">Warenkorb löschen</button>
+    </form>
+      </div>
+      <div class="col-sm-6">
+        <form action="" method="post">
+      <button type="submit" class="btn btn-success" name="finish">Zur Kasse</button>
+        </form>
     </div>
     </div>
     </div>
   </div>
+</div>
+</div>
+</div>

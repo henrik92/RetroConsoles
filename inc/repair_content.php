@@ -1,6 +1,14 @@
   <div class="container-fluid bg-black first-padding">
   <div class="container bg-black font-white">
-  <div class="info-box">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+    <h1>
+        Reparaturservice
+    </h1>
+    <h5> - Schnelle Hilfe für deine Konsole - </h5>
+    <br>
+    <p>Gerade ältere Konsolen sind oft nur schwer zu beschaffen bzw. zu reparieren, erst Recht wenn die Hersteller die Produktion bereits eingestellt haben. <br>
+    Ganz egal ob deine Konsole regelmäßig abstürzt, der Controller nicht korrekt funktioniert oder das Laufwerk keine Spiele mehr liest  -
+    Unser Reparaturteam hilft dir weiter!<br>
+    Unabhängig vom Hersteller sorgen wir für schnelle Abhilfe bei einem fairen Preis.</p>
   </div>
 
   <div class="container container-padding bg-black">
@@ -50,6 +58,8 @@
   <div class="panel panel-default">
       <h5>1.Schritt: </h5>
     <hr>
+    <br>
+    <i class="fa fa-pencil-square-o fa-5x"></i>
     <br><br>
   <p>Formular ausfüllen und abschicken</p>
   <br><br>
@@ -59,6 +69,8 @@
   <div class="panel panel-default">
     <h5>2.Schritt</h5>
     <hr>
+    <br>
+    <i class="fa fa-cube fa-5x"></i>
     <br><br>
     <p>Konsole verpacken und verschicken</p>
     <br><br>
@@ -68,6 +80,8 @@
   <div class="panel panel-default">
     <h5>3. Schritt: </h5>
     <hr>
+    <br>
+    <i class="fa fa-hourglass-half fa-5x" aria-hidden="true"></i>
     <br><br>
     <p>Angebot unserer Mitarbeiter abwarten</p>
     <br><br>
@@ -77,6 +91,8 @@
   <div class="panel panel-default">
 <h5>4.Schritt</h5>
     <hr>
+    <br>
+    <i class="fa fa-handshake-o fa-5x" aria-hidden="true"></i>
     <br><br>
     <p>Annahme oder Ablehnung des Angebots</p>
     <br><br>
