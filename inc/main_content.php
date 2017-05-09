@@ -5,9 +5,8 @@
 
 <div class="container-fluid container-padding bg-black">
   <h3><strong>Unser Service für dich :</strong></h3>
-  <br>
-  <br>
-<div class="container-fluid box-padding">
+<br><br>
+<div class="container-fluid ">
 <div class="row">
   <div class="col-sm-4">
     <i class="fa fa-cogs fa-5x"></i>

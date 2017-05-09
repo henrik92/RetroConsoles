@@ -8,7 +8,6 @@ body {
   text-align: center;
   background-color: #000000;
   color: white;
-  padding-top: 100px;
 }
 span, i{
 vertical-align: top;
@@ -430,7 +429,7 @@ background-color: #af1136;
   padding-bottom: 15px;
 }
 .box-padding {
-  padding: 10px;
+  padding-top: 100px;
 }
 .well-border {
   border: 1px solid darkgrey;
@@ -446,7 +445,7 @@ background-color: #af1136;
   margin-right: auto;
 }
 .first-padding {
-  padding-top: 250px;
+  padding-top: 200px;
 }
 .text-padding {
   padding-left: 5%;

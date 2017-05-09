@@ -29,8 +29,6 @@ if (isset ($_POST['delete_item'])){
   $delete_id = $_POST['delete_id'];
   $_SESSION['sum'] = $_SESSION['sum'] - $_SESSION['cart'][$delete_id]['Preis'];
   unset($_SESSION['cart'][$delete_id]);
-} else {
-  echo "Fehler: Artikel konnte nicht gelöscht werden.";
 }
 
 if (isset ($_POST['delete_cart'])){
@@ -39,8 +37,8 @@ if (isset ($_POST['delete_cart'])){
 }
  ?>
 
-<div class="container first-padding bg-black">
-  <div class="container-fluid bg-black">
+<div class="container-fluid bg-black">
+  <div class="container-fluid box-padding bg-black">
   <div class="row">
     <div class="col-sm-8" style="float:left;">
       <h1>Artikelübersicht.</h1></br>
@@ -101,9 +99,9 @@ if (isset ($_POST['delete_cart'])){
     </div>
       <?php  }} ?>
       </div>
-    <div class="col-sm-4 auto-margin" style="position:fixed; right: 0px;">
-      <h1>Warenkorb</h1></br>
-      <div class="well" style="background-color: dimgrey;">
+    <div class="col-sm-4" style="position:fixed; right: 0px;">
+      <h1>Warenkorb</h1>
+      <div class="well well-sm bg-black font-white">
       <table class="table" style="color: white;">
         <thead>
         <tr>
@@ -135,7 +133,6 @@ if (isset ($_POST['delete_cart'])){
             <td><?php echo $_SESSION['sum']; ?> €</td>
           </tr>
       </table>
-      <br><br>
       <div class="container-fluid">
         <div class="row">
       <div class="col-sm-6">

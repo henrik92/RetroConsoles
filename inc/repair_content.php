@@ -13,7 +13,6 @@
 
   <div class="container container-padding bg-black">
   <h3>Wir unterstützen folgende Hersteller: </h3>
-  <hr>
   <div class="container bg-black">
     <div class="row">
       <div class="col-sm-2">
@@ -108,9 +107,9 @@
     <div class="panel-heading bg-black">
   <ul class="nav nav-tabs bg-black" >
     <li class="active"><a data-toggle="tab" href="#console">Deine Konsole</a></li>
-    <li><a data-toggle="tab" href="#account">Persönliche Informationen</a></li>
-    <li><a data-toggle="tab" href="#payment">Liefer-/Rechnungsadresse</a></li>
-    <li><a data-toggle="tab" href="#shipping">Zahlungsmöglichkeiten</a></li>
+    <li><a data-toggle="tab" href="#account">Persönliches</a></li>
+    <li><a data-toggle="tab" href="#payment">Addressdaten</a></li>
+    <li><a data-toggle="tab" href="#shipping">Zahlung</a></li>
     <li><a data-toggle="tab" href="#account">Übersicht</a></li>
 </ul>
   </div>
