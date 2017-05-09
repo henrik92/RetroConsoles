@@ -1,22 +1,45 @@
-<div class="jumbotron banner-bot-border bg-about">
-<h1>Unser Unternehmen</h1>
-</div>
-<div class="container-fluid container-padding">
+<div class="container-fluid container-padding first-padding">
   <p>Herzlich Willkommen zu RetroKonsolen, dein Partner wenn es um Spielekonsolen geht.</p>
 </div>
 <div class="container-fluid container-padding">
-  <p>Wir bieten Reperaturen an.</p>
+  <p>Some text.</p>
 </div>
-<div class="container-fluid container-padding">
-  <p>Unser Team:</p>
-  <div class="member-box">
-    <div class="member">Member1
+<div class="container container-padding  bg-black">
+  <h3>Unser Team:</h3>
+  <div class="container-fluid bg-black">
+    <div class="row">
+      <div class="col-sm-6 font-black">
+        <div class="panel">
+          <br><br>
+          Member1
+          <br><br>
+        </div>
+      </div>
+      <div class="col-sm-6 font-black">
+        <div class="panel">
+          <br><br>
+          Member2
+          <br><br>
+        </div>
+      </div>
     </div>
-    <div class="member">Member2
-    </div>
-    <div class="member">Member3
-    </div>
-    <div class="member">Member4
+  </div>
+  <div class="container-fluid bg-black">
+    <div class="row">
+      <div class="col-sm-6 font-black">
+        <div class="panel">
+          <br><br>
+          Member3
+          <br><br>
+        </div>
+      </div>
+      <div class="col-sm-6 font-black">
+        <div class="panel">
+          <br><br>
+          Member4
+          <br><br>
+        </div>
+      </div>
     </div>
   </div>
 </div>

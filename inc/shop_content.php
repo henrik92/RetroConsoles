@@ -26,7 +26,7 @@ if(isset($_POST['submit'])){
 }
 }
  ?>
-<div class="container-fluid container-padding" style="background-color: black; color: white;">
+<div class="container container-padding first-padding bg-black">
   <div class="row">
     <div class="col-sm-9" style="float:left;">
 

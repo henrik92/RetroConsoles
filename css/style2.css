@@ -1,87 +1,23 @@
+@font-face {
+font-family: 'minecraft';
+src: url('/font/Minecraftia-Regular.ttf') format('truetype');
+}
 body {
-  font-family:sans-serif;
-  font: arial;
+  font-family: 'minecraft';
   font-size: 14px;
   text-align: center;
-  background: #f6f6f6;
+  background-color: #000000;
+  color: white;
+  padding-top: 100px;
 }
-
+span, i{
+vertical-align: top;
+}
+a { vertical-align:text-bottom; }
+select {color:black;}
 img .logo{
   width: 3%;
 }
-
-.login{
-float:right;
-height: 100px;
-width: 10%;
-background-color: white;
-}
-
-}
-.info{
-  width: 100%;
-  background-image: linear-gradient(to top, lightgrey 0%, white 100%);
-  padding: 5%;
-  box-sizing: border-box;
-}
-.info-box{
-  margin-left: 20%;
-  margin-right: 20%;
-  border: 1px solid grey;
-  padding: 20px;
-}
-.models{
-  width: 100%;
-  padding: 5%;
-  background: lightgrey;
-  border-top: 1px solid grey;
-}
-.models-raster{
-  text-align: center;
-  width: 60%;
-  height: 150px;
-  margin-left: 20%;
-}
-.models-raster img{
-  width: 10%;
-  height: auto;
-  padding: 20px;
-  display: inline;
-}
-.repair-steps{
-  width: 100%;
-  height: auto;
-  background: lightblue;
-  padding: 5%;
-  text-align: center;
-  border-top: 1px solid grey;
-}
-.step{
-  height: 200px;
-  width: 12.5%;
-  display: inline-block;
-  background: white;
-  border-radius: 10px;
-  border-top: 1px solid grey;
-  border-width: thin;
-  margin-right: 5%;
-  margin-left: 5%;
-  padding: 10px;
-}
-.repair-form{
-  padding: 5%;
-  border-top: 1px solid grey;
-}
-.main{
-  background-color: white;
-  text-align: center;
-}
-label{
-  float: left;
-  display: inline-block;
-  width: 6em;
-}
-
 
 /*SHOP*/
 
@@ -166,11 +102,11 @@ label{
     border: 1px solid black;
   }
   label{
-  margin-left: 10%;
   margin:10px;
-  background: white;
-
+  float: left;
+  display: inline-block;
   }
+
   textarea {
     width: 100%;
     height: 100px;
@@ -324,7 +260,7 @@ background: green;
 }
 .footer-header{
   height: 1px;
-  background-color: grey;
+  background-color: #838384;
 }
 .social-list{
   display:inline;
@@ -399,6 +335,7 @@ background-color: #af1136;
   background-color: #a3e4ff;
   color:white;
 }
+
 .tab-border {
   border: 1px solid black;
 }
@@ -497,4 +434,21 @@ background-color: #af1136;
 }
 .well-border {
   border: 1px solid darkgrey;
+}
+.font-black {
+  color:black;
+}
+.font-white {
+  color:white;
+}
+.auto-margin{
+  margin-left: auto;
+  margin-right: auto;
+}
+.first-padding {
+  padding-top: 250px;
+}
+.text-padding {
+  padding-left: 5%;
+  padding-right: 5%;
 }

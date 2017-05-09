@@ -17,8 +17,8 @@
 
 </head>
 <body>
-<div class="container-fluid" style="margin-bottom: 1px;">
-<nav class="navbar navbar-fixed-top navbar-static-top">
+<div class="container-fluid">
+<nav class="navbar navbar-fixed-top">
   <div class="container-fluid">
     <ul class="nav navbar-nav navbar-right">
     <li><a href="index.php?section=login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>

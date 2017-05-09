@@ -3,8 +3,6 @@
 //DB-Verbindung
 include "inc/database_connection.php";
 
-
-
 //Variablen
 $input = $email = $password = "";
 $input_error = $email_error = $password_error = "";
@@ -72,16 +70,15 @@ if (mysqli_num_rows($result) > 0) {
 }
 ?>
 <!--Login-Formular -->
-<div class="jumbotron bg-home banner-bot-border">
-    <h1>Login.</h1>
-</div>
-<div class="container container-padding">
-<div class="panel panel-default login-panel">
-  <div class="panel-heading">Login</div>
-<div class="panel-body">
+
+<div class="container first-padding bg-black">
+<h2>Login</h2>
+<br><br>
+<div class="panel-body bg-black">
 <form class="form-horizontal" action="" method="post">
   <div class="form-group">
   <label>E-Mail Adresse</label>
+  <hr>
   <div class="input-group">
 <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
   <input type="email" class="form-control" name="email" id="email" placeholder="E-Mail Adresse" required>
@@ -90,19 +87,23 @@ if (mysqli_num_rows($result) > 0) {
   <?php if(isset($email_error))echo "<span><p>" . $email_error . "</p></span><br/>";?>
   <div class="form-group">
   <label>Passwort</label>
+      <hr>
   <div class="input-group">
     <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
   <input type="password" class="form-control" name="password" id="password" placeholder="Passwort" required>
 </div>
 </div>
   <?php if(isset($password_error))echo "<p>" . $password_error . "</p>";?>
-  <div class="checkbox"
-  <label><input type="checkbox">Anmeldedaten merken</label>
+  <div class="container-fluid inline-block text-center">
+  <h5>Anmeldedaten merken<input type="checkbox"></input></h5>
+
 </div>
-  <input class="btn btn-default" type="Submit" id ="submit" name="submit" value="Jetzt einloggen." />
+<br>
+  <input style="width:50%;"class="btn btn-success" type="Submit" id ="submit" name="submit" value="Jetzt einloggen." />
+<br><br>
 </form>
 </div>
-<div class="panel-footer">
+<div class="panel-footer bg-black">
 <p>Neu bei uns? <a style="color: darkblue;" href="index.php?section=register">Hier</a> geht es zur Registrierung.</p>
 </div>
 </div>

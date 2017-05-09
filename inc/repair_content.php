@@ -1,17 +1,12 @@
-<div class="jumbotron banner-bot-border">
-  <h1>Retro - Reperaturservice</h1>
-</div>
-
-<div class="container-fluid"
-  <!--Info-->
-  <div class="container-fluid bg-grey container-padding" style="background-color: #a2ff77;">
+  <div class="container-fluid bg-black first-padding">
+  <div class="container bg-black font-white">
   <div class="info-box">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
   </div>
 
-  <div class="container-fluid container-padding">
+  <div class="container container-padding bg-black">
   <h3>Wir unterstützen folgende Hersteller: </h3>
   <hr>
-  <div class="container">
+  <div class="container bg-black">
     <div class="row">
       <div class="col-sm-2">
         <div class="well">
@@ -45,58 +40,98 @@
       </div>
   </div>
   </div>
-  <hr>
   </div>
 
-  <div class="container-fluid bg-grey container-padding" style="background-color: #adc1ff;">
+  <div class="container bg-black">
+    <h3>Reparatur in nur 4 Schritten</h3>
+    <br>
     <div class="row">
-<div class="col-sm-3">
+<div class="col-sm-3 font-black">
   <div class="panel panel-default">
       <h5>1.Schritt: </h5>
     <hr>
+    <br><br>
   <p>Formular ausfüllen und abschicken</p>
+  <br><br>
   </div>
 </div>
-<div class="col-sm-3">
+<div class="col-sm-3 font-black">
   <div class="panel panel-default">
     <h5>2.Schritt</h5>
     <hr>
+    <br><br>
     <p>Konsole verpacken und verschicken</p>
+    <br><br>
   </div>
 </div>
-<div class="col-sm-3">
+<div class="col-sm-3 font-black">
   <div class="panel panel-default">
     <h5>3. Schritt: </h5>
     <hr>
-    <p>Reperatur durch unsere Mitarbeiter</p>
+    <br><br>
+    <p>Angebot unserer Mitarbeiter abwarten</p>
+    <br><br>
   </div>
 </div>
-<div class="col-sm-3">
+<div class="col-sm-3 font-black">
   <div class="panel panel-default">
 <h5>4.Schritt</h5>
     <hr>
-    <p>Retro-Spielevergnügen erneut genießen!</p>
+    <br><br>
+    <p>Annahme oder Ablehnung des Angebots</p>
+    <br><br>
   </div>
 </div>
 </div>
 </div>
 
 <!--Formular Reperatur-->
-<div class="container-fluid container-padding" style="background-color: #8ce2ff;">
+<div class="container container-padding bg-black">
   <h2>Reperaturauftrag erstellen.</h2>
-  <div class="panel panel-default ">
-    <div class="panel-heading">
-  <ul class="nav nav-tabs" >
-    <li><a data-toggle="tab"  href="#account">Persönliche Informationen</a></li>
-    <li><a data-toggle="tab" href="#payment">Zahlungsdaten</a></li>
-    <li><a data-toggle="tab" href="#shipping">Lieferdaten</a></li>
+  <div class="panel bg-black">
+    <div class="panel-heading bg-black">
+  <ul class="nav nav-tabs bg-black" >
+    <li class="active"><a data-toggle="tab" href="#console">Deine Konsole</a></li>
+    <li><a data-toggle="tab" href="#account">Persönliche Informationen</a></li>
+    <li><a data-toggle="tab" href="#payment">Liefer-/Rechnungsadresse</a></li>
+    <li><a data-toggle="tab" href="#shipping">Zahlungsmöglichkeiten</a></li>
     <li><a data-toggle="tab" href="#account">Übersicht</a></li>
 </ul>
   </div>
 
-  <div class="panel-body">
-<div class="tab-content">
-  <div id="account" class="tab-pane fade in active">
+  <div class="panel-body bg-black">
+<div class="tab-content bg-black">
+  <div id="console" class="tab-pane fade in active">
+<form id="acc" name="acc" action="" method="post" enctype="text/html">
+    <p>
+      <label for="nachname">Nachname:</label>
+      <input id="nachname" type="text" name="nachname" value="" size="20" maxlength="50" />
+    </p>
+    <p>
+      <label for="vorname">Vorname:</label>
+      <input id="vorname" type="text" name="vorname" value="" size="20" maxlength="50" />
+    </p>
+    <p>
+      <label for="strasse">Straße:</label>
+      <input id="strasse" type="text" name="strasse" value="" size="5" maxlength="5" />
+    </p>
+    <p>
+      <label for="hausnr">Hausnummer:</label>
+      <input id="hausnr" type="text" name="hausnr" value="" size="5" maxlength="5" />
+    </p>
+    <p>
+      <label for="plz">PLZ:</label>
+      <input id="plz" type="text" name="plz" value="" size="5" maxlength="5" />
+    </p>
+    <p>
+      <label for="wohnort">Wohnort:</label>
+      <input id="wohnort" type="text" name="wohnort" value="" size="5" maxlength="5" />
+    </p>
+</form>
+  </div>
+
+
+  <div id="account" class="tab-pane fade">
 <form id="acc" name="acc" action="" method="post" enctype="text/html">
     <p>
       <label for="nachname">Nachname:</label>
@@ -172,9 +207,14 @@
   </div>
 </div>
 </div>
-<div class="panel-footer">
-<input class="abschicken" type="Submit" name="" value="Abschicken" />
-</div>
+<div class="container bg-black">
+  <div class="row">
+    <div class="col-sm-6">
+      <input style="width:50%;" class="btn btn-success" type="Submit" name="" value="Zurück" />
+    </div>
+    <div class="col-sm-6">
+<input style="width:50%;" class="btn btn-success" type="Submit" name="" value="Weiter" />
+    </div>
 </div>
 </div>
 </div>

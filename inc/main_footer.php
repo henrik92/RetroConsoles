@@ -7,15 +7,13 @@ function GoogleMap(){
   }
 </script>
 -->
-<div class="container-fluid footer footer-header">
-</div>
-<div class="container-fluid footer footer-main" style="background-color: black; color: white;">
+<div class="container footer footer-main" style="background-color: black; color: white;">
 <div class="row">
 
     <div class="col-sm-5 text-left">
       <b>Kontakt.</b>
       <ul class="social-list">
-        <li>OldConsole AG</li>
+        <li>OldKonsole</li>
         <li>Musterstraße 1</li>
         <li>26382 Wilhelmshaven</li>
       </ul>
@@ -41,9 +39,9 @@ function GoogleMap(){
 </div>
 </div>
 </div>
-<div class="container-fluid footer" style="background-color: black; color: white;">
+<div class="container footer" style="background-color: black; color: white;">
 <div class="row">
-    <div class="col-sm-3">
+    <div class="col-sm-3 text-left">
     <p>Copyright <i class="fa fa-copyright"></i> 2017 OldConsole </p>
     </div>
     <div class="col-sm-3">

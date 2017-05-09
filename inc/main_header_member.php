@@ -22,11 +22,18 @@
   <?php
 @session_start();
    ?>
+   <div class="container-fluid">
   <nav class="navbar navbar-fixed-top">
     <div class="container-fluid">
-      <div class="navbar-header">
-      <span class="fa fa-gamepad fa-3x"></span>
-      </div>
+      <ul class="nav navbar-nav navbar-right">
+      <li><a href="index.php?section=profile"><span class="glyphicon glyphicon-log-in"></span> Hallo <?php echo $_SESSION['vorname'] ?></a></li>
+      <li><a href="index.php?section=logout"><span class="glyphicon glyphicon-user"></span> Logout</a></li>
+      </ul>
+    </div>
+    <div class="container-fluid text-center">
+      <p><img class="img img-responsive" style="width: 20%; margin-left: auto; margin-right: auto;" src="/img/Logo_oldkonsole_klein.png"></img></p>
+    </div>
+    <div class="container-fluid">
       <div class="navbar-collapse">
       <ul class="nav navbar-nav">
         <li><a href="index.php?section=home">Startseite</a></li>
@@ -34,11 +41,8 @@
         <li><a href="index.php?section=shop">Shop</a></li>
         <li><a href="index.php?section=faq">Tipps & Tricks</a></li>
           <li><a href="index.php?section=aboutus">Über uns</a></li>
-  	</ul>
-      <ul class="nav navbar-nav navbar-right">
-      <li><a href="index.php?section=profile"> <span class="glyphicon glyphicon-user"></span> Hallo, <?php echo $_SESSION['vorname'] ?></a></li>
-      <li><a href="index.php?section=logout">  <span class="glyphicon glyphicon-off"></span> Logout</a></li>
-      </ul>
-    </div>
-  </div>
-  </nav>
+  	       </ul>
+         </div>
+       </div>
+     </nav>
+   </div>

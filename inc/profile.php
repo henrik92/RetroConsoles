@@ -1,16 +1,15 @@
-<div class="jumbotron bg-home banner-bot-border">
-  <p>Willkommen zurück <?php echo $_SESSION['vorname'] ?> !</p>
+<div class="container first-padding bg-black">
+<h2>Willkommen zurück <?php echo $_SESSION['vorname'] ?> ! </h2>
 </div>
 
-<div class="container-fluid">
-  <div class="container">
+  <div class="container bg-black">
     <div class="row">
-      <div class="col-sm-12">
-        <div class="panel panel-default">
-          <div class="panel-heading">
+      <div class="col-sm-12 bg-black">
+        <div class="panel panel-default bg-black">
+          <div class="panel-heading bg-black">
             Accountfunktionen
           </div>
-          <div class="panel-body" style="display:inline-block;">
+          <div class="panel-body bg-black font-black">
             <button class="btn" type="button" value="Editieren">Reperaturauftrag erstellen</button><br>
             <button class="btn" type="button" value="Editieren">Warenkorb ansehen</button><br>
             <button class="btn" type="button" value="Editieren">Benutzerdaten editieren</button><br>
@@ -24,17 +23,16 @@
   </div>
 </div>
 
-<div class="container-fluid">
-<div class="container">
+<div class="container bg-black">
   <div class="row">
-    <div class="col-sm-6">
-  <div class="panel panel-default">
-    <div class="panel-heading"><b>Deine persönlichen Informationen</b></div>
-    <div class="panel-body">
+    <div class="col-sm-6 bg-black">
+  <div class="panel panel-default bg-black">
+    <div class="panel-heading bg-black"><b>Deine persönlichen Informationen</b></div>
+    <div class="panel-body bg-black">
       <div class="row">
       <div class="col-sm-6">
         <div class="table-responsive">
-        <table class="table table-hover">
+        <table class="table">
           <thead>
             <tr>
             <th>Stammdaten</th>
@@ -71,9 +69,9 @@
       </table>
     </div>
       </div>
-      <div class="col-sm-6">
-        <div class="table-responsive">
-        <table class="table table-hover">
+      <div class="col-sm-6 bg-black">
+        <div class="table-responsive bg-black">
+        <table class="table bg-black">
           <thead>
             <tr>
             <th>Lieferadresse</th>
@@ -99,22 +97,22 @@
   </div>
     </div>
   </div>
-  <div class="panel-footer">
+  <div class="panel-footer  bg-black">
 <button class="btn" value="Editieren">Editieren</button>
   </div>
   </div>
 </div>
 
-<div class="col-sm-6">
+<div class="col-sm-6 bg-black">
 
-  <div class="panel panel-default">
-    <div class="panel-heading"><b>Zahlungsinformationen</b></div>
-    <div class="panel-body"
+  <div class="panel panel-default bg-black">
+    <div class="panel-heading bg-black"><b>Zahlungsinformationen</b></div>
+    <div class="panel-body bg-black"
 
     <div class="row">
-    <div class="panel panel-default">
+    <div class="panel panel-default bg-black">
 
-    <ul class="nav nav-tabs">
+    <ul class="nav nav-tabs bg-black">
       <li><a data-toggle="tab" href="#vorkasse"><span class="fa fa-credit-card"> Vorkasse</span></a></li>
       <li><a data-toggle="tab" href="#visa"><i class="fa fa-cc-visa"> Visa</i></a></li>
       <li><a data-toggle="tab" href="#mastercard"><i class="fa fa-cc-mastercard"> Mastercard</i></a></li>
@@ -123,9 +121,9 @@
 
   </div>
 
-      <div class="panel-body>"
-    <div class="tab-content tab-border">
-      <div id="vorkasse" class="tab-pane fade in active">
+      <div class="panel-body bg-black>"
+    <div class="tab-content tab-border bg-black">
+      <div id="vorkasse" class="tab-pane fade in active bg-black">
         <h4><b>Vorkasse</b></h4>
         <h5><u>Bankverbindung</u></h5>
         <p>Kontoinhaber: RetroConsoles</p>
@@ -135,18 +133,18 @@
         <p>BIC/SWIFT-Code:</p>
         <p>IBAN-Code:</p>
       </div>
-      <div id="visa" class="tab-pane fade">
+      <div id="visa" class="tab-pane fade bg-black">
         <h4><b>Visa</b></h4>
       </div>
-      <div id="mastercard" class="tab-pane fade">
+      <div id="mastercard" class="tab-pane fade bg-black">
         <h4><b>mastercard</b></h4>
       </div>
-      <div id="paypal" class="tab-pane fade">
+      <div id="paypal" class="tab-pane fade bg-black">
         <h4><b>Paypal</b></h4>
       </div>
     </div>
   </div>
-  <div class="panel-footer">
+  <div class="panel-footer bg-black">
 <button class="btn" type="button" value="Editieren">Editieren</button>
   </div>
 
@@ -156,15 +154,14 @@
 </div>
 </div>
 </div>
-</div>
 
 
-<div class="container">
-  <div class="panel panel-default">
-  <div class="panel-heading"><b>Bestellungen</b></div>
-  <div class="panel-body">
+<div class="container bg-black">
+  <div class="panel panel-default bg-black">
+  <div class="panel-heading bg-black"><b>Bestellungen</b></div>
+  <div class="panel-body bg-black">
     <div class="table-responsive">
-    <table class="table table-hover">
+    <table class="table table-hover bg-black font-white">
     <thead>
       <tr>
         <th>Bestellnr.</th>
@@ -185,12 +182,12 @@
 </div>
 
 
-<div class="container">
-  <div class="panel panel-default">
-  <div class="panel-heading"><b>Reperaturen</b></div>
-  <div class="panel-body">
+<div class="container bg-black">
+  <div class="panel panel-default bg-black">
+  <div class="panel-heading bg-black"><b>Reperaturen</b></div>
+  <div class="panel-body bg-black">
     <div class="table-responsive">
-    <table class=" table table-hover">
+    <table class=" table table-hover bg-black">
     <thead>
       <tr>
         <th>Servicenummer</th>
@@ -208,6 +205,5 @@
   </table>
 </div>
   </div>
-</div>
 </div>
 </div>
