@@ -37,11 +37,11 @@ if (isset ($_POST['delete_cart'])){
 }
  ?>
 
-<div class="container-fluid bg-black">
-  <div class="container-fluid box-padding bg-black">
+
+  <div class="container-fluid first-padding bg-black">
   <div class="row">
     <div class="col-sm-8" style="float:left;">
-      <h1>Artikelübersicht.</h1></br>
+      <h1>Artikelübersicht</h1></br>
       <?php
       if (mysqli_num_rows($shop_item) > 0) {
       while($row = mysqli_fetch_array($shop_item)){?>

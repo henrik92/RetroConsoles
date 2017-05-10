@@ -77,15 +77,13 @@
 </div>
 
 <div class="container bg-black">
-  <div class="row">
-    <div class="col-sm-6 bg-black">
   <div class="panel panel-default bg-black">
     <div class="panel-heading bg-black"><strong>Adressdaten</strong></div>
     <div class="panel-body bg-black">
       <div class="row">
       <div class="col-sm-6 bg-black">
-        <div class="table-responsive bg-black">
-        <table class="table bg-black">
+        <div class="table-responsive">
+        <table class="table table-responsive bg-black">
           <thead>
             <tr>
             <th>Rechnungsadresse</th>
@@ -107,10 +105,11 @@
             </tr>
         </tbody>
       </table>
-    </div>
+
     <form method="post" action="">
     <input type="checkbox" name="pay_address" value="address">Abweichende Lieferadresse</input>
   </form>
+</div>
   </div>
   <div class="col-sm-6">
     <?php if (isset($_POST['address'])){ ?>
@@ -143,18 +142,14 @@
     </div>
   </div>
   <div class="panel-footer  bg-black">
-<button class="btn" value="Editieren">Editieren</button>
+<button class="btn btn-warning font-black" value="Editieren">Editieren</button>
   </div>
   </div>
 </div>
-
-<div class="col-sm-6 bg-black">
-
+<div class="container bg-black">
   <div class="panel panel-default bg-black">
     <div class="panel-heading bg-black"><b>Zahlungsinformationen</b></div>
     <div class="panel-body bg-black"
-
-    <div class="row">
     <div class="panel panel-default bg-black">
 
     <ul class="nav nav-tabs bg-black">
@@ -168,17 +163,17 @@
 
       <div class="panel-body bg-black>"
     <div class="tab-content tab-border bg-black">
-      <div id="vorkasse" class="tab-pane fade in active bg-black">
+      <div id="vorkasse" class="tab-pane fade in active bg-black text-left">
         <h4><b>Vorkasse</b></h4>
-        <h5><u>Bankverbindung</u></h5>
-        <p>Kontoinhaber: RetroConsoles</p>
-        <p>Kontonummer:</p>
-        <p>Bankleitzahl:</p>
-        <p>Bankname:</p>
-        <p>BIC/SWIFT-Code:</p>
-        <p>IBAN-Code:</p>
+        <br>
+        <p>Kontoinhaber: OldKonsole</p>
+        <p>Kontonummer: 123456789</p>
+        <p>Bankleitzahl: 987654321</p>
+        <p>Bankname: Musterbank</p>
+        <p>BIC/SWIFT-Code: NOLADE2H</p>
+        <p>IBAN-Code:DE987654321123456789</p>
       </div>
-      <div id="visa" class="tab-pane fade bg-black">
+      <div id="visa" disabled class="tab-pane fade bg-black">
         <h4><b>Visa</b></h4>
       </div>
       <div id="mastercard" class="tab-pane fade bg-black">
@@ -190,13 +185,10 @@
     </div>
   </div>
   <div class="panel-footer bg-black">
-<button class="btn" type="button" value="Editieren">Editieren</button>
+<button class="btn btn-warning font-black" type="btn btn-warning" value="Editieren">Editieren</button>
   </div>
 
   </div>
-</div>
-</div>
-</div>
 </div>
 </div>
 
