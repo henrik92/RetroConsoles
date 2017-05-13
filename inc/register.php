@@ -1,4 +1,4 @@
-
+<?php $_SESSION['page'] = "register"; ?>
 <div class="container first-padding bg-black">
   <h2>Registrierung</h2>
   <br><br>

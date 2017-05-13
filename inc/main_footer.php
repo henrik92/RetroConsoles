@@ -1,59 +1,73 @@
-<!--<script>
-function GoogleMap(){
-  var coords={
-    center: new google.maps.LatIng(53.548731, 8.088285), zoom:5,
-  };
-    var map = center: new google.maps.Map(document.getElementById("googleMap"), coords);
-  }
-</script>
--->
-<div class="container footer footer-main" style="background-color: black; color: white;">
+<div class="container bg-black font-white">
+  <hr>
+  <br><br>
 <div class="row">
-
-    <div class="col-sm-5 text-left">
-      <b>Kontakt.</b>
-      <ul class="social-list">
-        <li>OldKonsole</li>
-        <li>Musterstraße 1</li>
-        <li>26382 Wilhelmshaven</li>
-      </ul>
+  <div class="col-sm-6 text-left">
+    <h5><u>Suchfunktion:</u></h5>
+    <input name="search" placeholder="Wonach suchst Du?" style="width: 50%;"></input>
+    <button class="btn font-black" name=search>Suchen</button>
   </div>
-<div class="col-sm-4 text-left">
-  <ul class="social-list">
-    <li><span class="fa fa-envelope-open"> info@oldconsole.de</span></li>
-    <li><span class="fa fa-phone"> 42424/121212</span></li>
-    <li><span class="fa fa-file-text-o"> <a href"">Zum Kontaktformular</a></span></li>
-    </ul>
-  </div>
-
-<div class="col-sm-3 text-left">
-  <p>Noch kein Fan? Dann folge uns jetzt:</p>
-
-  <ul class="social-iconlist">
+  <div class="col-sm-6 text-right">
+      <p><u>Noch kein Fan? Dann folge uns jetzt:</u></p>
+        <ul class="social">
     <li><i class="fa fa-facebook fa-3x"></i></li>
     <li><i class="fa fa-twitter fa-3x"></i></li>
     <li><i class="fa fa-instagram fa-3x"></i></li>
     <li><i class="fa fa-google-plus fa-3x"></i></li>
     <li><i class="fa fa-youtube fa-3x"></i></li>
-  </ul>
+  </div>
 </div>
 </div>
-</div>
-<div class="container footer" style="background-color: black; color: white;">
+<br><br>
+<div class="container bg-black font-white">
 <div class="row">
-    <div class="col-sm-3 text-left">
-    <p>Copyright <i class="fa fa-copyright"></i> 2017 OldConsole </p>
-    </div>
-    <div class="col-sm-3">
-    <a href="#"><p><u>Datenschutz</u></p></a>
-    </div>
-      <div class="col-sm-3">
-    <a href="#"><p><u>Nutzungsbedinungen</u></p></a>
-    </div>
-      <div class="col-sm-3">
-    <a href="#"><p><u>Impressum</u></p></a>
-    </div>
+  <div class="col-sm-6 text-left">
+        <p><u>Navigation</u></p>
+        <br>
+        <table class="table-condensed">
+          <tr>
+            <td><a href="#"><p>Startseite</a></td>
+            <td><a href="#"><p>Login</a></td>
+          </tr>
+          <tr>
+            <td><a href="#"><p>Reparatur</a></td>
+            <td><a href="#"><p>Registrieren</a></td>
+          </tr>
+          <tr>
+            <td><a href="#"><p>Shop</a></td>
+            <td><a href="#"><p>Datenschutz</a></td>
+          </tr>
+          <tr>
+            <td><a href="#"><p>Tipps&Tricks</a></td>
+            <td><a href="#"><p>Nutzungsbedingungen</a></td>
+          </tr>
+          <tr>
+            <td><a href="#"><p>Über uns</a></td>
+            <td><a href="#"><p>Impressum</a></td>
+          </tr>
+        </table>
+      </div>
+
+  <div class="col-sm-6 text-right">
+    <b>Kontakt.</b>
+    <br>
+    <ul style="list-style-type: none;">
+      <li>OldKonsole</li>
+      <li>Musterstraße 1</li>
+      <li>26382 Wilhelmshaven</li>
+    </ul>
+    <br>
+  <ul style="list-style-type: none;">
+      <li>info@oldconsole.de <span class="fa fa-envelope-open"></span></li>
+      <li>42424/121212 <span class="fa fa-phone"></span></li>
+      <li><a href"">Zum Kontaktformular</a><span class="fa fa-file-text-o"></span></li>
+  </ul>
+  <br>
 </div>
+</div>
+</div>
+<div class="container bg-black text-right">
+  <p><strong>Copyright <i class="fa fa-copyright"></i> 2017 OldConsole </strong></p>
 </div>
 </body>
 </html>

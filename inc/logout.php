@@ -1,4 +1,4 @@
-
+<?php $_SESSION['page'] = "logout"; ?>
 <div class="container first-padding container-padding bg-black font-white">
     <h3>Auf Wiedersehen, <?php echo $_SESSION['vorname']?>. Bis zum nächsten Mal!</h3></br>
 

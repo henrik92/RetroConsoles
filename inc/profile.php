@@ -1,3 +1,4 @@
+<?php $_SESSION['page'] = "profile"; ?>
 <div class="container first-padding bg-black">
 <h2>Willkommen zurück <?php echo $_SESSION['vorname'] ?> ! </h2>
 </div>

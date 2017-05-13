@@ -26,7 +26,7 @@
   <nav class="navbar navbar-fixed-top">
     <div class="container-fluid">
       <ul class="nav navbar-nav navbar-right">
-      <li><a href="index.php?section=profile"><span class="glyphicon glyphicon-log-in"></span> Hallo <?php echo $_SESSION['vorname'] ?></a></li>
+      <li><a href="index.php?section=profile"><span class="glyphicon glyphicon-log-in"></span> Mein Profil</a></li>
       <li><a href="index.php?section=logout"><span class="glyphicon glyphicon-user"></span> Logout</a></li>
       </ul>
     </div>

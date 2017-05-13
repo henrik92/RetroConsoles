@@ -1,3 +1,4 @@
+<?php $_SESSION['page'] = "about"; ?>
 <div class="container-fluid container-padding first-padding">
   <p>Herzlich Willkommen zu RetroKonsolen, dein Partner wenn es um Spielekonsolen geht.</p>
 </div>

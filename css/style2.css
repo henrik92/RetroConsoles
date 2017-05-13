@@ -196,8 +196,8 @@ background: green;
 
 /* BOOTSTRAP */
 .container{
-  width: 80%;
-  background-color: white;
+  width: 60%;
+  background-color: black;
 }
 .navbar{
   background-color: black;
@@ -262,7 +262,7 @@ background: green;
   background-color: #838384;
 }
 .social-list{
-  display:inline;
+  display:inline-block;
   list-style-type: none;
 }
 .social-list li {
@@ -450,4 +450,81 @@ padding-top: 300px;
 .text-padding {
   padding-left: 5%;
   padding-right: 5%;
+}
+
+.navbar-default {
+border: none;
+}
+.navbar-default .navbar-brand {
+  color: #777;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #5e5e5e;
+  background-color: transparent;
+}
+.navbar-default .navbar-text {
+  color: white;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: white;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-nav > li > a:active {
+  color: red;
+  border-bottom: 1px solid red;
+}
+.navbar-default .navbar-nav > li >.active > a:active,
+.navbar-default .navbar-nav > li >.active > a:hover,
+.navbar-default .navbar-nav > li> .active > a:focus {
+  color: red;
+}
+.navbar-default .navbar-nav > .disabled > a,
+.navbar-default .navbar-nav > .disabled > a:hover,
+.navbar-default .navbar-nav > .disabled > a:focus {
+  color: #ccc;
+  background-color: transparent;
+}
+
+.brands{
+    list-style-type: none;
+    float:left;
+    width: 100%;
+    background-color: #8e8e8e;
+    border-radius: 8px;
+}
+.brands li {
+  display: inline-block;
+    list-style-type: none;
+  margin: 5px 5px;
+  padding: 30px;
+}
+.brands li img{
+border: none;
+width: 150px;
+height: auto;
+}
+.social{
+    list-style-type: none;
+    float:right;
+    border-radius: 8px;
+}
+.social li {
+  display: inline-block;
+  list-style-type: none;
+  padding: 20px;
+}
+.social i:hover {
+  color:red;
+}
+ul{
+  list-style-type: none;
+}
+td{
+  padding: 1px;
+}
+.footer_contact{
+
 }

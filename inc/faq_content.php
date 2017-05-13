@@ -1,3 +1,4 @@
+<?php $_SESSION['page'] = "faq"; ?>
 <div class="container bg-black first-padding">
 <h2>Wie können wir dir weiterhelfen?</h2>
 <br>
@@ -106,7 +107,7 @@
     <h2>Kontakt</h2>
     <hr>
     <br><br>
-     
+
     <p>Anschrift</p>
     <p>Telefon</p>
     <p>Email</p>

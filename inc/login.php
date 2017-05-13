@@ -1,3 +1,4 @@
+<?php $_SESSION['page'] = "login"; ?>
 <!--Login-PHP (Session starten, DB Verbindung, Benutzereingaben prüfen) -->
 <?php
 //DB-Verbindung
@@ -5,7 +6,7 @@ include "inc/database_connection.php";
 
 //Variablen
 $input = $email = $password = "";
-$input_error = $email_error = $password_error = "";
+$error_msg = $login_msg = "";
 
 //Funktion: Eingabe formatieren
 function format($input){
@@ -31,21 +32,11 @@ $result = $conn->query($sql);
     $password = format($_POST['password']);
 
 if(!filter_var($email, FILTER_VALIDATE_EMAIL) === true ) {
-     $email_error = "Bitte geben Sie eine gültige Email-Adresse ein.";
-     echo $email_error;
+     $error_msg = "Bitte geben Sie eine gültige Email-Adresse ein.";
    } else {
-
 //DB Abfrage
 $sql = "SELECT * FROM user WHERE email='" .$email. "' AND pwd='" . $password ."' LIMIT 1";
-echo $sql;
-
 $result = mysqli_query($conn, $sql);
-if ($result === false){
-  echo "Query NOT successful.";
-} else {
-  echo "Query successful";
-}
-
 if (mysqli_num_rows($result) > 0) {
   while($row = mysqli_fetch_assoc($result)){
     $_SESSION['session_id'] = session_id();
@@ -59,13 +50,14 @@ if (mysqli_num_rows($result) > 0) {
     $_SESSION['postcode'] = $row['post'];
     $_SESSION['city'] = $row['city'];
     $_SESSION['regdate'] = $row['reg_date'];
+    $login_msg = "Login erfolgreich!";
   }
     header("Location: index.php?section=profile");
   } else {
-    echo "Hoppla, leider hat deine Anmeldung nicht funktioniert.";
+    $error_msg = "Hoppla, wir haben keine Email-Adresse oder Passworteinstimmung gefunden.";
   }}
 } else {
-  echo "Bitte geben Sie ihre E-Mail-Adresse und ihr Passwort ein!";
+  $error_msg = "Bitte geben Sie ihre E-Mail-Adresse und ihr Passwort ein!";
 }
 }
 ?>
@@ -84,7 +76,6 @@ if (mysqli_num_rows($result) > 0) {
   <input type="email" class="form-control" name="email" id="email" placeholder="E-Mail Adresse" required>
   </div>
 </div>
-  <?php if(isset($email_error))echo "<span><p>" . $email_error . "</p></span><br/>";?>
   <div class="form-group">
   <label>Passwort</label>
       <hr>
@@ -93,7 +84,7 @@ if (mysqli_num_rows($result) > 0) {
   <input type="password" class="form-control" name="password" id="password" placeholder="Passwort" required>
 </div>
 </div>
-  <?php if(isset($password_error))echo "<p>" . $password_error . "</p>";?>
+  <?php if($error_msg !== "" || $login_msg !== "") echo '<p class="bg-danger">' . $error_msg . '</p>';?>
   <div class="container-fluid inline-block text-center">
   <h5>Anmeldedaten merken<input type="checkbox"></input></h5>
 

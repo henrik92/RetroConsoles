@@ -1,3 +1,4 @@
+<?php $_SESSION['page'] = "repair"; ?>
   <div class="container-fluid bg-black first-padding">
   <div class="container bg-black font-white">
     <h1>
@@ -10,42 +11,22 @@
     Unser Reparaturteam hilft dir weiter!<br>
     Unabhängig vom Hersteller sorgen wir für schnelle Abhilfe bei einem fairen Preis.</p>
   </div>
-
-  <div class="container container-padding bg-black">
-  <h3>Wir unterstützen folgende Hersteller: </h3>
+<br><br>
   <div class="container bg-black">
-    <div class="row">
-      <div class="col-sm-2">
-        <div class="well">
-<img class="img img-responsive" src="img/logos/amiga.png" alt="Amiga"/>
-        </div>
-      </div>
-      <div class="col-sm-2">
-          <div class="well">
-    <img class="img img-responsive" src="img/logos/atari.png" alt="Atari"/>
-      </div>
-      </div>
-      <div class="col-sm-2">
-          <div class="well">
-    <img class="img img-responsive" src="img/logos/comm.png" alt="Commodore"/>
-      </div>
-      </div>
-      <div class="col-sm-2">
-          <div class="well">
-    <img class="img img-responsive" src="img/logos/nin.png" alt="Nintendo"/>
-      </div>
-      </div>
-      <div class="col-sm-2">
-          <div class="well">
-        <img class="img img-responsive" src="img/logos/sega.png" alt="Sega"/>
-      </div>
-      </div>
-      <div class="col-sm-2">
-          <div class="well">
-        <img class="img img-responsive" src="img/logos/sony.png" alt="Sony"/>
-      </div>
+  <h3>Wir unterstützen folgende Hersteller: </h3>
+  <br>
+  <div class="container-fluid bg-black">
+      <div class="col-sm-12">
+          <ul class="brands">
+            <li><img class="img img-responsive" src="img/logos/amiga.png" alt="Amiga"/></li>
+            <li><img class="img img-responsive" src="img/logos/comm.png" alt="Commodore"/></li>
+            <li><img class="img img-responsive" src="img/logos/nin.png" alt="Nintendo"/></li>
+            <li><img class="img img-responsive" src="img/logos/sega.png" alt="Sega"/></li>
+            <li><img class="img img-responsive" src="img/logos/sony.png" alt="Sony"/></li>
+      </ul>
       </div>
   </div>
+  <br><br>
   </div>
   </div>
 
@@ -53,94 +34,79 @@
     <h3>Reparatur in nur 4 Schritten</h3>
     <br>
     <div class="row">
-<div class="col-sm-3 font-black">
-  <div class="panel panel-default">
+<div class="col-sm-3 font-white">
+  <div class="well well-sm bg-black">
       <h5>1.Schritt: </h5>
-    <hr>
-    <br>
+      <hr>
     <i class="fa fa-pencil-square-o fa-5x"></i>
     <br><br>
   <p>Formular ausfüllen und abschicken</p>
-  <br><br>
   </div>
 </div>
-<div class="col-sm-3 font-black">
-  <div class="panel panel-default">
+<div class="col-sm-3 font-white">
+  <div class="well well-sm bg-black">
     <h5>2.Schritt</h5>
     <hr>
-    <br>
     <i class="fa fa-cube fa-5x"></i>
     <br><br>
     <p>Konsole verpacken und verschicken</p>
-    <br><br>
   </div>
 </div>
-<div class="col-sm-3 font-black">
-  <div class="panel panel-default">
+<div class="col-sm-3 font-white">
+  <div class="well well-sm bg-black">
     <h5>3. Schritt: </h5>
     <hr>
-    <br>
     <i class="fa fa-hourglass-half fa-5x" aria-hidden="true"></i>
     <br><br>
     <p>Angebot unserer Mitarbeiter abwarten</p>
-    <br><br>
   </div>
 </div>
-<div class="col-sm-3 font-black">
-  <div class="panel panel-default">
+<div class="col-sm-3 font-white">
+  <div class="well well-sm bg-black">
 <h5>4.Schritt</h5>
     <hr>
-    <br>
     <i class="fa fa-handshake-o fa-5x" aria-hidden="true"></i>
     <br><br>
     <p>Annahme oder Ablehnung des Angebots</p>
-    <br><br>
   </div>
 </div>
 </div>
 </div>
-
+<br><br>
 <!--Formular Reperatur-->
-<div class="container container-padding bg-black">
+<div class="container bg-black">
   <h2>Reperaturauftrag erstellen.</h2>
   <div class="panel bg-black">
     <div class="panel-heading bg-black">
   <ul class="nav nav-tabs bg-black" >
     <li class="active"><a data-toggle="tab" href="#console">Deine Konsole</a></li>
     <li><a data-toggle="tab" href="#account">Persönliches</a></li>
-    <li><a data-toggle="tab" href="#payment">Addressdaten</a></li>
-    <li><a data-toggle="tab" href="#shipping">Zahlung</a></li>
-    <li><a data-toggle="tab" href="#account">Übersicht</a></li>
+    <li><a data-toggle="tab" href="#shipping">Addressdaten</a></li>
+    <li><a data-toggle="tab" href="#payment">Zahlung</a></li>
+    <li><a data-toggle="tab" href="#overview">Übersicht</a></li>
 </ul>
   </div>
 
   <div class="panel-body bg-black">
-<div class="tab-content bg-black">
+<div class="tab-content bg-black text-left">
   <div id="console" class="tab-pane fade in active">
 <form id="acc" name="acc" action="" method="post" enctype="text/html">
+  <h5>Wähle deine Konsole aus: </h5>
     <p>
-      <label for="nachname">Nachname:</label>
-      <input id="nachname" type="text" name="nachname" value="" size="20" maxlength="50" />
+      <label for="nachname">Hersteller:</label>
+      <select name="make"></select>
     </p>
     <p>
-      <label for="vorname">Vorname:</label>
-      <input id="vorname" type="text" name="vorname" value="" size="20" maxlength="50" />
+      <label for="vorname">Modell:</label>
+      <select name="model"></select>
     </p>
     <p>
-      <label for="strasse">Straße:</label>
-      <input id="strasse" type="text" name="strasse" value="" size="5" maxlength="5" />
+      <label for="strasse">Fehlerkategorie:</label>
+      <select name="cat"></select>
     </p>
     <p>
-      <label for="hausnr">Hausnummer:</label>
-      <input id="hausnr" type="text" name="hausnr" value="" size="5" maxlength="5" />
-    </p>
-    <p>
-      <label for="plz">PLZ:</label>
-      <input id="plz" type="text" name="plz" value="" size="5" maxlength="5" />
-    </p>
-    <p>
-      <label for="wohnort">Wohnort:</label>
-      <input id="wohnort" type="text" name="wohnort" value="" size="5" maxlength="5" />
+      <label for="hausnr">Beschreibe dein Problem:</label>
+      <textarea id="hausnr" type="text" name="hausnr" value="" size="5" maxlength="140"></textarea>
     </p>
 </form>
   </div>
@@ -149,7 +115,7 @@
   <div id="account" class="tab-pane fade">
 <form id="acc" name="acc" action="" method="post" enctype="text/html">
     <p>
-      <label for="nachname">Nachname:</label>
+      <label for="nachname">Titel:</label>
       <input id="nachname" type="text" name="nachname" value="" size="20" maxlength="50" />
     </p>
     <p>
@@ -157,68 +123,45 @@
       <input id="vorname" type="text" name="vorname" value="" size="20" maxlength="50" />
     </p>
     <p>
-      <label for="strasse">Straße:</label>
+      <label for="strasse">Nachname:</label>
       <input id="strasse" type="text" name="strasse" value="" size="5" maxlength="5" />
     </p>
     <p>
-      <label for="hausnr">Hausnummer:</label>
+      <label for="hausnr">E-Mail-Adresse:</label>
       <input id="hausnr" type="text" name="hausnr" value="" size="5" maxlength="5" />
     </p>
     <p>
-      <label for="plz">PLZ:</label>
+      <label for="plz">Telefon:</label>
       <input id="plz" type="text" name="plz" value="" size="5" maxlength="5" />
-    </p>
-    <p>
-      <label for="wohnort">Wohnort:</label>
-      <input id="wohnort" type="text" name="wohnort" value="" size="5" maxlength="5" />
     </p>
 </form>
   </div>
   <div id="payment" class="tab-pane fade">
 <form id="pay" name="pay" action="" method="post" enctype="text/html">
+  <h2>Vorkasse</h2>
+  </form></div>
+
+  <div id="overview" class="tab-pane fade">
+    <form id="con" name="con" action="" method="post" enctype="text/html">
+
+          <h2>Auftragsübersicht</h2> </form></div>
+  <div id="shipping" class="tab-pane fade">
     <p>
-      <label for="nachname">Nachname:</label>
+      <label for="nachname">Straßenname:</label>
       <input id="nachname" type="text" name="nachname" value="" size="20" maxlength="50" />
     </p>
     <p>
-      <label for="vorname">Vorname:</label>
+      <label for="vorname">Hausnummer:</label>
       <input id="vorname" type="text" name="vorname" value="" size="20" maxlength="50" />
     </p>
     <p>
-      <label for="kartennr">Kartennummer:</label>
-      <input id="kartennr" type="text" name="kartennr" value="" size="20" maxlength="50" />
+      <label for="strasse">Postleitzahl:</label>
+      <input id="strasse" type="text" name="strasse" value="" size="5" maxlength="5" />
     </p>
     <p>
-      <label for="gueltig">Gültig bis:</label>
-      <input id="gueltig" type="text" name="gueltig" value="" size="20" maxlength="50" />
+      <label for="hausnr">Stadt:</label>
+      <input id="hausnr" type="text" name="hausnr" value="" size="5" maxlength="5" />
     </p>
-    <p>
-      <label for="pruef">Prüfnummer:</label>
-      <input id="pruef" type="text" name="pruef" value="" size="20" maxlength="50" />
-    </p></form></div>
-
-  <div id="console" class="tab-pane fade">
-    <form id="con" name="con" action="" method="post" enctype="text/html">
-
-          <p>
-            <label for="hersteller">Hersteller:</label>
-            <input id="hersteller" type="text" name="hersteller" value="" size="20" maxlength="50" />
-          </p>
-          <p>
-            <label for="modell">Modell:</label>
-            <input id="modell" type="text" name="modell" value="" size="20" maxlength="50" />
-          </p>
-          <p>
-            <label for="kat">Fehlerkategorie:</label>
-            <input id="kat" type="text" name="kat" value="" size="20" maxlength="50" />
-          </p>
-          <p>
-            <label for="beschreibung">Fehlerbeschreibung:</label>
-            <input id="beschreibung" type="text" name="beschreibung" value="" size="20" maxlength="50" />
-          </p>  </form></div>
-  <div id="account" class="tab-pane fade">
-    <h3>Bestellung erfolgreich</h3>
-    <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
   </div>
 </div>
 </div>

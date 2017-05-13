@@ -1,9 +1,13 @@
-<?php
+
+<?php $_SESSION['page'] = "shop";
 @session_start();
 include "inc/database_connection.php";
 $sql = "SELECT * FROM shop";
 $shop_item = mysqli_query($conn, $sql);
 
+/*if(mb_detect_encoding($shop_item) != 'UTF-8') {
+  $shop_item = utf8_encode($shop_item); }
+*/
 $_SESSION['sum'];
 
 if(!isset($_SESSION['cart'])){
@@ -38,10 +42,10 @@ if (isset ($_POST['delete_cart'])){
  ?>
 
 
-  <div class="container-fluid first-padding bg-black">
+  <div class="container first-padding bg-black">
   <div class="row">
-    <div class="col-sm-8" style="float:left;">
-      <h1>Artikelübersicht</h1></br>
+    <div class="col-sm-8">
+      <h1>Artikelübersicht</h1>
       <?php
       if (mysqli_num_rows($shop_item) > 0) {
       while($row = mysqli_fetch_array($shop_item)){?>
@@ -71,15 +75,19 @@ if (isset ($_POST['delete_cart'])){
           </tr>
       <!-- Weitere Informationen -->
           <tr>
-            <td>Beschreibung:</td>
+            <td>Beschreibung: <br></td><br>
+            <td></td>
+          </tr>
+          <tr>
             <td><?php echo $row['description'] ?></td>
+            <td></td>
           </tr>
         </tbody>
       </table>
       </div>
 
       <div class="col-sm-2">
-        <div class="container-fluid text-right" >
+        <div class="container-fluid" >
           <h5>Preis (inkl. 19 % Mwst.):</h5>
           <br>
           <h4><?php echo $row['price'] ?> <i class="fa fa-euro"></i></h4>
@@ -99,7 +107,7 @@ if (isset ($_POST['delete_cart'])){
     </div>
       <?php  }} ?>
       </div>
-    <div class="col-sm-4" style="position:fixed; right: 0px;">
+    <div class="col-sm-4">
       <h1>Warenkorb</h1>
       <div class="well well-sm bg-black font-white">
       <table class="table" style="color: white;">
