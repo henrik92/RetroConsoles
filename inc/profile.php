@@ -62,20 +62,23 @@
           <div class="panel-heading bg-black">
             <strong>Accountfunktionen</strong>
           </div>
-          <div class="panel-body bg-black font-black">
+          <div class="panel-body bg-black font-black text-right">
             <button class="btn" type="button" value="Editieren">Reperaturauftrag erstellen</button><br>
             <button class="btn" type="button" value="Editieren">Warenkorb ansehen</button><br>
-            <button class="btn" type="button" value="Editieren">Benutzerdaten editieren</button><br>
-            <button class="btn" type="button" value="Editieren">Kontaktiere uns</button><br>
-            <button class="btn" type="button" value="Editieren">Ausloggen</button><br>
+            <button class="btn" type="button" value="Editieren">Kontaktformular</button><br>
+            <br>
+            <button class="btn" type="button" value="Editieren">E-Mail-Adresse ändern</button><br>
+            <button class="btn" type="button" value="Editieren">Passwort ändern</button><br>
+            <br>
             <button class="btn btn-danger" type="button" value="Editieren">Account löschen</button><br>
           </div>
         </div>
       </div>
-
     </div>
   </div>
 </div>
+
+<!--<script></script>-->
 
 <div class="container bg-black">
   <div class="panel panel-default bg-black">
@@ -106,15 +109,14 @@
             </tr>
         </tbody>
       </table>
-
     <form method="post" action="">
-    <input type="checkbox" name="pay_address" value="address">Abweichende Lieferadresse</input>
+    <input id="shipping_show" type="checkbox" name="pay_address" value="address">Abweichende Lieferadresse</input>
   </form>
 </div>
   </div>
   <div class="col-sm-6">
     <?php if (isset($_POST['address'])){ ?>
-      <div class="table-responsive bg-black">
+      <div class="table-responsive bg-black hide" >
       <table class="table bg-black">
         <thead>
           <tr>
@@ -137,6 +139,7 @@
           </tr>
       </tbody>
     </table>
+    <input id="shipping_show" type="radio" name="diff" name="diff_shipment">Abweichende Rechnungsadresse</input>
   </div>
     <?php } ?>
   </div>
