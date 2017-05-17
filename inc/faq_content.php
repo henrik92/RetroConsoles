@@ -32,7 +32,6 @@
 <br><br>
 <div class="container bg-black">
 <h2>F.A.Q</h2>
-<hr>
   <br><br>
 <div class="row">
 <div class="col-sm-3 text-right" style="border-right: 1px solid lightgrey;">
@@ -58,7 +57,6 @@
 <br><br>
 <div class="container bg-black">
 <h2>Dokumentation</h2>
-  <hr>
   <br><br>
 <div class="row">
   <div class="col-sm-3 text-right" style="border-right: 1px solid lightgrey;">
@@ -104,14 +102,24 @@
 <br><br>
 <div class="container-fluid bg-black">
 <div class="container bg-black">
-    <h2>Kontakt</h2>
-    <hr>
-    <br><br>
-
-    <p>Anschrift</p>
-    <p>Telefon</p>
-    <p>Email</p>
-    <p>Fax</p>
+  <h2>Kontakt</h2>
+  <br>
+  <div class="row">
+    <div class="col-sm-4 text-right">
+      OldKonsole<br><br>
+      Musterstraße 1<br><br>
+      26382 Wilhelmshaven<br><br>
+      <br>
+    </div>
+    <div class="col-sm-4">
+      <strong>N 53° 31′ 52.957″ E 008° 6′ 12.902″</strong><br>
+      <i class="fa fa-globe fa-5x" style="font-size:10em" aria-hidden="true"></i><br><br>
+    </div>
+    <div class="col-sm-4 text-left">
+      <br>
+      <span class="fa fa-envelope-open"></span>info@oldconsole.de <br><br>
+      <span class="fa fa-phone"></span>42424/121212 <br><br>
+    </div>
   </div>
 </div>
 <br><br>
@@ -121,11 +129,11 @@
         <hr>
         <br><br>
     <div class="row">
-      <div class="col-sm-6">
+      <div class="col-sm-6 text-center">
         Vorname:<br>
         <input type="text"></input>
       </div>
-      <div class="col-sm-6">
+      <div class="col-sm-6 text-center">
         Nachname:<br>
         <input type="text"></input>
       </div>
@@ -134,13 +142,13 @@
 
     <div class="container bg-black">
   <div class="row">
-    <div class="col-sm-6">
+    <div class="col-sm-6 text-center">
       <br><br>
       Straße:<br>
       <input type="text text-left"></input>
       <br><br>
     </div>
-    <div class="col-sm-6">
+    <div class="col-sm-6 text-center">
       <br><br>
       Hausnummer:<br>
       <input type="text"></input>
@@ -151,13 +159,13 @@
 
   <div class="container bg-black">
 <div class="row">
-  <div class="col-sm-6">
+  <div class="col-sm-6 text-center">
     <br><br>
     PLZ:<br>
     <input type="text"></input>
     <br><br>
   </div>
-  <div class="col-sm-6">
+  <div class="col-sm-6 text-center">
     <br><br>
     Ort:<br>
     <input type="text"></input>
@@ -168,13 +176,13 @@
 
 <div class="container bg-black">
 <div class="row">
-<div class="col-sm-6">
+<div class="col-sm-6 text-center">
   <br><br>
   Vorwahl:<br>
   <input type="text"></input>
   <br><br>
 </div>
-<div class="col-sm-6">
+<div class="col-sm-6 text-center">
   <br><br>
 Telefonnummer:<br>
 <input type="text"></input>
@@ -185,7 +193,7 @@ Telefonnummer:<br>
 
 <div class="container bg-black">
 <div class="row">
-<div class="col-sm-12">
+<div class="col-sm-12 text-center">
   <br><br>
   E-Mail:<br>
   <input type="text"></input>
@@ -196,11 +204,11 @@ Telefonnummer:<br>
 
 <div class="container bg-black">
 <div class="row">
-<div class="col-sm-12">
+<div class="col-sm-12 text-center">
   <br><br>
   Betreff:<br>
   <select name="betreff">
-    <option value="hide"></option>
+    <option value="hide">--Kategorie auswählen--</option>
     <option value="hide"></option>
     <option value="hide"></option>
     <option value="hide"></option>
@@ -212,7 +220,7 @@ Telefonnummer:<br>
 
 <div class="container bg-black">
 <div class="row">
-<div class="col-sm-12">
+<div class="col-sm-12 text-center">
   <br><br>
   Ihre Nachricht:<br>
   <textarea></textarea>

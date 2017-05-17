@@ -16,8 +16,6 @@
 <link href="css/style2.css" rel="stylesheet"/>
 
 <!--jQuery Skripte importierens-->
-<script src="/js/nav_active.js", </script>
-<script src="/js/hide_and_show_table.js", </script>
 
   <!--<script>
   $(document).ready(function(){
@@ -29,14 +27,23 @@
     })
   })
 </script>-->
-<script>
-$(document).ready(function(){
-    alert(window.location.pathname);
-    $(".containerf-fluid ul li a").each(function(){
-        if($(this).attr("href")==window.location.pathname)
-            $(this).addClass("active");
-    })
-})
+<script type="text/javascript">
+  $(document).ready(function () {
+      var url = window.location;
+      $('ul.nav a[href="'+ url +'"]').parent().addClass('active');
+      $('ul.nav a').filter(function() {
+           return this.href == url;
+      }).parent().addClass('active');
+  });
+</script>
+<script type="text/javascript">
+$('a[data-toggle^="tab"]').click(function(){
+    var data = $(this).attr("href");
+    $('a[data-toggle^="tab"]').parent("li").removeClass("active");
+    $('li a[href^="'+data+'"]').parent("li").addClass("active");
+    $('.tab-pane').removeClass("active");
+    $(data).addClass("active");
+});
 </script>
 
 <?php

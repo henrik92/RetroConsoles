@@ -4,8 +4,34 @@
 <div class="row">
   <div class="col-sm-6 text-left">
     <h5><u>Suchfunktion:</u></h5>
+    <br>
     <input name="search" placeholder="Wonach suchst Du?" style="width: 50%;"></input>
     <button class="btn font-black" name=search>Suchen</button>
+    <br><br>
+    <p><u>Navigation</u></p>
+    <br>
+    <table class="table-condensed">
+      <tr>
+        <td><a href="#"><p>Startseite</a></td>
+        <td><a href="#"><p>Login</a></td>
+      </tr>
+      <tr>
+        <td><a href="#"><p>Reparatur</a></td>
+        <td><a href="#"><p>Registrieren</a></td>
+      </tr>
+      <tr>
+        <td><a href="#"><p>Shop</a></td>
+        <td><a href="#"><p>Datenschutz</a></td>
+      </tr>
+      <tr>
+        <td><a href="#"><p>Tipps&Tricks</a></td>
+        <td><a href="#"><p>Nutzungsbedingungen</a></td>
+      </tr>
+      <tr>
+        <td><a href="#"><p>Über uns</a></td>
+        <td><a href="#"><p>Impressum</a></td>
+      </tr>
+    </table>
   </div>
   <div class="col-sm-6 text-right">
       <p><u>Noch kein Fan? Dann folge uns jetzt:</u></p>
@@ -15,55 +41,21 @@
     <li><i class="fa fa-instagram fa-3x"></i></li>
     <li><i class="fa fa-google-plus fa-3x"></i></li>
     <li><i class="fa fa-youtube fa-3x"></i></li>
-  </div>
-</div>
-</div>
-<br><br>
-<div class="container bg-black font-white">
-<div class="row">
-  <div class="col-sm-6 text-left">
-        <p><u>Navigation</u></p>
-        <br>
-        <table class="table-condensed">
-          <tr>
-            <td><a href="#"><p>Startseite</a></td>
-            <td><a href="#"><p>Login</a></td>
-          </tr>
-          <tr>
-            <td><a href="#"><p>Reparatur</a></td>
-            <td><a href="#"><p>Registrieren</a></td>
-          </tr>
-          <tr>
-            <td><a href="#"><p>Shop</a></td>
-            <td><a href="#"><p>Datenschutz</a></td>
-          </tr>
-          <tr>
-            <td><a href="#"><p>Tipps&Tricks</a></td>
-            <td><a href="#"><p>Nutzungsbedingungen</a></td>
-          </tr>
-          <tr>
-            <td><a href="#"><p>Über uns</a></td>
-            <td><a href="#"><p>Impressum</a></td>
-          </tr>
-        </table>
-      </div>
-
-  <div class="col-sm-6 text-right">
+    <br><br><br>
     <b>Kontakt.</b>
-    <br>
+    <br><br>
     <ul style="list-style-type: none;">
-      <li>OldKonsole</li>
-      <li>Musterstraße 1</li>
+      <li>OldKonsole</li><br>
+      <li>Musterstraße 1</li><br>
       <li>26382 Wilhelmshaven</li>
     </ul>
     <br>
   <ul style="list-style-type: none;">
-      <li>info@oldconsole.de <span class="fa fa-envelope-open"></span></li>
-      <li>42424/121212 <span class="fa fa-phone"></span></li>
-      <li><a href"">Zum Kontaktformular</a><span class="fa fa-file-text-o"></span></li>
+      <li>info@oldconsole.de <span class="fa fa-envelope-open"></span></li><br>
+      <li>42424/121212 <span class="fa fa-phone"></span></li><br>
+      <li><a href"">Zum Kontaktformular</a><span class="fa fa-file-text-o"></span></li><br>
   </ul>
-  <br>
-</div>
+  </div>
 </div>
 </div>
 <div class="container bg-black text-right">

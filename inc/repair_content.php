@@ -89,7 +89,7 @@
 
   <div class="panel-body bg-black">
 <div class="tab-content bg-black text-left">
-  <div id="console" class="tab-pane fade in active">
+  <div id="console" class="tab-pane active">
 <form id="acc" name="acc" action="" method="post" enctype="text/html">
   <h5>Wähle deine Konsole aus: </h5>
     <p>
@@ -112,7 +112,7 @@
   </div>
 
 
-  <div id="account" class="tab-pane fade">
+  <div id="account" class="tab-pane ">
 <form id="acc" name="acc" action="" method="post" enctype="text/html">
     <p>
       <label for="nachname">Titel:</label>
@@ -168,10 +168,10 @@
 <div class="container bg-black">
   <div class="row">
     <div class="col-sm-6">
-      <input style="width:50%;" class="btn btn-success" type="Submit" name="" value="Zurück" />
+      <button style="width:50%;" id="previous" class="btn btn-success" value="prev">Zurück</button>
     </div>
     <div class="col-sm-6">
-<input style="width:50%;" class="btn btn-success" type="Submit" name="" value="Weiter" />
+<button style="width:50%;" id="next" class="btn btn-success"  name="next">Weiter</button>
     </div>
 </div>
 </div>
