@@ -74,7 +74,7 @@
 </div>
 <br><br>
 <!--Formular Reperatur-->
-<div class="container bg-black">
+<div class="container bg-black" style="height: 600px;">
   <h2>Reperaturauftrag erstellen.</h2>
   <div class="panel bg-black">
     <div class="panel-heading bg-black">
@@ -82,7 +82,6 @@
     <li class="active"><a data-toggle="tab" href="#console">Deine Konsole</a></li>
     <li><a data-toggle="tab" href="#account">Persönliches</a></li>
     <li><a data-toggle="tab" href="#shipping">Addressdaten</a></li>
-    <li><a data-toggle="tab" href="#payment">Zahlung</a></li>
     <li><a data-toggle="tab" href="#overview">Übersicht</a></li>
 </ul>
   </div>
@@ -136,10 +135,6 @@
     </p>
 </form>
   </div>
-  <div id="payment" class="tab-pane fade">
-<form id="pay" name="pay" action="" method="post" enctype="text/html">
-  <h2>Vorkasse</h2>
-  </form></div>
 
   <div id="overview" class="tab-pane fade">
     <form id="con" name="con" action="" method="post" enctype="text/html">
@@ -147,19 +142,19 @@
           <h2>Auftragsübersicht</h2> </form></div>
   <div id="shipping" class="tab-pane fade">
     <p>
-      <label for="nachname">Straßenname:</label>
+      Straßenname:
       <input id="nachname" type="text" name="nachname" value="" size="20" maxlength="50" />
     </p>
     <p>
-      <label for="vorname">Hausnummer:</label>
+      Hausnummer:
       <input id="vorname" type="text" name="vorname" value="" size="20" maxlength="50" />
     </p>
     <p>
-      <label for="strasse">Postleitzahl:</label>
+      Postleitzahl:
       <input id="strasse" type="text" name="strasse" value="" size="5" maxlength="5" />
     </p>
     <p>
-      <label for="hausnr">Stadt:</label>
+    Stadt:
       <input id="hausnr" type="text" name="hausnr" value="" size="5" maxlength="5" />
     </p>
   </div>
@@ -173,6 +168,17 @@
     <div class="col-sm-6">
 <button style="width:50%;" id="next" class="btn btn-success"  name="next">Weiter</button>
     </div>
+
+<script type="text/javascript">
+    $('#next').click(function(){
+ $('.nav-tabs > .active').next('li').find('a').trigger('click');
+});
+
+ $('#previous').click(function(){
+ $('.nav-tabs > .active').prev('li').find('a').trigger('click');
+});
+</script>
+
 </div>
 </div>
 </div>

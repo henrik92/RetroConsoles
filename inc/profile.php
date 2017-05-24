@@ -3,9 +3,25 @@
 <h2>Willkommen zurück <?php echo $_SESSION['vorname'] ?> ! </h2>
 </div>
 
+<div class="container bg-black">
+  <div class="panel panel-default bg-black">
+    <div class="panel-heading bg-black">
+      <strong>Accountfunktionen</strong>
+    </div>
+    <div class="panel-body bg-black font-black text-left">
+      <button class="btn" type="button" value="Editieren">Reperaturauftrag erstellen</button>
+      <button class="btn" type="button" value="Editieren">Warenkorb ansehen</button>
+      <button class="btn" type="button" value="Editieren">Kontaktformular</button><br>
+      <br>
+      <button class="btn" type="button" value="Editieren">E-Mail-Adresse ändern</button>
+      <button class="btn" type="button" value="Editieren">Passwort ändern</button><br>
+      <br>
+      <button class="btn btn-danger" type="button" value="Editieren">Account löschen</button><br>
+    </div>
+  </div>
+</div>
+
   <div class="container bg-black">
-    <div class="row">
-      <div class="col-sm-6 bg-black">
         <div class="panel panel-default bg-black">
           <div class="panel-heading bg-black">
               <strong>Persönliche Informationen</strong>
@@ -55,26 +71,7 @@
         </div>
       </div>
     </div>
-    </div>
   </div>
-      <div class="col-sm-6 bg-black">
-        <div class="panel panel-default bg-black">
-          <div class="panel-heading bg-black">
-            <strong>Accountfunktionen</strong>
-          </div>
-          <div class="panel-body bg-black font-black text-right">
-            <button class="btn" type="button" value="Editieren">Reperaturauftrag erstellen</button><br>
-            <button class="btn" type="button" value="Editieren">Warenkorb ansehen</button><br>
-            <button class="btn" type="button" value="Editieren">Kontaktformular</button><br>
-            <br>
-            <button class="btn" type="button" value="Editieren">E-Mail-Adresse ändern</button><br>
-            <button class="btn" type="button" value="Editieren">Passwort ändern</button><br>
-            <br>
-            <button class="btn btn-danger" type="button" value="Editieren">Account löschen</button><br>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 </div>
 
@@ -145,29 +142,13 @@
   </div>
     </div>
   </div>
-  <div class="panel-footer  bg-black">
-<button class="btn btn-warning font-black" value="Editieren">Editieren</button>
-  </div>
   </div>
 </div>
+
 <div class="container bg-black">
-  <div class="panel panel-default bg-black">
+<div class="panel panel-default bg-black">
     <div class="panel-heading bg-black"><b>Zahlungsinformationen</b></div>
-    <div class="panel-body bg-black"
-    <div class="panel panel-default bg-black">
-
-    <ul class="nav nav-tabs bg-black">
-      <li><a data-toggle="tab" href="#vorkasse"><span class="fa fa-credit-card"> Vorkasse</span></a></li>
-      <li><a data-toggle="tab" href="#visa"><i class="fa fa-cc-visa"> Visa</i></a></li>
-      <li><a data-toggle="tab" href="#mastercard"><i class="fa fa-cc-mastercard"> Mastercard</i></a></li>
-      <li><a data-toggle="tab" href="#paypal"><i class="fa fa-paypal"></i> Paypal</a></li>
-    </ul>
-
-  </div>
-
-      <div class="panel-body bg-black>"
-    <div class="tab-content tab-border bg-black">
-      <div id="vorkasse" class="tab-pane fade in active bg-black text-left">
+    <div class="panel-body bg-black text-left>"
         <h4><b>Vorkasse</b></h4>
         <br>
         <p>Kontoinhaber: OldKonsole</p>
@@ -176,27 +157,11 @@
         <p>Bankname: Musterbank</p>
         <p>BIC/SWIFT-Code: NOLADE2H</p>
         <p>IBAN-Code:DE987654321123456789</p>
-      </div>
-      <div id="visa" disabled class="tab-pane fade bg-black">
-        <h4><b>Visa</b></h4>
-      </div>
-      <div id="mastercard" class="tab-pane fade bg-black">
-        <h4><b>mastercard</b></h4>
-      </div>
-      <div id="paypal" class="tab-pane fade bg-black">
-        <h4><b>Paypal</b></h4>
-      </div>
-    </div>
-  </div>
-  <div class="panel-footer bg-black">
-<button class="btn btn-warning font-black" type="btn btn-warning" value="Editieren">Editieren</button>
-  </div>
-
   </div>
 </div>
 </div>
 
-
+<!--
 <div class="container bg-black">
   <div class="panel panel-default bg-black">
   <div class="panel-heading bg-black"><b>Bestellungen</b></div>
@@ -248,3 +213,4 @@
   </div>
 </div>
 </div>
+-->

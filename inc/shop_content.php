@@ -45,11 +45,11 @@ if (isset ($_POST['delete_cart'])){
   <div class="container first-padding bg-black">
   <div class="row">
     <div class="col-sm-8">
-      <h1>Artikelübersicht</h1>
+      <h3>Artikel</h3>
       <?php
       if (mysqli_num_rows($shop_item) > 0) {
       while($row = mysqli_fetch_array($shop_item)){?>
-        <div class="well well-border" style="background-color: black; color: white;">
+        <div class="well well-sm well-border" style="background-color: black; color: white;">
           <div class="container-fluid text-left">
             <h4><?php echo $row['title'] ?></h4>
           </div>
@@ -60,8 +60,10 @@ if (isset ($_POST['delete_cart'])){
       <img src="<?php echo $row['image_link'] ?>" class="img-thumbnail img-responsive" width="300px" height="250px"></img>
       </div>
 
-      <div class="col-sm-6 text-left">
-          <table class="table table-condensed" style="color: white; ">
+      <div class="col-sm-8 text-left">
+<h5><?php echo $row['description'] ?></h5><br>
+<h5><?php echo $row['price'] ?> <i class="fa fa-euro"></i></h5>
+      <!--    <table class="table table-condensed" style="color: white; ">
           <thead>
             <tr>
             <th>Informationen:</th>
@@ -74,7 +76,7 @@ if (isset ($_POST['delete_cart'])){
             <td><?php echo $row['product_id'] ?></td>
           </tr>
       <!-- Weitere Informationen -->
-          <tr>
+        <!--  <tr>
             <td>Beschreibung: <br></td><br>
             <td></td>
           </tr>
@@ -83,39 +85,31 @@ if (isset ($_POST['delete_cart'])){
             <td></td>
           </tr>
         </tbody>
-      </table>
-      </div>
-
-      <div class="col-sm-2">
-        <div class="container-fluid" >
-          <h5>Preis (inkl. 19 % Mwst.):</h5>
-          <br>
-          <h4><?php echo $row['price'] ?> <i class="fa fa-euro"></i></h4>
-        </div>
-      </div>
+      </table>-->
       </div>
     </div>
+  </div>
     <hr>
       <div class="container-fluid">
         <form method="post" action="">
           <input type="hidden" name="product_id" value="<?php echo $row['product_id']?>"/>
           <input type="hidden" name="title" value="<?php echo $row['title'] ?>"/>
           <input type="hidden" name="price" value="<?php echo $row['price'] ?>"/>
-          <button type"submit" name="add_item" class="btn btn-warning" style="float:right;"><i class="fa fa-cart-plus fa-1x"></i> In den Warenkorb</button>
+          <button type"submit" name="add_item" class="btn btn-warning" style="float:center;"><i class="fa fa-cart-plus fa-1x"></i> In den Warenkorb</button>
       </form>
       </div>
     </div>
       <?php  }} ?>
       </div>
     <div class="col-sm-4">
-      <h1>Warenkorb</h1>
-      <div class="well well-sm bg-black font-white">
+      <div class="bg-black font-white cart">
+          <h3>Warenkorb</h3>
       <table class="table" style="color: white;">
         <thead>
         <tr>
           <th>Artikel</th>
           <th>Preis</th>
-          <th>Entfernen</th>
+          <th></th>
         </tr>
       </thead>
       <?php  if(empty($_SESSION['cart'])){ ?>

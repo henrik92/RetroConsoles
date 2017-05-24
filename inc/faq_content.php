@@ -34,7 +34,7 @@
 <h2>F.A.Q</h2>
   <br><br>
 <div class="row">
-<div class="col-sm-3 text-right" style="border-right: 1px solid lightgrey;">
+<div class="col-sm-3 text-left" style="border-right: 1px solid lightgrey;">
   <h5><u>Wähle eine Kategorie aus:</u></h5><br>
   <select  style="width: 100%;" type="select">
     <option value="hide">--Kategorie--</option>
@@ -46,7 +46,12 @@
     <option value="account">Mein Profil</option>
   </select>
   <br><br>
-  <button class="btn btn-success" value="refresh">Suchen</button>
+  <h5><u>Wähle eine Frage aus:</u></h5><br>
+  <select disabled style="width: 100%;" type="select">
+    <<option value="question">--Frage--</option>
+  </select>
+  <br><br>
+  <button class="btn btn-success text-left" value="refresh">Suchen</button>
 
 </div>
 <div class="col-sm-9 text-left">
@@ -59,7 +64,7 @@
 <h2>Dokumentation</h2>
   <br><br>
 <div class="row">
-  <div class="col-sm-3 text-right" style="border-right: 1px solid lightgrey;">
+  <div class="col-sm-3 text-left" style="border-right: 1px solid lightgrey;">
     <h5>Wähle deine Konsole aus um Zugriff auf die entsprechende Dokumentation zu erhalten</h5><br>
     <select style="width: 100%;"type="select">
     <option value="hide">--Hersteller--</option>
@@ -71,7 +76,7 @@
     <option value="sony">Sony</option>
   </select>
   <br><br>
-  <select style="width: 100%;" type="select">
+  <select disabled style="width: 100%;" type="select">
   <option value="hide">--Modell--</option>
 </select>
   <br><br>

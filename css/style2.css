@@ -113,18 +113,6 @@ img .logo{
     resize: none;
   }
 
-  input {
-    width: 100%;
-    color: black;
-    border-radius: 10px;
-  }
-  input:hover{
-    background: lightblue;
-  }
-  input:active{
-    background: lightblue;
-  }
-
 /*ABOUT US*/
 /*MAIN*/
 .main_button{
@@ -527,4 +515,8 @@ td{
 }
 .footer_contact{
 
+}
+.cart {
+  float: right;
+  position: fixed;
 }

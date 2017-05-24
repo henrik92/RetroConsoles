@@ -17,7 +17,7 @@
         <p>Unser Reparaturservice bringt deine Konsole wieder auf Vordermann.</p>
       </div>
           <div class="container-fluid bg-black">
-              <button class="btn btn-danger">Zur Reparatur</button>
+              <a href="index.php?section=repair" class="btn btn-danger">Zur Reparatur</a>
           </div>
   </div>
   <div class="col-sm-4">
@@ -28,7 +28,7 @@
         <p>In unserem Onlineshop findest du alles was dein Konsolenherz begehrt.</p>
     </div>
         <div class="container-fluid bg-black">
-              <button class="btn btn-danger">Zum Onlineshop</button>
+              <a href="index.php?section=shop"class="btn btn-danger">Zum Onlineshop</a>
         </div>
   </div>
   <div class="col-sm-4">
@@ -39,7 +39,7 @@
           <p>Vertraut mit der Materie? Für Bastler bieten wir Tipps für die Eigenreperatur</p>
     </div>
         <div class="container-fluid bg-black">
-              <button class="btn btn-danger">Zu den Tipps</button>
+              <a href="index.php?section=faq"class="btn btn-danger">Zu den Tipps</a>
         </div>
   </div>
 </div>

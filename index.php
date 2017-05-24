@@ -1,11 +1,6 @@
 <?php
 session_start();
-
-if (isset($_SESSION["user_id"])){
-include "inc/main_header_member.php";
-} else {
 include "inc/main_header.php";
-}
 
 $_SESSION['page'] = "home";
 
