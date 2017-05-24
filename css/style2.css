@@ -496,7 +496,7 @@ height: auto;
 }
 .social{
     list-style-type: none;
-    float:right;
+    float:left;
     border-radius: 8px;
 }
 .social li {
@@ -519,4 +519,7 @@ td{
 .cart {
   float: right;
   position: fixed;
+}
+.select {
+  width: 100%;
 }
