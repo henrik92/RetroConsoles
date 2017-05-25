@@ -33,7 +33,7 @@ $_SESSION['page'] = ""; ?>
 
 <body>
 
-<div class="container-fluid">
+<div id="nav" class="container-fluid">
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
     <ul class="nav navbar-nav navbar-right">
@@ -51,7 +51,7 @@ $_SESSION['page'] = ""; ?>
   </div>
   <div class="container-fluid">
     <ul class="nav navbar-nav">
-      <li class="active"><a href="index.php?section=home">Startseite</a></li>
+      <li active><a href="index.php?section=home">Startseite</a></li>
       <li><a href="index.php?section=repair">Reparatur</a></li>
       <li><a href="index.php?section=shop">Shop</a></li>
       <li><a href="index.php?section=faq">Tipps & Tricks</a></li>

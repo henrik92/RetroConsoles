@@ -49,6 +49,31 @@ switch(@$_GET['section']) {
             include "inc/profile.php";
             $_SESSION['page']=="profile";
             break;
+
+      case "data":
+            include "inc/datenschutz.php";
+            $_SESSION['page']=="home";
+            break;
+
+      case "use":
+            include "inc/nutzungsbedingungen.php";
+            $_SESSION['page']=="home";
+            break;
+
+      case "cart_overview":
+            include "inc/cart_overview.php";
+            $_SESSION['page']=="home";
+            break;
+      case "imp":
+            include "inc/impressum.php";
+            $_SESSION['page']=="home";
+            break;
+
+            case "agb":
+                  include "inc/agb.php";
+                  $_SESSION['page']=="shop";
+                  break;
+
       default:  // Wenn eine ungültige Section angegeben wurde
                 // soll home angezeigt werden
           include "inc/main_content.php";

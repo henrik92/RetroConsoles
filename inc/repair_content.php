@@ -1,3 +1,12 @@
+
+<script>
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover();
+});
+</script>
+
+
+
 <?php $_SESSION['page'] = "repair"; ?>
   <div class="container-fluid bg-black first-padding">
   <div class="container bg-black font-white">
@@ -15,16 +24,26 @@
   <div class="container bg-black">
   <h3>Wir unterstützen folgende Hersteller: </h3>
   <br>
-  <div class="container-fluid bg-black">
-      <div class="col-sm-12">
-          <ul class="brands">
-            <li><img class="img img-responsive" src="img/logos/amiga.png" alt="Amiga"/></li>
-            <li><img class="img img-responsive" src="img/logos/comm.png" alt="Commodore"/></li>
-            <li><img class="img img-responsive" src="img/logos/nin.png" alt="Nintendo"/></li>
-            <li><img class="img img-responsive" src="img/logos/sega.png" alt="Sega"/></li>
-            <li><img class="img img-responsive" src="img/logos/sony.png" alt="Sony"/></li>
+  <div class="container-fluid bg-black brandlogo">
+    <div class="row">
+    <div class="col-sm-4">
+      <ul>
+        <li><img class="img img-responsive" src="img/logos/amiga.png" alt="Amiga"/></li>
+        <li><img class="img img-responsive" src="img/logos/comm.png" alt="Commodore"/></li>
       </ul>
-      </div>
+    </div>
+    <div class="col-sm-4">
+      <ul>
+      <li><img class="img img-responsive" src="img/logos/nin.png" alt="Nintendo"/></li>
+      <li><img class="img img-responsive" src="img/logos/sega.png" alt="Sega"/></li>
+    </ul>
+    </div>
+    <div class="col-sm-4">
+      <ul>
+      <li>ATARI-LOGO</li>
+      <li>SONY LOGO</li>
+    </ul>
+    </div>
   </div>
   <br><br>
   </div>
@@ -91,72 +110,119 @@
   <div id="console" class="tab-pane active">
 <form id="acc" name="acc" action="" method="post" enctype="text/html">
   <h5>Wähle deine Konsole aus: </h5>
-    <p>
-      <label for="nachname">Hersteller:</label>
-      <select name="make"></select>
-    </p>
-    <p>
-      <label for="vorname">Modell:</label>
-      <select name="model"></select>
-    </p>
-    <p>
-      <label for="strasse">Fehlerkategorie:</label>
-      <select name="cat"></select>
-    </p>
-    <p>
-      <label for="hausnr">Beschreibe dein Problem:</label>
-      <textarea id="hausnr" type="text" name="hausnr" value="" size="5" maxlength="140"></textarea>
-    </p>
+  <ul>
+    <li>  <select name="make">
+        <option value="hide">Hersteller wählen</option>
+      </select>
+       <a href="index.php?section=repair#con" data-toggle="popover" title="Hersteller" data-content="Wähle den Hersteller deiner Konsole aus."><i class="fa fa-info-circle fa-2x"></i></a>
+    </li>
+    <br>
+    <li>
+      <select name="model">
+        <option value="hide">Modell wählen</option>
+      </select>
+      <a href="index.php?section=repair#con" data-toggle="popover" title="Modell" data-content="Wähle das Konsolenmodell des Herstellers aus."><i class="fa fa-info-circle fa-2x"></i></a>
+    </li>
+    <br>
+    <li>
+      <select name="cat">
+          <option value="hide">Kategorie wählen</option>
+      </select>
+      <a href="index.php?section=repair#con" data-toggle="popover" title="Kategorie" data-content="Wähle eine passende Kategorie bezüglich deines Problems aus."><i class="fa fa-info-circle fa-2x"></i></a>
+
+    </li>
+    <br>
+    <li>
+      <textarea id="hausnr" placeholder="Beschreibe dein Problem..." type="text" name="hausnr" value="" size="5" maxlength="140"></textarea>
+      <a href="index.php?section=repair#con" data-toggle="popover" title="Problembeschreibung" data-content="Beschreibe uns kurz dein Problem."><i class="fa fa-info-circle fa-2x"></i></a>
+    </li>
+  </ul>
 </form>
   </div>
 
 
   <div id="account" class="tab-pane ">
 <form id="acc" name="acc" action="" method="post" enctype="text/html">
-    <p>
-      <label for="nachname">Titel:</label>
-      <input id="nachname" type="text" name="nachname" value="" size="20" maxlength="50" />
-    </p>
-    <p>
-      <label for="vorname">Vorname:</label>
-      <input id="vorname" type="text" name="vorname" value="" size="20" maxlength="50" />
-    </p>
-    <p>
-      <label for="strasse">Nachname:</label>
-      <input id="strasse" type="text" name="strasse" value="" size="5" maxlength="5" />
-    </p>
-    <p>
-      <label for="hausnr">E-Mail-Adresse:</label>
-      <input id="hausnr" type="text" name="hausnr" value="" size="5" maxlength="5" />
-    </p>
-    <p>
-      <label for="plz">Telefon:</label>
-      <input id="plz" type="text" name="plz" value="" size="5" maxlength="5" />
-    </p>
+  <h5>Mit wem haben wir das Vergnügen?</h5>
+<ul>
+    <li>
+      <select name="anrede">
+      <option value="hide">Anrede wählen</option>
+      <option value="mrs">Frau</option>
+      <option value="mr">Herr</option>
+    </select>
+    </li>
+    <br>
+    <li>
+      <input placeholder="Vorname" id="vorname" type="text" name="vorname" value="" size="20" maxlength="50" />
+    </li>
+    <br>
+    <li>
+      <input placeholder="Nachname" id="strasse" type="text" name="strasse" value="" size="5" maxlength="5" />
+    </li>
+    <br>
+    <li>
+      <input placeholder="E-Mail-Adresse" id="email" type="text" name="hausnr" value="" size="5" maxlength="5" />
+    </li>
+    <br>
+    <li>
+    <input placeholder="Telefonnummer"id="plz" type="text" name="plz" value="" size="5" maxlength="5" />
+    </li>
+  </ul>
 </form>
   </div>
 
   <div id="overview" class="tab-pane fade">
     <form id="con" name="con" action="" method="post" enctype="text/html">
 
-          <h2>Auftragsübersicht</h2> </form></div>
+          <h4 class="text-left">Alle Daten korrekt?</h4>
+          <br>
+<div class="row">
+<div class="col-sm-6">
+  <i class="fa fa-gamepad fa-3x"></i><br>
+<ul>
+  <li>Hersteller:Modell</li>
+  <br>
+  <li>Kat.</li>
+  <br>
+  <li>Problembeschreibung:<br><li>
+</ul>
+</div>
+<div class="col-sm-6">
+  <i class="fa fa-user-circle fa-3x"></i><br>
+  <ul>
+    <li>Anrede:Vorname:Name</li>
+    <br>
+    <li>Str.:Hausnr</li>
+    <br>
+    <li>PLZ:Ort<br><li>
+      <br>
+    <li>Mail</li>
+    <br>
+    <li>Telefon<br><li>
+  </ul>
+</div>
+</div>
+        </form>
+        </div>
   <div id="shipping" class="tab-pane fade">
-    <p>
-      Straßenname:
-      <input id="nachname" type="text" name="nachname" value="" size="20" maxlength="50" />
-    </p>
-    <p>
-      Hausnummer:
-      <input id="vorname" type="text" name="vorname" value="" size="20" maxlength="50" />
-    </p>
-    <p>
-      Postleitzahl:
-      <input id="strasse" type="text" name="strasse" value="" size="5" maxlength="5" />
-    </p>
-    <p>
-    Stadt:
-      <input id="hausnr" type="text" name="hausnr" value="" size="5" maxlength="5" />
-    </p>
+  <h5>Wo finden wir dich?</h5>
+<ul>
+    <li>
+      <input placeholder="Straßenname"id="nachname" type="text" name="nachname" value="" size="20" maxlength="50" />
+    </li>
+    <br>
+    <li>
+      <input placeholder="Hausnummer" id="vorname" type="text" name="vorname" value="" size="20" maxlength="50" />
+    </li>
+    <br>
+    <li>
+      <input placeholder="Postleitzahl" id="strasse" type="text" name="strasse" value="" size="5" maxlength="5" />
+    </li>
+    <br>
+    <li>
+      <input placeholder="Stadt" id="hausnr" type="text" name="hausnr" value="" size="5" maxlength="5" />
+    </li>
   </div>
 </div>
 </div>
@@ -166,9 +232,12 @@
       <button style="width:50%;" id="previous" class="btn btn-success" value="prev">Zurück</button>
     </div>
     <div class="col-sm-6">
-<button style="width:50%;" id="next" class="btn btn-success"  name="next">Weiter</button>
+      <button style="width:50%;" id="next" class="btn btn-success"  type="submit" name="next">Weiter</button>
     </div>
+</div>
 
+</div>
+</div>
 <script type="text/javascript">
     $('#next').click(function(){
  $('.nav-tabs > .active').next('li').find('a').trigger('click');
@@ -179,7 +248,4 @@
 });
 </script>
 
-</div>
-</div>
-</div>
 </div>
