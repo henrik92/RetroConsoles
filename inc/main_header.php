@@ -15,16 +15,7 @@
 <!--Own CSS-Sheet-->
 <link href="css/style2.css" rel="stylesheet"/>
 </head>
-<script type="text/javascript">
-  $(document).ready(function () {
-      var url = window.location;
-      $('ul.nav a[href="'+ url +'"]').parent().addClass('active');
-      $('ul.nav a').filter(function() {
-           return this.href == url;
-      })
-      .parent().addClass('active').siblings().removeClass('active');
-  });
-</script>
+
 
 <?php
 @session_start();
@@ -32,6 +23,16 @@ $_SESSION['page'] = ""; ?>
 
 
 <body>
+  <script type="text/javascript">
+    $(document).ready(function () {
+        var url = window.location;
+        $('ul.nav a[href="'+ url +'"]').parent().addClass('active');
+        $('ul.nav a').filter(function() {
+             return this.href == url;
+        })
+        .parent().addClass('active').siblings().removeClass('active');
+    });
+  </script>
 
 <div id="nav" class="container-fluid">
 <nav class="navbar navbar-default navbar-fixed-top">
@@ -51,7 +52,12 @@ $_SESSION['page'] = ""; ?>
   </div>
   <div class="container-fluid">
     <ul class="nav navbar-nav">
-      <li active><a href="index.php?section=home">Startseite</a></li>
+      <?php if(isset($_SESSION['page'])) { ?>
+        <li class="active"><a class="active"href="index.php?section=home">Startseite</a></li>
+    <?php  } else { ?>
+        <li><a href="index.php?section=home">Startseite</a></li>
+    <?php  } ?>
+
       <li><a href="index.php?section=repair">Reparatur</a></li>
       <li><a href="index.php?section=shop">Shop</a></li>
       <li><a href="index.php?section=faq">Tipps & Tricks</a></li>

@@ -50,14 +50,17 @@
 <br><br>
 <div class="row">
 <div class="col-sm-6 text-padding text-left">
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br>
-<a href="">Mehr</a></p><br><br>
+<p>20.05.2017</p>
+<p>Ab Sofort bieten wir die Spielekonsole Atari 2600 in unserem Shop an. Zusätzlich kann die Konsole in unserem Reparaturservice ausgewählt werden<br>
+</p><br>
+<p>16.05.2017</p>
+<p>Entdecken Sie jetzt unsere neuen Tipps und Tricks, damit Sie nur Spaß und keine Probleme mit ihrer Konsole haben</p><br>
 </div>
 <div class="col-sm-6 text-padding text-left">
-<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
-<a href="">Mehr</a></p><br><br><br>
+<p>10.05.2017</p>
+<p>Hast du deine Handbücher zu den Konsolen verloren? Kein Problem lade dir einfach die Handbücher deiner Lieblingskonsole hier bei uns runter</p><br>
+<p>04.05.2017</p>
+<p>Jetzt neu im Sortiment die Spielekonsole Nintendo 64. Erlebe das Spieleerlebnis von damals erneut.
 </div>
 </div>
 </div>

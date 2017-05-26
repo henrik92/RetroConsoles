@@ -36,7 +36,8 @@ $sql = "SELECT * FROM shop";
 $shop_item = mysqli_query($conn, $sql);
 
 $_SESSION['sum'];
-
+$empty_cart_err = "";
+$nologin_err = "";
 //Warenkorb erstellen
 if(!isset($_SESSION['cart'])){
   //Shopping Cart Session nicht gesetzt - Keine Artikel im Warenkorb
@@ -49,12 +50,12 @@ if(isset($_POST['add_item'])){
   $title = $_POST['title'];
   $price = $_POST['price'];
   if(isset($_SESSION['cart'][$add_id])){
-    echo "Artikel bereits vorhanden!";
+    $already_in_cart = "Artikel bereits vorhanden!";
   } else {
   $cart_row = array('ID' => $add_id, 'Artikel' => $title ,'Preis' => $price , );
   $_SESSION['cart'][$add_id] = $cart_row;
   $_SESSION['sum'] = $_SESSION['sum'] + $price;
-  echo "Artikel erfolgreich hinzugefügt!";
+  $added = "Artikel erfolgreich hinzugefügt!";
 }
 }
 //Artikel entfernen
@@ -82,16 +83,16 @@ if(isset($_POST['finish']) && isset($_SESSION['user_id'])){
   if(!empty($_SESSION['cart'])){
   header ("Location: index.php?section=cart_overview");
 } else {
-  echo 'Keine Artikel im Warenkorb';
+  $empty_cart_err = 'Keine Artikel im Warenkorb';
 }} else {
-  echo 'Bitte logge dich zuerst ein!';
+  $nologin_err = 'Bitte logge dich zuerst ein!';
 }
  ?>
 
 <!-- ############################################################################## -->
 <div id="" class="container-fluid first-padding">
   <div class="container text-center" >
-    <h5>Warenkorb</h5>
+    <h4>Warenkorb</h4>
     <table class="table" style="color: white;">
       <thead>
       <tr>
@@ -129,6 +130,13 @@ if(isset($_POST['finish']) && isset($_SESSION['user_id'])){
       <form action="" method="post">
     <button type="submit" class="btn btn-success" name="finish">Zur Kasse</button>
       </form>
+      <?php if (isset($_POST['finish'])) {
+      if ($nologin_err !== "") {
+        echo '<p class="bg-danger">'. $nologin_err . '</p>';
+      } else if ($empty_cart_err !== ""){
+        echo '<p class="bg-danger">'. $empty_cart_err . '</p>';
+     } else {}} else {}
+      ?>
   </div>
   </div>
   </div>
