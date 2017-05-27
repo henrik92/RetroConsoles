@@ -16,7 +16,7 @@ function format($input){
   return $input;
 }
 //$_SERVER["REQUEST_METHOD"] == "POST"
-if (isset ($_POST['submit']) || $_SERVER["REQUEST_METHOD"] == "POST" ) {
+if (isset ($_POST['anmelden']) || $_SERVER["REQUEST_METHOD"] == "POST" ) {
   if(isset($_POST['email']) && isset($_POST['password'])){
 
 session_start();
@@ -67,35 +67,23 @@ if (mysqli_num_rows($result) > 0) {
 <h2>Login</h2>
 <br><br>
 <div class="panel-body bg-black">
-<form class="form-horizontal" action="" method="post">
-  <div class="form-group">
-  <label>E-Mail Adresse</label>
-  <hr>
-  <div class="input-group">
-<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-  <input type="email" class="form-control" name="email" id="email" placeholder="E-Mail Adresse" required>
-  </div>
-</div>
-  <div class="form-group">
-  <label>Passwort</label>
-      <hr>
-  <div class="input-group">
-    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-  <input type="password" class="form-control" name="password" id="password" placeholder="Passwort" required>
-</div>
-</div>
-  <?php if($error_msg !== "" || $login_msg !== "") echo '<p class="bg-danger">' . $error_msg . '</p>';?>
-  <div class="container-fluid inline-block text-center">
-  <h5>Anmeldedaten merken<input type="checkbox"></input></h5>
-
-</div>
+<form action="" method="post">
+  <ul>
+  <li><h5>E-Mail Adresse</h5></li>
+  <li>  <input type="email" name="email" id="email" placeholder="E-Mail Adresse eingeben" required></li>
+  <li><br><br></li>
+  <li>  <h5>Passwort</h5></li>
+  <li><input type="password" name="password" id="password" placeholder="Passwort eingeben" required></li>
+  <li><br></li>
+  <li><?php if($error_msg !== "" || $login_msg !== "") echo '<p class="bg-danger">' . $error_msg . '</p>';?></li>
+</ul>
 <br>
-  <input style="width:50%;"class="btn btn-success" type="Submit" id ="submit" name="submit" value="Jetzt einloggen." />
-<br><br>
+  <input style="width:50%;"class="btn btn-success" type="Submit" id ="submit" name="anmelden" value="Jetzt einloggen." />
+<br>
 </form>
+<br>
+<h5>Neu bei uns? <a href="index.php?section=register">Hier</a> geht es zur Registrierung.</h5>
 </div>
-<div class="panel-footer bg-black">
-<p>Neu bei uns? <a style="color: darkblue;" href="index.php?section=register">Hier</a> geht es zur Registrierung.</p>
 </div>
 </div>
 </div>

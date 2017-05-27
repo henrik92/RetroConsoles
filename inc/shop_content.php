@@ -98,7 +98,7 @@ if(isset($_POST['finish']) && isset($_SESSION['user_id'])){
       <tr>
         <th>Artikel</th>
         <th>Preis</th>
-        <th><form method="post" action="" >
+        <th>   <form method="post" action="" >
           <button type"submit" name="delete_cart" class="btn btn-danger" value="<?php echo $product['ID']?>"><i class="fa fa-times fa-1x"></i></button>
       </form></th>
       </tr>
@@ -132,19 +132,19 @@ if(isset($_POST['finish']) && isset($_SESSION['user_id'])){
       </form>
       <?php if (isset($_POST['finish'])) {
       if ($nologin_err !== "") {
-        echo '<p class="bg-danger">'. $nologin_err . '</p>';
+        echo '<p>'. $nologin_err . '</p>';
       } else if ($empty_cart_err !== ""){
-        echo '<p class="bg-danger">'. $empty_cart_err . '</p>';
+        echo '<p>'. $empty_cart_err . '</p>';
      } else {}} else {}
       ?>
   </div>
   </div>
   </div>
-
+<br>
   <div id="search" class="container bg-black">
-      <h4>Artikelsuche</h4>
+      <h3>Artikelsuche</h3>
       <form action="" method="post">
-      <input  name="search_value" style="width:40%; padding: 5px;"placeholder="Artikel suchen..."/>
+      <input  name="search_value" style="width:50%; padding: 5px;"placeholder="Artikel suchen..."/>
       <button type="submit_search" name="submit_search" class="btn font-black">Suchen</button>
     </form>
     <br>

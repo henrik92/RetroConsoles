@@ -39,11 +39,11 @@ $_SESSION['page'] = ""; ?>
   <div class="container-fluid">
     <ul class="nav navbar-nav navbar-right">
       <?php if (!isset($_SESSION['user_id'])) { ?>
-      <li><a href="index.php?section=login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-      <li><a href="index.php?section=register"><span class="glyphicon glyphicon-user"></span> Registrieren</a></li>
+      <li><a href="index.php?section=login"><span class="fa fa-sign-in fa-1x"></span> Login</a></li>
+      <li><a href="index.php?section=register"><span class="fa fa-hand-spock-o"></span> Registrieren</a></li>
 <?php } else { ?>
-  <li><a href="index.php?section=profile"><span class="glyphicon glyphicon-log-in"></span> Mein Profil</a></li>
-  <li><a href="index.php?section=logout"><span class="glyphicon glyphicon-user"></span> Logout</a></li>
+  <li><a href="index.php?section=profile"><span class="fa fa-user-circle-o fa-1x"></span> Mein Profil</a></li>
+  <li><a href="index.php?section=logout"><span class="fa fa-power-off fa-1x"></span> Logout</a></li>
     <?php } ?>
     </ul>
   </div>

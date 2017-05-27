@@ -55,7 +55,7 @@ $(document).ready(function(){
     <div class="row">
 <div class="col-sm-3 font-white">
   <div class="well well-sm bg-black">
-      <h5>1.Schritt: </h5>
+      <h5>1. Schritt: </h5>
       <hr>
     <i class="fa fa-pencil-square-o fa-5x"></i>
     <br><br>
@@ -64,7 +64,7 @@ $(document).ready(function(){
 </div>
 <div class="col-sm-3 font-white">
   <div class="well well-sm bg-black">
-    <h5>2.Schritt</h5>
+    <h5>2. Schritt</h5>
     <hr>
     <i class="fa fa-cube fa-5x"></i>
     <br><br>
@@ -82,7 +82,7 @@ $(document).ready(function(){
 </div>
 <div class="col-sm-3 font-white">
   <div class="well well-sm bg-black">
-<h5>4.Schritt</h5>
+<h5>4. Schritt</h5>
     <hr>
     <i class="fa fa-handshake-o fa-5x" aria-hidden="true"></i>
     <br><br>

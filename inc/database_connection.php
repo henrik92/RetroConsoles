@@ -15,16 +15,12 @@ $conn = mysqli_connect( $server, $login, $password, $db_name) or die( 'Verbindun
 
 //UTF-8 Enkodierung
 $utf = mysqli_set_charset($conn, 'utf8');
-if ($utf === true){
-  echo "UTF8 Encoding aktiv";
-} else {
-  echo "Encoding hat nicht funktioniert";
+if ($utf === false){
+  echo "MySQL: UTF-8 Encoding hat nicht funktioniert";
 }
 
 // Check connection
 if ($conn->connect_error) {
-    echo "Connection failed: " . $conn->connect_error;
-} else {
-    echo "Connected successfully";
+    echo "DB-Connection failed: " . $conn->connect_error;
 }
 ?>

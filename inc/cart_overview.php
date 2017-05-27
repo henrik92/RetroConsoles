@@ -1,20 +1,28 @@
 <?php
 $agb_err = "";
-if (isset($_POST['buy']) && isset($_POST['agb'])) {
-  header('location: index.php?section=repair');
-} else {
+
+if (isset($_POST['buy'])) {
+    header("Location: index.php?section=cart_success");
+    unset($_SESSION['cart']);
+    $_SESSION['sum'] = 0;
+  }else {
   $agb_err = "Bitte akzeptiere unsere AGB's";
+}
+
+if (isset($_POST['cancel'])){
+  header("Location: index.php?section=shop");
 }
 ?>
 
 
 
 <div class="container bg-black font-white first-padding">
-<h1>Warenkorb-Übersicht</h1>
-<div class="container text-left">
+<h1>Bestellübersicht</h1>
+<div class="well well-sm bg-black font-white">
+<div class="container-fluid text-left">
     <h5><u>Persönliche Daten</u></h5>
     <br>
-        <ul>
+        <ul class="text-left">
         <li>Herr <?php echo $_SESSION['vorname']; echo " ";  echo $_SESSION['name']; ?></li>
         <li><?php echo $_SESSION['email'] ?></li>
         <li><?php ?></li>
@@ -29,7 +37,7 @@ if (isset($_POST['buy']) && isset($_POST['agb'])) {
       <div class="col-sm-6"></div>
   </div>
 </div>
-<div class="container text-center" >
+<div class="container-fluid text-center" >
   <table class="table" style="color: white;">
     <thead>
     <tr>
@@ -48,28 +56,31 @@ if (isset($_POST['buy']) && isset($_POST['agb'])) {
       <?php } ?>
       <br><br>
       <tr>
-        <td>  Gesamtsumme: </td>
-        <td><?php echo $_SESSION['sum']; ?> €</td>
+        <td><br> Gesamtsumme: </td>
+        <td><br><u><?php echo $_SESSION['sum']; ?> €</u></td>
       </tr>
   </table>
 </div>
-</div>
 
-<div class="container text-center">
+
+
+<div class="container-fluid text-center">
 <p>...</p>
 <form>
-<input style="width: auto;" type="checkbox" value="agb" name="agb"> Ich habe die AGB gelesen und akzeptiert.</input>
+<input style="width: auto;" type="checkbox" value="agb" name="agb" unchecked> Ich habe die AGB gelesen und akzeptiert.</input>
 </form>
 </div>
 <br>
-<div class="container text-center">
+<div class="container-fluid text-center">
   <form action="" method="post">
     <button type="submit" class="btn btn-warning" name="cancel">Zurück</button>
 <button type="submit" class="btn btn-warning" name="buy">Einkauf abschliessen</button>
   </form>
   <?php
-    if ($agb_err !== ""){
+    if (isset($_POST['buy']) && !isset($_POST['agb']) ){
       echo '<p class="bg-danger">'. $agb_err . '</p>';
-    }
+    } else {}
   ?>
+</div>
+</div>
 </div>

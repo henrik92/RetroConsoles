@@ -52,6 +52,11 @@ switch(@$_GET['section']) {
       case "cart_overview":
             include "inc/cart_overview.php";
             break;
+            
+      case "cart_success":
+            include "inc/cart_success.php";
+            break;
+
       case "imp":
             include "inc/impressum.php";
             break;

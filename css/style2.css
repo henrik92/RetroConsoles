@@ -221,3 +221,36 @@ select{
 .popover-content{
   background-color: black;
 }
+
+
+/*MODALS*/
+.modal {
+  background-color: black;
+  color:white;
+}
+.modal-header{
+  background-color: black;
+  color:white;
+}
+.modal-content{
+  background-color: black;
+  color:white;
+}
+.modal-body{
+  background: black;
+  color:white;
+}
+.modal-title{
+  background-color: black;
+  color:white;
+}
+.modal-footer{
+  background-color: black;
+  color:white;
+}
+.close{
+  color:white;
+}
+p {
+  padding: 3px;
+}

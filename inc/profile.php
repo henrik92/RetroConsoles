@@ -1,4 +1,8 @@
-<?php $_SESSION['page'] = "profile"; ?>
+<?php $_SESSION['page'] = "profile";
+if (!isset($_SESSION['vorname'])){
+  header("Location: index.php?section=home");
+}
+?>
 <div class="container first-padding bg-black">
 <h2>Willkommen zurück <?php echo $_SESSION['vorname'] ?> ! </h2>
 </div>
@@ -9,33 +13,152 @@
       <strong>Accountfunktionen</strong>
     </div>
     <div class="panel-body bg-black font-black text-left">
-      <button class="btn" type="button" value="Editieren">Reperaturauftrag erstellen</button>
-      <button class="btn" type="button" value="Editieren">Warenkorb ansehen</button>
-      <button class="btn" type="button" value="Editieren">Kontaktformular</button><br>
+      <div class="row">
+        <div class="col-sm-4">
+          <ul>
+      <li><a href="index.php?section=repair">Reperaturauftrag erstellen</a></li><br>
+      <li><a href="index.php?section=shop">Warenkorb ansehen</a></li><br>
+      <li><a href="index.php?section=aboutus">Zum Kontakformular</a></li>
+    </ul>
+</div>
+      <div class="col-sm-4">
+        <ul>
+  <li>  <a href=""data-toggle="modal" data-target="#edit_account">Benutzerdaten ansehen</a> </li><br>
+  <li>  <a href=""data-toggle="modal" data-target="#edit_mail">E-Mail Adresse ändern</a> </li><br>
+  <li>  <a href=""data-toggle="modal" data-target="#edit_pwd">Passwort ändern</a> </li>
+</ul>
       <br>
-      <button class="btn" type="button" value="Editieren">E-Mail-Adresse ändern</button>
-      <button class="btn" type="button" value="Editieren">Passwort ändern</button><br>
-      <br>
-      <button class="btn btn-danger" type="button" value="Editieren">Account löschen</button><br>
+</div>
+      <div class="col-sm-4">
+    <a href=""data-toggle="modal" data-target="#delete_account">Account löschen</a>>
+    </div>
+  </div>
+  </div>
+</div>
+</div>
+<!-- MODALS -->
+<div id="delete_account" class="modal fade" role="dialog">
+  <div class="modal-dialog bg-black font-white">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Account löschen</h4>
+      </div>
+      <div class="modal-body">
+        <p>Willst du uns wirklich verlassen?</p>
+        <form method="post" action="">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Nein</button>
+        <button class="btn">Ja</button>
+      </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Abbrechen</button>
+      </div>
     </div>
   </div>
 </div>
 
+<div id="edit_mail" class="modal fade" role="dialog">
+  <div class="modal-dialog bg-black font-white">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Email-Adresse ändern</h4>
+      </div>
+      <div class="modal-body">
+        <form method="post" action="">
+              <ul>
+              <li><h6>Alte Email</h6></li>
+              <li><input placeholder="Alte Email-Adresse eingeben"id="plz" type="text" name="mail_o" required/></li>
+              <li><br></li>
+              <li><h6>Neue Email</h6></li>
+              <li><input placeholder="Neue Email-Adresse eingeben"id="plz" type="text" name="mail" required/></li>
+              <li><input placeholder="Neue Email-Adresse bestätigen"id="plz" type="text" name="mail_c" required/></li>
+              <li><br></li>
+            </ul>
+            <button class="btn btn-default">Ändern</button>
+      </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Abbrechen</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="edit_pwd" class="modal fade" role="dialog">
+  <div class="modal-dialog bg-black font-white">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Passwort ändern</h4>
+      </div>
+      <div class="modal-body">
+        <form method="post" action="">
+              <ul>
+              <li><h6>Altes Passwort</h6></li>
+              <li><input placeholder="Altes Passwort eingeben"id="plz" type="text" name="mail_o" required/></li>
+              <li><br></li>
+              <li><h6>Neues Passwort</h6></li>
+              <li><input placeholder="Neues Passwort eingeben"id="plz" type="text" name="mail" required/></li>
+              <li><input placeholder="Neues Passwort bestätigen"id="plz" type="text" name="mail_c" required/></li>
+              <li><br></li>
+            </ul>
+            <button class="btn btn-default">Ändern</button>
+      </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Abbrechen</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="edit_account" class="modal fade" role="dialog">
+  <div class="modal-dialog bg-black font-white">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Benutzerdaten ändern</h4>
+      </div>
+      <div class="modal-body">
+        <form method="post" action="">
+              <ul>
+                <li><input placeholder="Vorname"id="plz" type="text" name="vorname"/></li>
+                <li><input placeholder="Nachname"id="plz" type="text" name="nachname"/></li>
+                <li><input placeholder="Straßenname"id="plz" type="text" name="straße"/></li>
+                <li><input placeholder="Hausnummer"id="plz" type="text" name="hausnr"/></li>
+                <li><input placeholder="Postleitzahl"id="plz" type="text" name="plz"/></li>
+                <li><input placeholder="Stadt"id="plz" type="text" name="city"/></li>
+            </ul>
+            <button class="btn btn-default">Ändern</button>
+      </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Abbrechen</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--++++++++++++++++++++++--->
   <div class="container bg-black">
         <div class="panel panel-default bg-black">
           <div class="panel-heading bg-black">
               <strong>Persönliche Informationen</strong>
           </div>
           <div class="panel-body bg-black">
+
             <div class="row">
-              <div class="col-sm-4"> AVATAR PICTURE
-              </div>
-              <div class="col-sm-8">
+              <div class="col-sm-6">
           <div class="table-responsive">
           <table class="table">
             <thead>
               <tr>
-              <th>Stammdaten</th>
+              <th>Zur Person</th>
               <th></th>
             </tr>
           </thead>
@@ -68,95 +191,50 @@
           </tbody>
         </table>
       </div>
-        </div>
-      </div>
     </div>
-  </div>
-  </div>
-</div>
-
-<!--<script></script>-->
-
-<div class="container bg-black">
-  <div class="panel panel-default bg-black">
-    <div class="panel-heading bg-black"><strong>Adressdaten</strong></div>
-    <div class="panel-body bg-black">
-      <div class="row">
-      <div class="col-sm-6 bg-black">
-        <div class="table-responsive">
-        <table class="table table-responsive bg-black">
-          <thead>
-            <tr>
-            <th>Rechnungsadresse</th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody>
-            <tr><td>Straße:</td>
-  <td><?php echo $_SESSION['street'] ?></td>
-            </tr>
-            <tr><td>Hausnummer:</td>
-  <td><?php echo $_SESSION['streetnr'] ?></td>
-            </tr>
-            <tr><td>Postleitzahl:</td>
-  <td><?php echo $_SESSION['postcode'] ?></td>
-            </tr>
-            <tr><td>Stadt:</td>
-  <td><?php echo $_SESSION['city'] ?></td>
-            </tr>
-        </tbody>
-      </table>
-    <form method="post" action="">
-    <input id="shipping_show" type="checkbox" name="pay_address" value="address">Abweichende Lieferadresse</input>
-  </form>
-</div>
-  </div>
-  <div class="col-sm-6">
-    <?php if (isset($_POST['address'])){ ?>
-      <div class="table-responsive bg-black hide" >
-      <table class="table bg-black">
+    <div class="col-sm-6">
+      <table class="table table-responsive bg-black">
         <thead>
           <tr>
-          <th>Lieferadresse</th>
+          <th>Anschrift</th>
           <th></th>
         </tr>
       </thead>
       <tbody>
           <tr><td>Straße:</td>
-<td><?php echo $_SESSION['street'] ?></td>
+    <td><?php echo $_SESSION['street'] ?></td>
           </tr>
           <tr><td>Hausnummer:</td>
-<td><?php echo $_SESSION['streetnr'] ?></td>
+    <td><?php echo $_SESSION['streetnr'] ?></td>
           </tr>
           <tr><td>Postleitzahl:</td>
-<td><?php echo $_SESSION['postcode'] ?></td>
+    <td><?php echo $_SESSION['postcode'] ?></td>
           </tr>
           <tr><td>Stadt:</td>
-<td><?php echo $_SESSION['city'] ?></td>
+    <td><?php echo $_SESSION['city'] ?></td>
           </tr>
       </tbody>
     </table>
-    <input id="shipping_show" type="radio" name="diff" name="diff_shipment">Abweichende Rechnungsadresse</input>
-  </div>
-    <?php } ?>
-  </div>
     </div>
+</div>
   </div>
   </div>
 </div>
 
-<div class="container bg-black">
+<div class="container bg-black ">
 <div class="panel panel-default bg-black">
     <div class="panel-heading bg-black"><b>Zahlungsinformationen</b></div>
     <div class="panel-body bg-black text-left>"
-        <h4><b>Vorkasse</b></h4>
         <br>
-        <p>Kontoinhaber: OldKonsole</p>
-        <p>Kontonummer: 123456789</p>
-        <p>Bankleitzahl: 987654321</p>
-        <p>Bankname: Musterbank</p>
-        <p>BIC/SWIFT-Code: NOLADE2H</p>
-        <p>IBAN-Code:DE987654321123456789</p>
+        <ul class="text-left">
+        <li><strong><u>Vorkasse</u></strong></li><br>
+        <li>Kontoinhaber: OldKonsole</li><br>
+        <li>Kontonummer: 123456789</li><br>
+        <li>Bankleitzahl: 987654321</li><br>
+        <li>Bankname: Musterbank</li><br>
+        <li>BIC/SWIFT-Code: NOLADE2H</li><br>
+        <li>IBAN-Code:DE987654321123456789</li><br>
+      </ul>
   </div>
 </div>
 </div>
