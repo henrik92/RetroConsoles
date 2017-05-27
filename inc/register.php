@@ -30,7 +30,7 @@
 <button name="register" style="width:40%;"class="btn btn-success font-white">Jetzt registrieren.</button>
 </form>
 <br><br>
-<h5>Du besitzt bereits einen Account? <a href="index.php?section=register">Hier</a> geht es zur Anmeldung.</h5>
+<h5>Du besitzt bereits einen Account? <a href="index.php?section=login">Hier</a> geht es zur Anmeldung.</h5>
 
 </div>
 
