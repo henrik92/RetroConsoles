@@ -167,24 +167,19 @@ if (!isset($_SESSION['vorname'])){
               <td>Kundennummer:</td>
               <td><?php echo $_SESSION['user_id']?></td>
               <tr>
-            <tr><td>Titel:</td>
-                <td>Herr</td>
+            <tr><td>Anrede:</td>
+                <td><?php echo $_SESSION['gender']?></td>
               <tr>
             <tr><td>Vorname:</td>
     <td><?php echo $_SESSION['vorname']?></td>
               <tr>
             <tr><td>Nachname:</td>
     <td><?php echo $_SESSION['name']?></td>
-              <tr>
-            <tr><td>Geburtsdatum:</td>
-      <td>01.01.2000</td>
-              <tr>
+  </tr>
             <tr><td>E-Mail-Adresse:</td>
     <td><?php echo $_SESSION['email']?></td>
   </tr>
-            <tr><td>Telefonnummer:</td>
-  <td>12345/6789</td>
-            </tr>
+
             <tr><td>Mitglied seit:</td>
       <td><?php echo $_SESSION['regdate']?></td>
             </tr>

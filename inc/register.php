@@ -39,8 +39,8 @@
 include "inc/database_connection.php";
 
 if (isset($_POST['register'])) {
-  // $stmt = $conn->prepare("INSERT INTO user (gender, name, lastname, streetname, hausnr,plz,ort, email,pwd) VALUES (?, ?, ?)");
-  // $stmt->bind_param("ssssiisss", $gender, $vorname, $nachname, $straße, $hausnr, $plz, $city, $mail, $pwd);
+  $stmt = $conn->prepare("INSERT INTO user (user_id, gender, name, vorname, email, pwd, street, streetnr, post, city, reg_date) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+  $stmt->bind_param("issssssiiss", $user_id, $gender, $nachname, $vorname, $mail, $pwd, $straße, $hausnr, $plz, $city,  $reg_date);
 
 
 if ($_POST['mail'] !== $_POST['mail_c'] ){
@@ -52,13 +52,20 @@ if ($_POST['mail'] !== $_POST['mail_c'] ){
   $mail_c = $_POST['mail_c'];
   $pwd = $_POST['pwd'];
   $pwd_c = $_POST['pwd_c'];
+  $user_id ="";
 
+  date_default_timezone_set("Europe/Berlin");
+  $time = time();
+  $datum = date("Y.m.d",$time);
+  $uhrzeit = date("H:i:s",$time);
+  $reg_date = $datum . ' ' . $uhrzeit;
+  
 if (isset($_POST['gender']) && $_POST['gender'] !== "hide"){
   if ($_POST['gender']==="m"){
-      $gender = "Herr";
+      $gender = "m";
     }
   if ($_POST['gender']==="w"){
-      $gender = "Frau";
+      $gender = "w";
     }} else {
       echo "Bitte Anrede auswählen";
     }
@@ -104,7 +111,9 @@ $result = mysqli_query($conn, $sql);
 if (mysqli_num_rows($result) > 0) {
  echo "Es exisitiert bereits ein Benutzer mit der angegebenen Email-Adresse";
 } else {
+  $stmt->execute();
   echo "Registrierung erfolgreich";
+  header("Location: index.php?section=login");
 }
 }
 }

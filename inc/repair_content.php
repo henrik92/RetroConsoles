@@ -7,7 +7,8 @@ $(document).ready(function(){
 
 
 
-<?php $_SESSION['page'] = "repair"; ?>
+<?php $_SESSION['page'] = "repair";
+$_SESSION['console_ok']=false;?>
   <div class="container-fluid bg-black first-padding">
   <div class="container bg-black font-white">
     <h1>
@@ -95,55 +96,87 @@ $(document).ready(function(){
 <!--Formular Reperatur-->
 <div class="container bg-black" style="height: 600px;">
   <h2>Reperaturauftrag erstellen.</h2>
-  <div class="panel bg-black">
-    <div class="panel-heading bg-black">
+
+    <!-- <div class="panel-heading bg-black">
   <ul class="nav nav-tabs bg-black" >
     <li class="active"><a data-toggle="tab" href="#console">Deine Konsole</a></li>
-    <li><a data-toggle="tab" href="#account">Persönliches</a></li>
+    <li><a disabled data-toggle="tab" href="#account">Persönliches</a></li>
     <li><a data-toggle="tab" href="#shipping">Addressdaten</a></li>
     <li><a data-toggle="tab" href="#overview">Übersicht</a></li>
 </ul>
-  </div>
+  </div> -->
 
   <div class="panel-body bg-black">
-<div class="tab-content bg-black text-left">
+<div class="tab-content bg-black text-center">
   <div id="console" class="tab-pane active">
-<form id="acc" name="acc" action="" method="post" enctype="text/html">
-  <h5>Wähle deine Konsole aus: </h5>
+<form id="acc" name="console" action="" method="post" enctype="text/html">
+  <h4>- Schritt 1 / 4 -</h4>
+  <h5>Wähle deine Konsole aus </h5>
+  <hr>
   <ul>
-    <li>  <select name="make">
+    <li>  <select name="make" required>
         <option value="hide">Hersteller wählen</option>
+        <option value="make_a">Modell A</option>
       </select>
        <a href="index.php?section=repair#con" data-toggle="popover" title="Hersteller" data-content="Wähle den Hersteller deiner Konsole aus."><i class="fa fa-info-circle fa-2x"></i></a>
     </li>
     <br>
     <li>
-      <select name="model">
+      <select name="model" required>
         <option value="hide">Modell wählen</option>
+        <option value="model_a">Modell A</option>
       </select>
       <a href="index.php?section=repair#con" data-toggle="popover" title="Modell" data-content="Wähle das Konsolenmodell des Herstellers aus."><i class="fa fa-info-circle fa-2x"></i></a>
     </li>
     <br>
     <li>
-      <select name="cat">
+      <select name="cat" required>
           <option value="hide">Kategorie wählen</option>
+          <option value="cat_a">Kategorie A</option>
       </select>
       <a href="index.php?section=repair#con" data-toggle="popover" title="Kategorie" data-content="Wähle eine passende Kategorie bezüglich deines Problems aus."><i class="fa fa-info-circle fa-2x"></i></a>
 
     </li>
     <br>
     <li>
-      <textarea id="hausnr" placeholder="Beschreibe dein Problem..." type="text" name="hausnr" value="" size="5" maxlength="140"></textarea>
+      <textarea placeholder="Beschreibe dein Problem..." type="text" name="beschreibung" value="" size="5" maxlength="140"  required></textarea>
       <a href="index.php?section=repair#con" data-toggle="popover" title="Problembeschreibung" data-content="Beschreibe uns kurz dein Problem."><i class="fa fa-info-circle fa-2x"></i></a>
     </li>
   </ul>
+  <div class="container text-center">
+  <form action="" method="post">
+  <button name="next" type="submit" class="btn btn-success">Weiter</button>
 </form>
+</div>
+  <!-- <button style="width:50%;" id="previous" class="btn btn-success" value="prev">Zurück</button>
+  <button style="width:50%;" id="next" class="btn btn-success"  type="submit" name="next">Weiter</button> -->
+</form>
+<?php if (!isset($_POST['next'])){
+  echo 'post-echo';
+  if (!isset($_POST['make']) || $_POST['make']==="hide"){
+    echo 'Bitte Hersteller auswählen';
+  }
+  if (!isset($_POST['model']) || $_POST['model']==="hide"){
+    echo 'Bitte Modell auswählen';
+  }
+  if (!isset($_POST['cat']) || $_POST['cat']==="hide"){
+    echo 'Bitte Kategorie auswählen';
+  }
+  if (!isset($_POST['beschreibung']) || $_POST['beschreibung']!==""){
+    echo 'Bitte Problembeschreibung angeben';
+  }
+  $_SESSION['console_ok'] = true;
+}else {
+
+}?>
   </div>
 
 
   <div id="account" class="tab-pane ">
 <form id="acc" name="acc" action="" method="post" enctype="text/html">
+  <h4>- Schritt 2 / 4 -</h4>
   <h5>Mit wem haben wir das Vergnügen?</h5>
+    <hr>
 <ul>
     <li>
       <select name="anrede">
@@ -165,22 +198,25 @@ $(document).ready(function(){
       <input placeholder="E-Mail-Adresse" id="email" type="text" name="hausnr" value="" size="5" maxlength="5" />
     </li>
     <br>
-    <li>
-    <input placeholder="Telefonnummer"id="plz" type="text" name="plz" value="" size="5" maxlength="5" />
-    </li>
   </ul>
+  <div class="container text-center">
+  <a name="previous" class="btn btn-default" data-toggle="tab" href="#console">Zurück</a>
+  <a name="next" class="btn btn-success" data-toggle="tab" href="#shipping">Weiter</a>
+</div>
 </form>
   </div>
 
   <div id="overview" class="tab-pane fade">
     <form id="con" name="con" action="" method="post" enctype="text/html">
-
-          <h4 class="text-left">Alle Daten korrekt?</h4>
-          <br>
+  <h4>- Schritt 4 / 4 -</h4>
+<h5>Alle Daten korrekt?</h5>
+  <hr>
+<br>
 <div class="row">
 <div class="col-sm-6">
-  <i class="fa fa-gamepad fa-3x"></i><br>
 <ul>
+  <li><i class="fa fa-gamepad fa-4x"></i></li>
+  <br>
   <li>Hersteller:Modell</li>
   <br>
   <li>Kat.</li>
@@ -189,8 +225,9 @@ $(document).ready(function(){
 </ul>
 </div>
 <div class="col-sm-6">
-  <i class="fa fa-user-circle fa-3x"></i><br>
   <ul>
+    <li><i class="fa fa-user-circle fa-3x"></i></li>
+    <br>
     <li>Anrede:Vorname:Name</li>
     <br>
     <li>Str.:Hausnr</li>
@@ -201,12 +238,21 @@ $(document).ready(function(){
     <br>
     <li>Telefon<br><li>
   </ul>
+  <div class="container text-center">
+  <a name="previous" class="btn btn-default" data-toggle="tab" href="#shipping">Zurück</a>
+  <a name="next" class="btn btn-success" data-toggle="tab" href="#success">Auftrag abschicken</a>
+  </div>
+
 </div>
 </div>
-        </form>
-        </div>
+</form>
+</div>
+
+
   <div id="shipping" class="tab-pane fade">
+      <h4>- Schritt 3 / 4 -</h4>
   <h5>Wo finden wir dich?</h5>
+    <hr>
 <ul>
     <li>
       <input placeholder="Straßenname"id="nachname" type="text" name="nachname" value="" size="20" maxlength="50" />
@@ -223,21 +269,25 @@ $(document).ready(function(){
     <li>
       <input placeholder="Stadt" id="hausnr" type="text" name="hausnr" value="" size="5" maxlength="5" />
     </li>
+  </ul>
+  <div class="container text-center">
+  <a name="previous" class="btn btn-default" data-toggle="tab" href="#account">Zurück</a>
+  <a name="next" class="btn btn-success" data-toggle="tab" href="#overview">Weiter</a>
+</div>
   </div>
-</div>
-</div>
-<div class="container bg-black">
-  <div class="row">
-    <div class="col-sm-6">
-      <button style="width:50%;" id="previous" class="btn btn-success" value="prev">Zurück</button>
-    </div>
-    <div class="col-sm-6">
-      <button style="width:50%;" id="next" class="btn btn-success"  type="submit" name="next">Weiter</button>
-    </div>
-</div>
+
+  <div id="success" class="tab-pane fade">
+    <h4>- Erfolg! -</h4>
+    <h5>Dein Auftrag ist unterwegs zu uns</h5>
+  <hr>
+  <br>
+  <h6>Unsere Mitarbeiter werden sich so schnell wie möglich bei dir melden!</h6>
+  </div>
 
 </div>
 </div>
+
+
 <script type="text/javascript">
     $('#next').click(function(){
  $('.nav-tabs > .active').next('li').find('a').trigger('click');

@@ -23,7 +23,7 @@ if (isset($_POST['cancel'])){
     <h5><u>Persönliche Daten</u></h5>
     <br>
         <ul class="text-left">
-        <li>Herr <?php echo $_SESSION['vorname']; echo " ";  echo $_SESSION['name']; ?></li>
+        <li><?php echo $_SESSION['gender'];echo " "; echo $_SESSION['vorname']; echo " ";  echo $_SESSION['name']; ?></li>
         <li><?php echo $_SESSION['email'] ?></li>
         <li><?php ?></li>
         <li><?php echo $_SESSION['street']; echo " "; echo $_SESSION['streetnr'];  ?></li>

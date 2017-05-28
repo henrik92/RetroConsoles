@@ -41,6 +41,14 @@ if (mysqli_num_rows($result) > 0) {
   while($row = mysqli_fetch_assoc($result)){
     $_SESSION['session_id'] = session_id();
     $_SESSION['login'] = true;
+
+    if ($row['gender']==="m") {
+    $_SESSION['gender'] = "Herr";
+    }
+  if ($row['gender']==="w"){
+    $_SESSION['gender'] = "Frau";
+    }
+
     $_SESSION['user_id'] = $row['user_id'];
     $_SESSION['vorname'] = $row['vorname'];
     $_SESSION['name'] = $row['name'];
