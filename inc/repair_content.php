@@ -109,49 +109,55 @@ $_SESSION['console_ok']=false;?>
   <div class="panel-body bg-black">
 <div class="tab-content bg-black text-center">
   <div id="console" class="tab-pane active">
-<form id="acc" name="console" action="" method="post" enctype="text/html">
+<form action="" method="post" enctype="text/html">
   <h4>- Schritt 1 / 4 -</h4>
   <h5>Wähle deine Konsole aus </h5>
   <hr>
   <ul>
     <li>  <select name="make" >
         <option value="hide">Hersteller wählen</option>
-        <option value="make_a">Modell A</option>
+        <option value="make_a">Hersteller A</option>
+        <option value="make_b">Hersteller B</option>
+        <option value="make_c">Hersteller C</option>
       </select>
-       <a href="index.php?section=repair#con" data-toggle="popover" title="Hersteller" data-content="Wähle den Hersteller deiner Konsole aus."><i class="fa fa-info-circle fa-2x"></i></a>
     </li>
     <br>
     <li>
       <select name="model" >
         <option value="hide">Modell wählen</option>
         <option value="model_a">Modell A</option>
+        <option value="model_b">Modell B</option>
+        <option value="model_c">Modell C</option>
       </select>
-      <a href="index.php?section=repair#con" data-toggle="popover" title="Modell" data-content="Wähle das Konsolenmodell des Herstellers aus."><i class="fa fa-info-circle fa-2x"></i></a>
     </li>
     <br>
     <li>
       <select name="cat" >
           <option value="hide">Kategorie wählen</option>
           <option value="cat_a">Kategorie A</option>
+          <option value="cat_b">Kategorie B</option>
+          <option value="cat_c">Kategorie C</option>
       </select>
-      <a href="index.php?section=repair#con" data-toggle="popover" title="Kategorie" data-content="Wähle eine passende Kategorie bezüglich deines Problems aus."><i class="fa fa-info-circle fa-2x"></i></a>
 
     </li>
     <br>
     <li>
       <textarea placeholder="Beschreibe dein Problem..." type="text" name="beschreibung"></textarea>
-      <a href="index.php?section=repair#con" data-toggle="popover" title="Problembeschreibung" data-content="Beschreibe uns kurz dein Problem."><i class="fa fa-info-circle fa-2x"></i></a>
     </li>
   </ul>
   <div class="container text-center">
-  <button name="next_tab" type="submit" class="btn btn-success">Weiter</button>
+  <button name="next_tab" type="submit" class="btn btn-success" data-toggle="tab" href="#account">Weiter</button>
 </div>
   <!-- <button style="width:50%;" id="previous" class="btn btn-success" value="prev">Zurück</button>
   <button style="width:50%;" id="next" class="btn btn-success"  type="submit" name="next">Weiter</button> -->
 </form>
-<?php if (isset($_POST['next'])){
-  echo 'post-echo';
-  if (!isset($_POST['make']) || $_POST['make']==="hide"){
+<?php if (isset($_POST['next_tab'])){
+$hersteller = $_POST['make'];
+$_SESSION['form_modell'] = $_POST['model'];
+$_SESSION['form_cat'] = $_POST['cat'];
+$_SESSION['form_beschreibung'] = $_POST['beschreibung'];
+
+/*  if (!isset($_POST['make']) || $_POST['make']==="hide"){
     echo 'Bitte Hersteller auswählen';
   }
   if (!isset($_POST['model']) || $_POST['model']==="hide"){
@@ -169,7 +175,7 @@ $_SESSION['console_ok']=false;?>
     <script>
     $(document).ready(function(){
         $("#next_tab").click(function(){
-            $(this).tab('show');
+            $("#account").tab('show');
         });
     });
   </script>
@@ -195,21 +201,21 @@ $_SESSION['console_ok']=false;?>
     </li>
     <br>
     <li>
-      <input placeholder="Vorname" id="vorname" type="text" name="vorname" value="" size="20" maxlength="50" />
+      <input placeholder="Vorname" id="vorname" type="text" name="vorname"/>
     </li>
     <br>
     <li>
-      <input placeholder="Nachname" id="strasse" type="text" name="strasse" value="" size="5" maxlength="5" />
+      <input placeholder="Nachname" id="strasse" type="text" name="strasse"/>
     </li>
     <br>
     <li>
-      <input placeholder="E-Mail-Adresse" id="email" type="text" name="hausnr" value="" size="5" maxlength="5" />
+      <input placeholder="E-Mail-Adresse" id="email" type="text" name="hausnr"/>
     </li>
     <br>
   </ul>
   <div class="container text-center">
-  <a name="previous" class="btn btn-default" data-toggle="tab" href="#console">Zurück</a>
-  <a name="next" class="btn btn-success" data-toggle="tab" href="#shipping">Weiter</a>
+  <button name="previous" class="btn btn-default" data-toggle="tab" href="#console">Zurück</button>
+  <button name="next" class="btn btn-success" data-toggle="tab" href="#shipping">Weiter</button>
 </div>
 </form>
   </div>
@@ -222,36 +228,35 @@ $_SESSION['console_ok']=false;?>
 <br>
 <div class="row">
 <div class="col-sm-6">
-<ul>
+<ul class="text-left">
   <li><i class="fa fa-gamepad fa-4x"></i></li>
   <br>
-  <li>Hersteller:Modell</li>
+  <li>Hersteller</li>
   <br>
-  <li>Kat.</li>
+  <li>Modell</li>
+  <br>
+  <li>Fehlerkategorie</li>
   <br>
   <li>Problembeschreibung:<br><li>
 </ul>
 </div>
 <div class="col-sm-6">
-  <ul>
+  <ul class="text-left">
     <li><i class="fa fa-user-circle fa-3x"></i></li>
     <br>
-    <li>Anrede:Vorname:Name</li>
+    <li>Anrede - Vorname - Name</li>
     <br>
-    <li>Str.:Hausnr</li>
+    <li>Straße - Hausnummer</li>
     <br>
-    <li>PLZ:Ort<br><li>
+    <li>Postleitzahl - Ort<br><li>
       <br>
-    <li>Mail</li>
-    <br>
-    <li>Telefon<br><li>
+    <li>E-Mail-Adresse</li>
   </ul>
-  <div class="container text-center">
-  <a name="previous" class="btn btn-default" data-toggle="tab" href="#shipping">Zurück</a>
-  <a name="next" class="btn btn-success" data-toggle="tab" href="#success">Auftrag abschicken</a>
-  </div>
-
 </div>
+</div>
+<div class="container">
+  <button name="previous" class="btn btn-default text-left" data-toggle="tab" href="#shipping">Zurück</button>
+  <button name="next" class="btn btn-success text-right" data-toggle="tab" href="#success">Auftrag abschicken</button>
 </div>
 </form>
 </div>
@@ -263,24 +268,24 @@ $_SESSION['console_ok']=false;?>
     <hr>
 <ul>
     <li>
-      <input placeholder="Straßenname"id="nachname" type="text" name="nachname" value="" size="20" maxlength="50" />
+      <input placeholder="Straßenname"id="nachname" type="text" name="nachname"/>
     </li>
     <br>
     <li>
-      <input placeholder="Hausnummer" id="vorname" type="text" name="vorname" value="" size="20" maxlength="50" />
+      <input placeholder="Hausnummer" id="vorname" type="text" name="vorname"/>
     </li>
     <br>
     <li>
-      <input placeholder="Postleitzahl" id="strasse" type="text" name="strasse" value="" size="5" maxlength="5" />
+      <input placeholder="Postleitzahl" id="strasse" type="text" name="strasse"/>
     </li>
     <br>
     <li>
-      <input placeholder="Stadt" id="hausnr" type="text" name="hausnr" value="" size="5" maxlength="5" />
+      <input placeholder="Stadt" id="hausnr" type="text" name="hausnr"/>
     </li>
   </ul>
   <div class="container text-center">
-  <a name="previous" class="btn btn-default" data-toggle="tab" href="#account">Zurück</a>
-  <a name="next" class="btn btn-success" data-toggle="tab" href="#overview">Weiter</a>
+  <button name="previous" class="btn btn-default" data-toggle="tab" href="#account">Zurück</button>
+  <button name="next" class="btn btn-success" data-toggle="tab" href="#overview">Weiter</button>
 </div>
   </div>
 
@@ -289,6 +294,8 @@ $_SESSION['console_ok']=false;?>
     <h5>Dein Auftrag ist unterwegs zu uns</h5>
   <hr>
   <br>
+  <i class="fa fa-check-square fa-5x"></i>
+  <h5>Wir freuen uns schon auf dich!</h5>
   <h6>Unsere Mitarbeiter werden sich so schnell wie möglich bei dir melden!</h6>
   </div>
 

@@ -1,29 +1,3 @@
-<script type="text/javascript">
-/*function checkOffset() {
-  var a=$(document).scrollTop()+window.innerHeight;
-  var b=$('#nav').offset().bottom;
-  if (a<b) {
-    $('#cart').css('top', '10px');
-  } else {
-    $('#cart').css('top', (10+(a+b))+'px');
-  }
-}*/
-
-/*function checkOffset() {
-  var b=$('#nav').offset().top;
-  $('#cart').css('top', (b)+'px');
-
-}
-$(document).ready(checkOffset);
-$(document).scroll(checkOffset);*/
-
-/*$(document).ready(function(){
-  var nav_height = $('#nav').outerHeight());
-  $('#cart').css("padding-top", nav_height + "px");
-  var cart_height = $('#cart').outerHeight());
-});*/
-</script>
-
 <?php $_SESSION['page'] = "shop";
 @session_start();
 include "inc/database_connection.php";
@@ -178,29 +152,6 @@ if(isset($_POST['finish']) && isset($_SESSION['user_id'])){
       <div class="col-sm-8 text-left">
 <h5><?php echo $row['description'] ?></h5><br>
 <h5><?php echo $row['price'] ?> <i class="fa fa-euro"></i></h5>
-      <!--    <table class="table table-condensed" style="color: white; ">
-          <thead>
-            <tr>
-            <th>Informationen:</th>
-            <th></th>
-            </tr>
-          </thead>
-          <tbody>
-          <tr>
-            <td>Artikelnummer: </td>
-            <td><?php echo $row['product_id'] ?></td>
-          </tr>
-      <!-- Weitere Informationen -->
-        <!--  <tr>
-            <td>Beschreibung: <br></td><br>
-            <td></td>
-          </tr>
-          <tr>
-            <td><?php echo $row['description'] ?></td>
-            <td></td>
-          </tr>
-        </tbody>
-      </table>-->
       </div>
     </div>
   </div>

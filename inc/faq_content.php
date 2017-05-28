@@ -87,16 +87,16 @@
   <!--Fragen zu Kategorie: Registrieren-->
   <?php if ($_POST['kategorie'] === "register") { ?>
   <select  name="question" style="width: 100%;" type="select">
-    <option value="question1">--Frage1--</option>
-    <option value="question2">--Frage2--</option>
+    <option value="question1">--Wozu benötige ich eine Registrierung auf ihrer Seite?--</option>
+    <option value="question2">--Was kann ich alles ohne Registrierung auf ihrer Seite machen?--</option>
   </select>
   <?php } ?>
 
   <!--Fragen zu Kategorie: Registrieren-->
   <?php if ($_POST['kategorie'] === "login") { ?>
   <select   name="question"style="width: 100%;" type="select">
-    <option value="question1">--Frage3--</option>
-    <option value="question2">--Frage4--</option>
+    <option value="question3">--Welche Daten benötige ich um mich bei ihnen Anzumelden?--</option>
+    <option value="question4">--Wo kann ich mich auf ihrer Seite Anmelden?--</option>
   </select>
   <?php } ?>
   <button name="search_q"class="btn btn-success text-right" value="refresh">Antwort anzeigen</button>
@@ -114,19 +114,19 @@
   if(isset($_POST['search_q']) && $_POST['question']!=="hide"){
   //Kategorie Registrierung : Frage 1
   if ($_POST['kategorie']==="register" && $_POST['question']==="question1"){
-    echo 'Antwort 1';
+    echo 'Um den kauf einer Konsole abzuschließen wird eine Registrierung auf der Seite benötigt.';
   }
   //Kategorie Registrierung : Frage 2
   if ($_POST['kategorie']==="register" && $_POST['question']==="question2"){
-    echo 'Antwort 2';
+    echo 'Sie können auf alle Funktion unserer Seite zugreifen. Es wird auschließlich beim kauf einer Konsole eine Registrierung benötigt.';
   }
   //Kategorie Anmeldung : Frage 3
-  if ($_POST['kategorie']==="login" && $_POST['question']==="question1"){
-    echo 'Antwort 3';
+  if ($_POST['kategorie']==="login" && $_POST['question']==="question3"){
+    echo 'Sie benötigen ihre E-Mail Adresse und ein von ihnen bei der Registrierung ausgewähltes Passwort.';
   }
   //Kategorie Anmeldung : Frage 4
-  if ($_POST['kategorie']==="login" && $_POST['question']==="question2"){
-    echo 'Antwort 4';
+  if ($_POST['kategorie']==="login" && $_POST['question']==="question4"){
+    echo 'Es befindet sich in der oberen rechten Ecke neben der Registrierung unser Login.';
   }
 }else{echo 'Wähle eine Frage aus';}}} ?>
 
