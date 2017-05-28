@@ -114,7 +114,7 @@ $_SESSION['console_ok']=false;?>
   <h5>Wähle deine Konsole aus </h5>
   <hr>
   <ul>
-    <li>  <select name="make" required>
+    <li>  <select name="make" >
         <option value="hide">Hersteller wählen</option>
         <option value="make_a">Modell A</option>
       </select>
@@ -122,7 +122,7 @@ $_SESSION['console_ok']=false;?>
     </li>
     <br>
     <li>
-      <select name="model" required>
+      <select name="model" >
         <option value="hide">Modell wählen</option>
         <option value="model_a">Modell A</option>
       </select>
@@ -130,7 +130,7 @@ $_SESSION['console_ok']=false;?>
     </li>
     <br>
     <li>
-      <select name="cat" required>
+      <select name="cat" >
           <option value="hide">Kategorie wählen</option>
           <option value="cat_a">Kategorie A</option>
       </select>
@@ -139,19 +139,17 @@ $_SESSION['console_ok']=false;?>
     </li>
     <br>
     <li>
-      <textarea placeholder="Beschreibe dein Problem..." type="text" name="beschreibung" value="" size="5" maxlength="140"  required></textarea>
+      <textarea placeholder="Beschreibe dein Problem..." type="text" name="beschreibung"></textarea>
       <a href="index.php?section=repair#con" data-toggle="popover" title="Problembeschreibung" data-content="Beschreibe uns kurz dein Problem."><i class="fa fa-info-circle fa-2x"></i></a>
     </li>
   </ul>
   <div class="container text-center">
-  <form action="" method="post">
-  <button name="next" type="submit" class="btn btn-success">Weiter</button>
-</form>
+  <button name="next_tab" type="submit" class="btn btn-success">Weiter</button>
 </div>
   <!-- <button style="width:50%;" id="previous" class="btn btn-success" value="prev">Zurück</button>
   <button style="width:50%;" id="next" class="btn btn-success"  type="submit" name="next">Weiter</button> -->
 </form>
-<?php if (!isset($_POST['next'])){
+<?php if (isset($_POST['next'])){
   echo 'post-echo';
   if (!isset($_POST['make']) || $_POST['make']==="hide"){
     echo 'Bitte Hersteller auswählen';
@@ -165,7 +163,17 @@ $_SESSION['console_ok']=false;?>
   if (!isset($_POST['beschreibung']) || $_POST['beschreibung']!==""){
     echo 'Bitte Problembeschreibung angeben';
   }
-  $_SESSION['console_ok'] = true;
+
+  /*echo '<a name="next_tab" id="next_tab" data-toggle="tab" href="#account"></a>'*/
+  ?>
+    <script>
+    $(document).ready(function(){
+        $("#next_tab").click(function(){
+            $(this).tab('show');
+        });
+    });
+  </script>
+<?php
 }else {
 
 }?>
